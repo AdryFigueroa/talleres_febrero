@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {font-family: 'Roboto', sans-serif;}
-        .header-img {height: 300px; object-fit: cover;}
-        .section {padding: 60px 0; border-bottom: 1px solid #eee;}
-        .card {transition: transform .2s;}
-        .card:hover {transform: translateY(-5px);}
-        .navbar-brand {align-items: center;
-        text-align: center;}
-         /* Estilos mejorados para el cronograma */
-         .gantt-container {
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header-img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card {
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .navbar-brand {
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Estilos mejorados para el cronograma */
+        .gantt-container {
             background: #f8f9fa;
             border-radius: 10px;
             padding: 20px;
             margin-top: 30px;
         }
-        
+
         .gantt-task {
             margin: 15px 0;
             position: relative;
         }
-        
+
         .gantt-bar {
             height: 40px;
             border-radius: 5px;
             background: linear-gradient(90deg, #4CAF50, #45a049);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -40,12 +61,12 @@
             color: white;
             font-weight: bold;
         }
-        
+
         .gantt-bar:hover {
             transform: scale(1.02);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
-        
+
         .gantt-labels {
             display: flex;
             justify-content: space-between;
@@ -53,19 +74,19 @@
             color: #666;
             font-size: 0.9em;
         }
-        
+
         .gantt-legend {
             margin-top: 20px;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
         }
-        
+
         .legend-item {
             display: inline-block;
             margin-right: 20px;
         }
-        
+
         .legend-color {
             width: 15px;
             height: 15px;
@@ -73,12 +94,18 @@
             margin-right: 5px;
             border-radius: 3px;
         }
+
         .text-shadow {
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra suave y difuminada */
-    }
-    .h-50 {max-height: 500px !important;}
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            /* Sombra suave y difuminada */
+        }
+
+        .h-50 {
+            max-height: 500px !important;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -89,18 +116,19 @@
 
     <!-- Header -->
     <!-- Header con Introducción -->
-<header class="container-fluid p-0 position-relative">
-    <img src="https://img.freepik.com/fotos-premium/planta-crece-suelo-enfoque-selectivo_73944-26506.jpg?w=1380" class="w-100 header-img" alt="Semillas">
-    <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-75">
-        
-        <h6 class="display-6 fw-bold text-shadow ">Talleres Comunitarios <br>para Regenerar Espacios Verdes</h6>
-        <p class="lead fw-bold text-shadow">
-            Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y accesibles. 
-            <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
-        </p>
-        
-    </div>
-</header>
+    <header class="container-fluid p-0 position-relative">
+        <img src="https://img.freepik.com/fotos-premium/planta-crece-suelo-enfoque-selectivo_73944-26506.jpg?w=1380"
+            class="w-100 header-img" alt="Semillas">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-75">
+
+            <h6 class="display-6 fw-bold text-shadow ">Talleres Comunitarios <br>para Regenerar Espacios Verdes</h6>
+            <p class="lead fw-bold text-shadow">
+                Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y accesibles.
+                <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
+            </p>
+
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main class="container">
@@ -111,10 +139,12 @@
                 <!-- Taller 1: Banco de Semillas -->
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/manos-sosteniendo-cosecha-grano-fresco_53876-139753.jpg?t=st=1738263782~exp=1738267382~hmac=035a9727b63d03371c647bb7af6f32afc6df99ae5a603f2ec72eabf587e40935&w=996" class="card-img-top" alt="Banco de Semillas">
+                        <img src="https://img.freepik.com/foto-gratis/manos-sosteniendo-cosecha-grano-fresco_53876-139753.jpg?t=st=1738263782~exp=1738267382~hmac=035a9727b63d03371c647bb7af6f32afc6df99ae5a603f2ec72eabf587e40935&w=996"
+                            class="card-img-top" alt="Banco de Semillas">
                         <div class="card-body">
                             <h5 class="card-title">Banco de Semillas</h5>
-                            <p class="card-text">Aprende a recolectar, secar y almacenar semillas nativas de La Araucanía.</p>
+                            <p class="card-text">Aprende a recolectar, secar y almacenar semillas nativas de La
+                                Araucanía.</p>
                             <ul class="list-unstyled">
                                 <li><strong>Duración:</strong> 2 horas</li>
                                 <li><strong>Costo:</strong> $10.000 por persona</li>
@@ -126,7 +156,8 @@
                 <!-- Taller 2: Huertos Familiares -->
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/hermanos-jovenes-plantando-cultivos-casa_23-2148831403.jpg?t=st=1738264609~exp=1738268209~hmac=aa1edad4954b0024826545f3e4141534a79d02f7dfe302dac9c17f33233732fa&w=996">
+                        <img
+                            src="https://img.freepik.com/foto-gratis/hermanos-jovenes-plantando-cultivos-casa_23-2148831403.jpg?t=st=1738264609~exp=1738268209~hmac=aa1edad4954b0024826545f3e4141534a79d02f7dfe302dac9c17f33233732fa&w=996">
                         <div class="card-body">
                             <h5 class="card-title">Huertos Familiares</h5>
                             <p class="card-text">Crea huertos urbanos en botellas recicladas con plantas nativas.</p>
@@ -141,10 +172,12 @@
                 <!-- Taller 3: Cápsulas Verdes -->
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/hierbas-colocadas-manos_1150-12585.jpg?t=st=1738264822~exp=1738268422~hmac=dcb12f551b3670dd557a102ab06f18fe8418638e530290f48f1f23b36c43b850&w=996" class="card-img-top" alt="Cápsulas Verdes">
+                        <img src="https://img.freepik.com/foto-gratis/hierbas-colocadas-manos_1150-12585.jpg?t=st=1738264822~exp=1738268422~hmac=dcb12f551b3670dd557a102ab06f18fe8418638e530290f48f1f23b36c43b850&w=996"
+                            class="card-img-top" alt="Cápsulas Verdes">
                         <div class="card-body">
                             <h5 class="card-title">Cápsulas Verdes</h5>
-                            <p class="card-text">Elabora esferas de arcilla con semillas nativas para reforestar espacios públicos.</p>
+                            <p class="card-text">Elabora esferas de arcilla con semillas nativas para reforestar
+                                espacios públicos.</p>
                             <ul class="list-unstyled">
                                 <li><strong>Duración:</strong> 3 horas</li>
                                 <li><strong>Costo:</strong> $10.000 por persona</li>
@@ -188,35 +221,44 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            
-                                <li class="list-unstyled"><small>**¿Qué son los kits?
-Los kits son paquetes de materiales que se entregan a los participantes de los talleres para que puedan replicar las actividades en sus hogares o comunidades. En este caso, los kits están relacionados con los talleres de semillas nativas y biodiversidad.
 
-Contenido típico de un kit:
-Semillas nativas: Variedades locales como maqui, avellano chileno, o hierbas medicinales.
+                            <li class="list-unstyled"><small>**¿Qué son los kits?
+                                    Los kits son paquetes de materiales que se entregan a los participantes de los
+                                    talleres para que puedan replicar las actividades en sus hogares o comunidades. En
+                                    este caso, los kits están relacionados con los talleres de semillas nativas y
+                                    biodiversidad.
 
-Materiales para siembra: Tierra fértil, arcilla (para cápsulas verdes), y recipientes reciclados.
+                                    Contenido típico de un kit:
+                                    Semillas nativas: Variedades locales como maqui, avellano chileno, o hierbas
+                                    medicinales.
 
-Guía práctica: Instrucciones paso a paso para sembrar y cuidar las plantas.
+                                    Materiales para siembra: Tierra fértil, arcilla (para cápsulas verdes), y
+                                    recipientes reciclados.
 
-Herramientas básicas: Palitas pequeñas, regaderas manuales, o etiquetas para identificar las plantas.
+                                    Guía práctica: Instrucciones paso a paso para sembrar y cuidar las plantas.
 
-¿Por qué vender kits?
-Ingresos adicionales: Genera una fuente de ingresos extra para el proyecto.
+                                    Herramientas básicas: Palitas pequeñas, regaderas manuales, o etiquetas para
+                                    identificar las plantas.
 
-Sostenibilidad: Permite que los participantes continúen el trabajo en casa.
+                                    ¿Por qué vender kits?
+                                    Ingresos adicionales: Genera una fuente de ingresos extra para el proyecto.
 
-Escalabilidad: Los kits pueden venderse incluso a personas que no asistieron a los talleres.
+                                    Sostenibilidad: Permite que los participantes continúen el trabajo en casa.
 
-Promoción: Los kits actúan como una forma de publicidad para futuros talleres.</small></li>
+                                    Escalabilidad: Los kits pueden venderse incluso a personas que no asistieron a los
+                                    talleres.
+
+                                    Promoción: Los kits actúan como una forma de publicidad para futuros
+                                    talleres.</small></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="https://img.freepik.com/fotos-premium/jardineria-siembra-casa-hombre-sembrando-semillas-caja-germinacion_214995-2835.jpg?w=360" class="card-img-top h-50" alt="kits">
-                        
+                        <img src="https://img.freepik.com/fotos-premium/jardineria-siembra-casa-hombre-sembrando-semillas-caja-germinacion_214995-2835.jpg?w=360"
+                            class="card-img-top h-50" alt="kits">
+
                     </div>
                 </div>
             </div>
@@ -253,154 +295,155 @@ Promoción: Los kits actúan como una forma de publicidad para futuros talleres.
             </table>
         </section>
 
-       
+
 
         <!-- Sección Cronograma Febrero-Marzo 2025 -->
-<section class="section">
-    <div class="container">
-        <h2 class="mb-4">Cronograma Febrero-Marzo 2025</h2>
-        
-        <!-- Leyenda -->
-        <div class="gantt-legend mb-4">
-            <span class="legend-item">
-                <span class="legend-color" style="background: #4CAF50"></span>
-                Talleres
-            </span>
-            <span class="legend-item">
-                <span class="legend-color" style="background: #2196F3"></span>
-                Preparación
-            </span>
-            <span class="legend-item">
-                <span class="legend-color" style="background: #ff9800"></span>
-                Marketing
-            </span>
-        </div>
+        <section class="section">
+            <div class="container">
+                <h2 class="mb-4">Cronograma Febrero-Marzo 2025</h2>
 
-        <!-- Escala temporal -->
-        <div class="gantt-labels mb-3">
-            <span>17-22 Feb</span>
-            <span>24-29 Feb</span>
-            <span>2-7 Mar</span>
-            <span>9-14 Mar</span>
-            <span>16-17 Mar</span>
-        </div>
+                <!-- Leyenda -->
+                <div class="gantt-legend mb-4">
+                    <span class="legend-item">
+                        <span class="legend-color" style="background: #4CAF50"></span>
+                        Talleres
+                    </span>
+                    <span class="legend-item">
+                        <span class="legend-color" style="background: #2196F3"></span>
+                        Preparación
+                    </span>
+                    <span class="legend-item">
+                        <span class="legend-color" style="background: #ff9800"></span>
+                        Marketing
+                    </span>
+                </div>
 
-        <!-- Barras de actividades -->
-        <div class="gantt-container">
-            <!-- Preparación de materiales -->
-            <div class="gantt-task">
-                <div class="row align-items-center">
-                    <div class="col-md-3 mb-2 mb-md-0">
-                        <strong>Preparación de materiales</strong>
+                <!-- Escala temporal -->
+                <div class="gantt-labels mb-3">
+                    <span>17-22 Feb</span>
+                    <span>24-29 Feb</span>
+                    <span>2-7 Mar</span>
+                    <span>9-14 Mar</span>
+                    <span>16-17 Mar</span>
+                </div>
+
+                <!-- Barras de actividades -->
+                <div class="gantt-container">
+                    <!-- Preparación de materiales -->
+                    <div class="gantt-task">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 mb-2 mb-md-0">
+                                <strong>Preparación de materiales</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="gantt-bar" style="width: 40%; background: #2196F3">
+                                    <span>Lun 17 - Vie 21 Feb</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-9">
-                        <div class="gantt-bar" style="width: 40%; background: #2196F3">
-                            <span>Lun 17 - Vie 21 Feb</span>
+
+                    <!-- Convocatoria y publicidad -->
+                    <div class="gantt-task">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 mb-2 mb-md-0">
+                                <strong>Campaña de marketing</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="gantt-bar" style="width: 40%; background: #ff9800">
+                                    <span>Lun 24 - Vie 28 Feb</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Talleres presenciales -->
+                    <div class="gantt-task">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 mb-2 mb-md-0">
+                                <strong>Talleres presenciales</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="gantt-bar" style="width: 60%; background: #4CAF50">
+                                    <span>Lun 2 Mar - Sáb 15 Mar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seguimiento y evaluación (Corregido) -->
+                    <div class="gantt-task">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 mb-2 mb-md-0">
+                                <strong>Seguimiento post-taller</strong>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="gantt-bar" style="width: 30%; background: #9c27b0">
+                                    <span>Lun 16 Mar - Mar 17 Mar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detalles del cronograma -->
+                    <div class="mt-4">
+                        <h5>Detalles de ejecución:</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h6><i class="bi bi-calendar-week"></i> Fechas clave</h6>
+                                        <ul class="list-unstyled">
+                                            <li>✅ Lanzamiento: 17 Feb</li>
+                                            <li>📢 Inscripciones: 24-28 Feb</li>
+                                            <li>🌱 Talleres: 2-15 Mar</li>
+                                            <li>📊 Informe final: 17 Mar</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6><i class="bi bi-info-circle"></i> Consideraciones</h6>
+                                        <ul>
+                                            <li>Días no hábiles: Domingos</li>
+                                            <li>Horario: 10:00 - 14:00 hrs</li>
+                                            <li>Lugar: Aldunate</li>
+                                            <li>Escalabilidad: Talleres Online. Talleres a solicitud para grupos
+                                                definidos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Convocatoria y publicidad -->
-            <div class="gantt-task">
-                <div class="row align-items-center">
-                    <div class="col-md-3 mb-2 mb-md-0">
-                        <strong>Campaña de marketing</strong>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="gantt-bar" style="width: 40%; background: #ff9800">
-                            <span>Lun 24 - Vie 28 Feb</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Talleres presenciales -->
-            <div class="gantt-task">
-                <div class="row align-items-center">
-                    <div class="col-md-3 mb-2 mb-md-0">
-                        <strong>Talleres presenciales</strong>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="gantt-bar" style="width: 60%; background: #4CAF50">
-                            <span>Lun 2 Mar - Sáb 15 Mar</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seguimiento y evaluación (Corregido) -->
-<div class="gantt-task">
-    <div class="row align-items-center">
-        <div class="col-md-3 mb-2 mb-md-0">
-            <strong>Seguimiento post-taller</strong>
-        </div>
-        <div class="col-md-9">
-            <div class="gantt-bar" style="width: 30%; background: #9c27b0">
-                <span>Lun 16 Mar - Mar 17 Mar</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <!-- Detalles del cronograma -->
-        <div class="mt-4">
-            <h5>Detalles de ejecución:</h5>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h6><i class="bi bi-calendar-week"></i> Fechas clave</h6>
-                            <ul class="list-unstyled">
-                                <li>✅ Lanzamiento: 17 Feb</li>
-                                <li>📢 Inscripciones: 24-28 Feb</li>
-                                <li>🌱 Talleres: 2-15 Mar</li>
-                                <li>📊 Informe final: 17 Mar</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6><i class="bi bi-info-circle"></i> Consideraciones</h6>
-                            <ul>
-                                <li>Días no hábiles: Domingos</li>
-                                <li>Horario: 10:00 - 14:00 hrs</li>
-                                <li>Lugar: Aldunate</li>
-                                <li>Escalabilidad: Talleres Online. Talleres a solicitud para grupos definidos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
-<!-- Footer -->
-<footer class="bg-dark text-white py-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="mb-1">© 2025 Proyecto Talleres Semillas del Futuro</p>
-                <p class="mb-0">
-                    Creado por: 
-                    <span class="fw-bold">Liset Nahuel</span> y 
-                    <span class="fw-bold">Adriana Figueroa</span>
-                </p>
-                <p class="mt-2">
-                    <small>
-                        Contacto: 
-                        <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
-                            vibraverdearaucania@gmail.com
-                        </a>
-                    </small>
-                </p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-1">© 2025 Proyecto Talleres Semillas del Futuro</p>
+                    <p class="mb-0">
+                        Creado por:
+                        <span class="fw-bold">Liset Nahuel</span> y
+                        <span class="fw-bold">Adriana Figueroa</span>
+                    </p>
+                    <p class="mt-2">
+                        <small>
+                            Contacto:
+                            <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
+                                vibraverdearaucania@gmail.com
+                            </a>
+                        </small>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Gráfico de ganancias
@@ -419,7 +462,7 @@ Promoción: Los kits actúan como una forma de publicidad para futuros talleres.
                 scales: {
                     y: {
                         ticks: {
-                            callback: function(value) {
+                            callback: function (value) {
                                 return '$' + value.toLocaleString('es-CL');
                             }
                         }
@@ -429,4 +472,5 @@ Promoción: Los kits actúan como una forma de publicidad para futuros talleres.
         });
     </script>
 </body>
+
 </html>
