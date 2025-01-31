@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Vivo: Coleccionismo Sostenible</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header-img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card {
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .navbar-brand {
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Paleta de colores actualizada */
+        :root {
+            --color-primary: #8B7355; /* Marrón vintage */
+            --color-secondary: #e6e6fa; /* Beige claro */
+            --color-accent: #c8677f;  /* Marrón oscuro */ 
+            --color-background: #e8d8c7; /* Beige claro para fondos */
+            --color-text: #38000e; /* Gris oscuro para texto */
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            /* Sombra suave y difuminada */
+        }
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+
+        .navbar-dark.bg-dark {
+            background-color: var(--color-accent) !important;
+        }
+
+        .card {
+            background-color: var(--color-secondary);
+            border: 1px solid var(--color-primary);
+        }
+
+        .card-title {
+            color: var(--color-accent);
+        }
+
+        .gantt-bar {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+        }
+
+        .gantt-legend {
+            background-color: var(--color-secondary);
+        }
+
+        .footer {
+            background-color: var(--color-accent);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand" href="#">Tiempo Vivo: Coleccionismo Sostenible</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container-fluid p-0 position-relative">
+        <img src="https://img.freepik.com/fotos-premium/articulos-antiguos-estanterias-madera_337384-197044.jpg?w=1380"
+            class="w-100 header-img" alt="Objetos vintage">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-75">
+            <h6 class="display-6 fw-bold text-shadow">Tiempo Vivo: Coleccionismo Sostenible</h6>
+            <p class="lead fw-bold text-shadow">
+                Aprende a rescatar, restaurar y reinventar objetos olvidados con talleres prácticos y herramientas de IA.
+                <br>¡Conecta con el pasado y construye un futuro sostenible!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Talleres Section -->
+        <section class="section">
+            <h2 class="mb-4 text-center">Próximos Talleres Presenciales</h2>
+            <div class="row g-4">
+                <!-- Taller 1: Identificación de Objetos con IA -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/fotos-premium/mujer-joven-madura-tomando-fotos-joyas-collares-hechas-mano-casa-lugar-trabajo-taller-tableta-moderna-actividad-ocio-pasatiempo-interior-concepto-estilo-vida-moderno-negocios-linea_425263-6906.jpg?w=996"
+                            class="card-img-top" alt="Identificación de Objetos">
+                            <div class="card-body">
+                                <h5 class="card-title">Identificación de Objetos con IA</h5>
+                                <p class="card-text">
+                                    Descubre el valor oculto de tus objetos antiguos usando herramientas de IA. Aprenderás a: 
+                                    <br>- Escanear y catalogar piezas con apps especializadas (Google Lens, ChatGPT personalizado)
+                                    <br>- Crear fichas digitales con historias verificadas
+                                    <br>- Identificar materiales y épocas de fabricación
+                                    <br><em>Trae 1-2 objetos de tu casa para analizar en vivo.</em>
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Duración:</strong> 2 horas</li>
+                                    <li><strong>Costo:</strong> $10.000 (incluye acceso a base de datos local por 1 mes)</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Taller 2: Restauración Sostenible -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/foto-gratis/artista-femenina-su-asistente-delantales-pintando-silla-vintage-pincel-taller_613910-18234.jpg?t=st=1738291609~exp=1738295209~hmac=ac346017476581358cd2805b4e78d76304c153284fd6e5b631c53b126d106ddd&w=996"
+                            class="card-img-top" alt="Restauración Sostenible">
+                            <div class="card-body">
+                                <h5 class="card-title">Restauración Sostenible</h5>
+                                <p class="card-text">
+                                    Técnicas profesionales para restaurar sin dañar el medio ambiente:
+                                    <br>- Lijado ecológico con materiales reciclados
+                                    <br>- Barnices no tóxicos (cera de abejas local)
+                                    <br>- Reparación de muebles pequeños (arcos, cajones, marcos)
+                                    <br><em>Materiales incluidos: llevarás tu objeto restaurado a casa.</em>
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Duración:</strong> 2.5 horas</li>
+                                    <li><strong>Costo:</strong> $10.000 (kit básico de restauración incluido)</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Taller 3: Upcycling Colectivo -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/fotos-premium/companeros-clase-crean-mosaico-gratitud-usando-ph_1022456-72823.jpg?w=996"
+                            class="card-img-top" alt="Upcycling Colectivo">
+                            <div class="card-body">
+                                <h5 class="card-title">Upcycling Colectivo</h5>
+                                <p class="card-text">
+                                    Transforma objetos rotos o abandonados en piezas únicas:
+                                    <br>- Diseño colaborativo con elementos modernos y vintage
+                                    <br>- Técnicas de narrativa visual para redes sociales
+                                    <br>- Uso de realidad aumentada para visualizar proyectos
+                                    <br><em>Trabajarás en equipo para crear una instalación grupal.</em>
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Duración:</strong> 3 horas</li>
+                                    <li><strong>Costo:</strong> $10.000 (acceso a biblioteca comunitaria de herramientas)</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+<!-- Sección Presupuesto -->
+<section class="section">
+    <h2 class="mb-4">📊 Presupuesto Estimado (CLP - Costos Regionales)</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Costos Mensuales</h5>
+                    <ul class="list-unstyled">
+                        <li>Materiales restauración: $180.000</li>
+                        <li>Licencias IA básicas: $50.000</li>
+                        <li>Alquiler Casa Aldunate: $150.000</li>
+                        <li>Personal: $850.000</li>
+                        <li class="fw-bold">Total: $1.230.000</li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5>Ingresos (20 personas/taller)</h5>
+                    <ul class="list-unstyled">
+                        <li>3 talleres: $1.200.000</li>
+                        <li>***Comisión ventas éticas (5%): $75.000</li>
+                        <li>Sponsors locales: $200.000</li>
+                        <li class="fw-bold">Total: $1.475.000</li>
+                    </ul>
+                    <small>*Costo taller: $20.000 por persona<br>
+                    *Comisión solo aplica a objetos con historia verificada</small>
+                </div>
+                <div class="card-body">
+                    <h6>Insumos clave:</h6>
+                    <ul>
+                        <li>Barnices ecológicos</li>
+                        <li>Herramientas básicas</li>
+                        <li>**Kits de restauración</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card-body">
+                <h6>**¿Qué son los kits?</h6>
+                    <ul class="list-unstyled">
+                        <li><small>Un kit práctico y económico diseñado para principiantes en restauración, enfocado en objetos pequeños como marcos de fotos, cajas de madera o relojes antiguos. Es ideal para participantes del workshop que quieran continuar practicando en casa o iniciar un emprendimiento sostenible. Enfoque Local:
+Materiales y herramientas producidos en La Araucanía, apoyando la economía circular.
+                           Incluye todo lo necesario para restaurar objetos pequeños en casa, sin requerir experiencia previa.
+                            Materiales ecológicos y reutilizables, alineados con la filosofía del workshop.
+                            Los participantes pueden comprar recargas de materiales en ferias locales o el Mercado Municipal.</small></li>
+                        
+                    </ul>
+                
+            </div>
+            <div class="card-body">
+                <h6>***¿Qué es la "Comisión de Ventas Éticas (5%)"?</h6>
+                    <ul class="list-unstyled">
+                        <li><small> Es un pequeño porcentaje que se cobra sobre las ventas de objetos restaurados o intercambiados durante la feria o talleres. Este dinero no es para lucrar, sino para apoyar iniciativas sostenibles y comunitarias.
+                            Si alguien vende un objeto restaurado durante la feria, se aplica un 5% sobre el precio de venta.
+                            Esa comisión se usa para: Financiar talleres gratuitos para comunidades vulnerables.Restaurar mobiliario público 
+                         Comprar materiales para futuros proyectos sostenibles.
+                    ¿Por qué es importante?
+                            Transparencia: Los participantes saben que su venta ayuda a la comunidad.
+                         Sostenibilidad: El dinero se reinvierte en proyectos que benefician a todos.
+                          Ética: Evita la especulación y promueve el comercio justo.</small></li>
+                        
+                    </ul>
+                
+            </div>
+            
+        </div>
+        
+        <div class="col">
+            <div class="card">
+                <img src="https://img.freepik.com/foto-gratis/articulos-antiguos-alto-angulo-mercado-segunda-mano_23-2149338435.jpg?t=st=1738339391~exp=1738342991~hmac=9801c4e23ad3130baea2a8743d3784f47639a33d77b94395f20b2d1b86eed195&w=360" 
+                     class="card-img-top h-50" alt="Materiales restauración">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Equipo Humano -->
+<section class="section">
+    <h2 class="mb-4">✅ Equipo Especializado</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Rol</th>
+                <th>Perfil</th>
+                <th>Costo Mensual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Especialista en restauración</td>
+                <td>Técnico en conservación patrimonial con experiencia local</td>
+                <td>$550.000</td>
+            </tr>
+            <tr>
+                <td>Facilitador IA/digital</td>
+                <td>Ingeniero en informática con enfoque en herramientas accesibles</td>
+                <td>$450.000</td>
+            </tr>
+            <tr>
+                <td>Coordinador logístico</td>
+                <td>Gestión de espacios y proveedores regionales</td>
+                <td>$300.000</td>
+            </tr>
+            <tr class="table-secondary">
+                <td>Community Manager</td>
+                <td>Estudiante último año diseño UA Temuco</td>
+                <td>$150.000</td>
+            </tr>
+            <tr class="table-success">
+                <td>Voluntarios</td>
+                <td>Estudiantes museología UFRO + clubes coleccionistas</td>
+                <td>$0</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<!-- Sección Cronograma -->
+<section class="section">
+    <div class="container">
+        <h2 class="mb-4">Cronograma Febrero-Marzo 2025</h2>
+        <div class="gantt-legend mb-4">
+            <span class="legend-item">
+                <span class="legend-color" style="background: #8B7355"></span>
+                Talleres Presenciales
+            </span>
+            <span class="legend-item">
+                <span class="legend-color" style="background: #A0522D"></span>
+                Reclutamiento
+            </span>
+            <span class="legend-item">
+                <span class="legend-color" style="background: #D2B48C"></span>
+                Producción Feria
+            </span>
+        </div>
+
+        <div class="gantt-labels mb-3">
+            <span>3-8 Feb</span>
+            <span>10-15 Feb</span>
+            <span>17-22 Feb</span>
+            <span>24-28 Feb</span>
+            <span>3-8 Mar</span>
+        </div>
+
+        <div class="gantt-container">
+            <!-- Fase 1 -->
+            <div class="gantt-task">
+                <div class="row align-items-center">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <strong>Preparación de talleres</strong>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="gantt-bar" style="width: 30%; background: #8B7355">
+                            <span>Lun 3 - Vie 7 Feb</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 2 -->
+            <div class="gantt-task">
+                <div class="row align-items-center">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <strong>Reclutamiento participantes</strong>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="gantt-bar" style="width: 40%; background: #A0522D">
+                            <span>Lun 10 - Sáb 15 Feb</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 3 -->
+            <div class="gantt-task">
+                <div class="row align-items-center">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <strong>Ejecución talleres</strong>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="gantt-bar" style="width: 60%; background: #8B7355">
+                            <span>Lun 17 - Sáb 22 Feb</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 4 -->
+            <div class="gantt-task">
+                <div class="row align-items-center">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <strong>Producción feria</strong>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="gantt-bar" style="width: 50%; background: #D2B48C">
+                            <span>Lun 24 - Vie 28 Feb</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Feria de Intercambio -->
+        <section class="section bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Mini Feria de Intercambio</h2>
+                <p class="lead text-center mb-5">
+                    Al finalizar los talleres, organizamos una **mini feria indoor** donde los participantes pueden explorar, intercambiar y adquirir objetos vintage y antiguos. 
+                    Este evento es producido íntegramente por nuestro equipo, con el objetivo de fomentar el coleccionismo sostenible.
+                </p>
+
+                <!-- Detalles de la producción -->
+                <div class="row g-4">
+                    <!-- Producción 1: Planificación -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Planificación</h5>
+                                <p class="card-text">
+                                    Organizamos todo, desde la selección de objetos hasta la logística del evento. 
+                                    Incluye diseño de stands, horarios y actividades complementarias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producción 2: Objetos -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Objetos</h5>
+                                <p class="card-text">
+                                    Ofrecemos objetos vintage, antigüedades y coleccionables. 
+                                    Todos los objetos son seleccionados y documentados por nuestro equipo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producción 3: Experiencia -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Experiencia</h5>
+                                <p class="card-text">
+                                    Creamos un ambiente acogedor con actividades interactivas, charlas y demostraciones en vivo. 
+                                    ¡Una experiencia única para los participantes!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="text-center mt-5">
+                    <h4>Detalles del Evento</h4>
+                    <p class="mb-3">
+                        Fecha: Sábado 22 de Marzo 2025<br>
+                        Horario: 10:00 - 16:00 hrs<br>
+                        Lugar: Casa Aldunate, Temuco
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-1">© 2025 Tiempo Vivo: Coleccionismo Sostenible</p>
+                    <p class="mb-0">
+                        Creado por:
+                        <span class="fw-bold">Liset Nahuel y Adriana Figueroa</span>
+                    </p>
+                    <p class="mt-2">
+                        <small>
+                            Contacto:
+                            <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
+                                vibraverdearaucania@gmail.com
+                            </a>
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

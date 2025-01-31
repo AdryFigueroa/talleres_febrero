@@ -1,536 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talleres Semillas La Araucanía</title>
+    <title>Proyectos Sostenibles - Nahuel & Figueroa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        .project-card {
+            transition: transform 0.3s;
+            min-height: 450px;
         }
-
-        .header-img {
-            height: 300px;
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .team-photo {
+            width: 200px;
+            height: 200px;
             object-fit: cover;
+            border: 3px solid #ff00cc;
         }
-
-        .section {
-            padding: 60px 0;
-            border-bottom: 1px solid #eee;
+        .highlight-section {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
         }
-
-        .card {
-            transition: transform .2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .navbar-brand {
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Estilos mejorados para el cronograma */
-        .gantt-container {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        .gantt-task {
-            margin: 15px 0;
-            position: relative;
-        }
-
-        .gantt-bar {
-            height: 40px;
-            border-radius: 5px;
-            background: linear-gradient(90deg, #4CAF50, #45a049);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .gantt-bar:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .gantt-labels {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .gantt-legend {
-            margin-top: 20px;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-
-        .legend-item {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .legend-color {
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 5px;
-            border-radius: 3px;
-        }
-
-        .text-shadow {
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            /* Sombra suave y difuminada */
-        }
-
-        .h-50 {
-            max-height: 500px !important;
-        }
+        .accordion-button:not(.collapsed) {
+    background-color: #e8f5e9 !important;
+    color: #009708 !important;
+}
+.social-links a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+.bg-info {
+    --bs-bg-opacity: 1;
+    background-color: #E91E63 !important;
+}
+.text-info {
+    --bs-text-opacity: 1;
+    color: #E91E63 !important;
+}
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container d-flex justify-content-center">
-            <a class="navbar-brand" href="#">Propuesta 30 de enero de 2025</a>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets\img\vibraverde.webp" alt="Logo" width="40" class="d-inline-block align-text-top me-2">
+                Creativas. Una presentación para Miguel Cortés.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <!-- Header con Introducción -->
-    <header class="container-fluid p-0 position-relative">
-        <img src="https://img.freepik.com/fotos-premium/planta-crece-suelo-enfoque-selectivo_73944-26506.jpg?w=1380"
-            class="w-100 header-img" alt="Semillas">
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-75">
+    
 
-            <h6 class="display-6 fw-bold text-shadow ">Talleres Comunitarios <br>para Regenerar Espacios Verdes</h6>
-            <p class="lead fw-bold text-shadow">
-                Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y accesibles.
-                <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
-            </p>
-
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Talleres Section -->
-        <section class="section">
-            <h2 class="mb-4 text-center">Próximos Talleres Presenciales</h2>
-            <div class="row g-4">
-                <!-- Taller 1: Banco de Semillas -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/manos-sosteniendo-cosecha-grano-fresco_53876-139753.jpg?t=st=1738263782~exp=1738267382~hmac=035a9727b63d03371c647bb7af6f32afc6df99ae5a603f2ec72eabf587e40935&w=996"
-                            class="card-img-top" alt="Banco de Semillas">
-                        <div class="card-body">
-                            <h5 class="card-title">Banco de Semillas</h5>
-                            <p class="card-text">Aprende a recolectar, secar y almacenar semillas nativas de La
-                                Araucanía.</p>
-                            <ul class="list-unstyled">
-                                <li><strong>Duración:</strong> 2 horas</li>
-                                <li><strong>Costo:</strong> $10.000 por persona</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Taller 2: Huertos Familiares -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img
-                            src="https://img.freepik.com/foto-gratis/hermanos-jovenes-plantando-cultivos-casa_23-2148831403.jpg?t=st=1738264609~exp=1738268209~hmac=aa1edad4954b0024826545f3e4141534a79d02f7dfe302dac9c17f33233732fa&w=996">
-                        <div class="card-body">
-                            <h5 class="card-title">Huertos Familiares</h5>
-                            <p class="card-text">Crea huertos urbanos en botellas recicladas con plantas nativas.</p>
-                            <ul class="list-unstyled">
-                                <li><strong>Duración:</strong> 2.5 horas</li>
-                                <li><strong>Costo:</strong> $10.000 por persona</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Taller 3: Cápsulas Verdes -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/hierbas-colocadas-manos_1150-12585.jpg?t=st=1738264822~exp=1738268422~hmac=dcb12f551b3670dd557a102ab06f18fe8418638e530290f48f1f23b36c43b850&w=996"
-                            class="card-img-top" alt="Cápsulas Verdes">
-                        <div class="card-body">
-                            <h5 class="card-title">Cápsulas Verdes</h5>
-                            <p class="card-text">Elabora esferas de arcilla con semillas nativas para reforestar
-                                espacios públicos.</p>
-                            <ul class="list-unstyled">
-                                <li><strong>Duración:</strong> 3 horas</li>
-                                <li><strong>Costo:</strong> $10.000 por persona</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Presupuesto Ajustado -->
-        <section class="section">
-            <h2 class="mb-4">📊 Presupuesto Estimado (CLP)</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Costos Mensuales</h5>
-                            <ul class="list-unstyled">
-                                <li>Materiales: $100.000</li>
-                                <li>Personal: $600.000</li>
-                                <li>Alquiler local: $50.000</li>
-                                <li class="fw-bold">Total: $750.000</li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <h5>Ingresos (25 personas/taller)</h5>
-                            <ul class="list-unstyled">
-                                <li>3 talleres/mes: $750.000</li>
-                                <li>Venta de kits**: $150.000</li>
-                                <li class="fw-bold">Total: $900.000</li>
-                            </ul>
-                        </div>
-                        
-                    
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-
-                            <li class="list-unstyled"><small>**¿Qué son los kits?
-                                    Los kits son paquetes de materiales que se entregan a los participantes de los
-                                    talleres para que puedan replicar las actividades en sus hogares o comunidades. En
-                                    este caso, los kits están relacionados con los talleres de semillas nativas y
-                                    biodiversidad.
-
-                                    Contenido típico de un kit:
-                                    Semillas nativas: Variedades locales como maqui, avellano chileno, o hierbas
-                                    medicinales.
-
-                                    Materiales para siembra: Tierra fértil, arcilla (para cápsulas verdes), y
-                                    recipientes reciclados.
-
-                                    Guía práctica: Instrucciones paso a paso para sembrar y cuidar las plantas.
-
-                                    Herramientas básicas: Palitas pequeñas, regaderas manuales, o etiquetas para
-                                    identificar las plantas.
-
-                                    ¿Por qué vender kits?
-                                    Ingresos adicionales: Genera una fuente de ingresos extra para el proyecto.
-
-                                    Sostenibilidad: Permite que los participantes continúen el trabajo en casa.
-
-                                    Escalabilidad: Los kits pueden venderse incluso a personas que no asistieron a los
-                                    talleres.
-
-                                    Promoción: Los kits actúan como una forma de publicidad para futuros
-                                    talleres.</small></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="https://img.freepik.com/fotos-premium/jardineria-siembra-casa-hombre-sembrando-semillas-caja-germinacion_214995-2835.jpg?w=360"
-                            class="card-img-top h-50" alt="kits">
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Equipo Humano -->
-        <section class="section">
-            <h2 class="mb-4">✅ Equipo Requerido</h2>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Rol</th>
-                        <th>Descripción</th>
-                        <th>Costo Mensual</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Facilitador ambiental</td>
-                        <td>Guía los talleres técnicos</td>
-                        <td>$400.000</td>
-                    </tr>
-                    <tr>
-                        <td>Asistente logístico</td>
-                        <td>Gestión de materiales</td>
-                        <td>$200.000</td>
-                    </tr>
-                    <tr class="table-success">
-                        <td>Voluntarios</td>
-                        <td>Estudiantes mayor de edad o agrupaciones</td>
-                        <td>$0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-
-
-        <!-- Sección Cronograma Febrero-Marzo 2025 -->
-        <section class="section">
-            <div class="container">
-                <h2 class="mb-4">Cronograma Febrero-Marzo 2025</h2>
-
-                <!-- Leyenda -->
-                <div class="gantt-legend mb-4">
-                    <span class="legend-item">
-                        <span class="legend-color" style="background: #4CAF50"></span>
-                        Talleres
-                    </span>
-                    <span class="legend-item">
-                        <span class="legend-color" style="background: #2196F3"></span>
-                        Preparación
-                    </span>
-                    <span class="legend-item">
-                        <span class="legend-color" style="background: #ff9800"></span>
-                        Marketing
-                    </span>
-                </div>
-
-                <!-- Escala temporal -->
-                <div class="gantt-labels mb-3">
-                    <span>17-22 Feb</span>
-                    <span>24-29 Feb</span>
-                    <span>2-7 Mar</span>
-                    <span>9-14 Mar</span>
-                    <span>16-17 Mar</span>
-                </div>
-
-                <!-- Barras de actividades -->
-                <div class="gantt-container">
-                    <!-- Preparación de materiales -->
-                    <div class="gantt-task">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 mb-2 mb-md-0">
-                                <strong>Preparación de materiales</strong>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="gantt-bar" style="width: 40%; background: #2196F3">
-                                    <span>Lun 17 - Vie 21 Feb</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Convocatoria y publicidad -->
-                    <div class="gantt-task">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 mb-2 mb-md-0">
-                                <strong>Campaña de marketing</strong>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="gantt-bar" style="width: 40%; background: #ff9800">
-                                    <span>Lun 24 - Vie 28 Feb</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Talleres presenciales -->
-                    <div class="gantt-task">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 mb-2 mb-md-0">
-                                <strong>Talleres presenciales</strong>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="gantt-bar" style="width: 60%; background: #4CAF50">
-                                    <span>Lun 2 Mar - Sáb 15 Mar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Seguimiento y evaluación (Corregido) -->
-                    <div class="gantt-task">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 mb-2 mb-md-0">
-                                <strong>Seguimiento post-taller</strong>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="gantt-bar" style="width: 30%; background: #9c27b0">
-                                    <span>Lun 16 Mar - Mar 17 Mar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Detalles del cronograma -->
-                    <div class="mt-4">
-                        <h5>Detalles de ejecución:</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card mb-3">
-                                    <div class="card-body">
-                                        <h6><i class="bi bi-calendar-week"></i> Fechas clave</h6>
-                                        <ul class="list-unstyled">
-                                            <li>✅ Lanzamiento: 17 Feb</li>
-                                            <li>📢 Inscripciones: 24-28 Feb</li>
-                                            <li>🌱 Talleres: 2-15 Mar</li>
-                                            <li>📊 Informe final: 17 Mar</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h6><i class="bi bi-info-circle"></i> Consideraciones</h6>
-                                        <ul>
-                                            <li>Días no hábiles: Domingos</li>
-                                            <li>Horario: 10:00 - 14:00 hrs</li>
-                                            <li>Lugar: Aldunate</li>
-                                            <li>Escalabilidad: Talleres Online. Talleres a solicitud para grupos
-                                                definidos</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- Sección Producción del Evento -->
-<section class="section bg-light py-5">
+    <!-- Equipo -->
+<section id="team" class="py-4">
     <div class="container">
-        <h2 class="text-center mb-4">Otras ideas asociadas: Producción de la Mini Feria Indoor</h2>
-        <p class="lead text-center mb-5">
-            Al finalizar los talleres, organizamos una **mini feria indoor** donde los participantes pueden explorar y adquirir productos relacionados con huertos, semillas nativas y sostenibilidad. 
-            Este evento es producido íntegramente por nuestro equipo, con el objetivo de fomentar la biodiversidad y apoyar a la comunidad.
-        </p>
-
-        <!-- Detalles de la producción -->
-        <div class="row g-4">
-            <!-- Producción 1: Planificación -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Planificación</h5>
-                        <p class="card-text">
-                            Organizamos todo, desde la selección de productos hasta la logística del evento. 
-                            Incluye diseño de stands, horarios y actividades complementarias.
-                        </p>
+        <h2 class="text-center mb-5">Quienes Somos</h2>
+        <div class="row">
+            <!-- Sección Liset Nahuel -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-success shadow-lg">
+                    <!-- Header con Título y Subtítulo -->
+                    <div class="card-header bg-success text-white text-center py-2">
+                        <h3 class="mb-0">Liset Nahuel</h3>
+                        
                     </div>
+
+                    <!-- Cuerpo de la Tarjeta -->
+                    <div class="card-body">
+                        <!-- Foto y Presentación -->
+                        <div class="text-center mb-4 ">
+                            <img src="assets/img/liset.png" width="200" alt="Liset Nahuel" 
+                                 class="img-fluid rounded-circle border border-success mb-3">
+                            <h4 class="text-success">¡Hola!</h4>
+                            <p class="fst-italic text-muted">"Una mujer dinámica, extrovertida y empoderada, con energía contagiosa y pasión por conectar con las personas."</p>
+                        </div>
+
+                        <!-- Acordeón con Detalles -->
+                        <div class="accordion" id="lisetAccordion">
+                            <!-- Sección 1: Quién Soy -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-light text-success" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#quienSoy">
+                                        <i class="bi bi-person-fill me-2"></i>¿Quién Soy?
+                                    </button>
+                                </h2>
+                                <div id="quienSoy" class="accordion-collapse collapse show" 
+                                     data-bs-parent="#lisetAccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Soy mamá, activista social, defensora de los derechos de la infancia y el medio ambiente, y una líder comprometida con el crecimiento de mi comunidad. Mi experiencia como candidata a Concejal por Temuco me permitió fortalecer mi capacidad para comunicar, liderar y movilizar a las personas en torno a causas importantes. Hoy, estoy enfocada en aportar mi voz y mi experiencia a proyectos innovadores, comerciales y sociales que busquen generar un impacto real.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección 2: Por Qué Elegirme -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-light text-success" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#porQueElegirme">
+                                        <i class="bi bi-star-fill me-2"></i>¿Por Qué Elegirme?
+                                    </button>
+                                </h2>
+                                <div id="porQueElegirme" class="accordion-collapse collapse" 
+                                     data-bs-parent="#lisetAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Dinamismo y Versatilidad:</strong> Me adapto fácilmente a diferentes contextos y audiencias. Mi estilo comunicativo es fresco, cercano y auténtico.</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Empoderamiento y Liderazgo:</strong> Sé cómo inspirar a otros, movilizar comunidades y alinear esfuerzos hacia objetivos comunes.</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Cercanía y Queribilidad:</strong> Mi estilo es cálido, humano y cercano. Soy una voz confiable y querible.</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Visión Comercial y Comunicacional:</strong> Transmito mensajes que no solo inspiran, sino que también generan resultados concretos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección 3: Mi Enfoque -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-light text-success" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#miEnfoque">
+                                        <i class="bi bi-bullseye me-2"></i>Mi Enfoque
+                                    </button>
+                                </h2>
+                                <div id="miEnfoque" class="accordion-collapse collapse" 
+                                     data-bs-parent="#lisetAccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Creo firmemente en el poder del emprendimiento para transformar comunidades. Estoy lista para ser la voz que promueva iniciativas comerciales que generen impacto social y económico, aportando mi experiencia y mi capacidad para conectar con diversos públicos. Mi enfoque siempre va más allá de vender un producto o servicio; busco transmitir valores, inspirar confianza y construir relaciones auténticas con la audiencia.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
 
-            <!-- Producción 2: Productos -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
+            <!-- Sección Adriana Figueroa -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-info shadow-lg">
+                    <!-- Header con Título y Subtítulo -->
+                    <div class="card-header bg-info text-white text-center py-2">
+                        <h4 class="text-light">Adriana Figueroa</h4>
+                            </div>
+
+                    <!-- Cuerpo de la Tarjeta -->
                     <div class="card-body">
-                        <h5 class="card-title">Productos</h5>
-                        <p class="card-text">
-                            Ofrecemos semillas nativas, kits de huertos, herramientas ecológicas y más. 
-                            Todos los productos son seleccionados y producidos por nuestro equipo.
-                        </p>
+                        <!-- Foto y Presentación -->
+                        <div class="text-center mb-4">
+                            <img src="assets\img\Adry.png" width="200" alt="Adriana Figueroa" 
+                                 class="img-fluid rounded-circle border border-info mb-3">
+                            <h4 class="text-info">¡Hola!</h4>
+                            <p class="fst-italic text-muted">"Estoy donde la tecnología y el arte se encuentran para dar vida a proyectos que inspiran"</p>
+                        </div>
+
+                        <!-- Acordeón con Detalles -->
+                        <div class="accordion" id="adrianaAccordion">
+                            <!-- Sección 1: Mi Historia -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-light text-info" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#historia">
+                                        <i class="bi bi-journal-richtext me-2"></i>Mi Viaje
+                                    </button>
+                                </h2>
+                                <div id="historia" class="accordion-collapse collapse show" 
+                                     data-bs-parent="#adrianaAccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Soy una creadora digital neurodivergente y estoy donde la tecnología y el arte se encuentran para dar vida a proyectos que inspiran. Desde pequeña, he sentido una fascinación por dos mundos aparentemente opuestos: la lógica precisa de las computadoras y la libertad expresiva del arte. Esta dualidad me ha permitido desarrollar una visión única, donde cada línea de código tiene un toque de creatividad y cada diseño cuenta una historia.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección 2: Cómo Creo -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-light text-info" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#crear">
+                                        <i class="bi bi-magic me-2"></i>Mi Alquimia
+                                    </button>
+                                </h2>
+                                <div id="crear" class="accordion-collapse collapse" 
+                                     data-bs-parent="#adrianaAccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Transformo lo invisible en tangible:</strong><br>
+                                            ◍ Las ideas en experiencias digitales<br>
+                                            ◍ Los datos en historias que conmueven<br>
+                                            ◍ Los problemas técnicos en soluciones elegantes<br><br>
+                                            Mi taller es ese espacio donde el arte abraza a la tecnología para dar vida a proyectos que <span class="text-info">no sólo funcionan</span>, sino que <span class="text-info">inspiran</span>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección 3: Por Qué Elegirme -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-light text-info" type="button" 
+                                            data-bs-toggle="collapse" data-bs-target="#elegirme">
+                                        <i class="bi bi-puzzle-fill me-2"></i>Lo Que Ofrezco
+                                    </button>
+                                </h2>
+                                <div id="elegirme" class="accordion-collapse collapse" 
+                                     data-bs-parent="#adrianaAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="text-center mb-3">
+                                                    <i class="bi bi-hexagon text-info display-6"></i>
+                                                    <p class="small mt-2">Visión técnica con sensibilidad artística</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text-center mb-3">
+                                                    <i class="bi bi-translate text-info display-6"></i>
+                                                    <p class="small mt-2">Puente entre lo humano y lo digital</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Soy esa fuerza silenciosa que:<br>
+                                            <span class="text-info">▸</span> Convierte caos en sistemas armoniosos<br>
+                                            <span class="text-info">▸</span> Da voz visual a las ideas abstractas<br>
+                                            <span class="text-info">▸</span> Teje redes digitales con calidez humana
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    
                 </div>
             </div>
-
-            <!-- Producción 3: Experiencia -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Experiencia</h5>
-                        <p class="card-text">
-                            Creamos un ambiente acogedor con actividades interactivas, charlas y demostraciones en vivo. 
-                            ¡Una experiencia única para los participantes!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Información adicional -->
-        <div class="text-center mt-5">
-            <h4>Detalles del Evento</h4>
-            <p class="mb-3">
-                Fecha: Sábado 22 de Marzo 2025<br>
-                Horario: 10:00 - 16:00 hrs<br>
-                Lugar: Adunate
-            </p>
-            
         </div>
     </div>
 </section>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-1">© 2025 Proyecto Talleres Semillas del Futuro</p>
-                    <p class="mb-0">
-                        Creado por:
-                        <span class="fw-bold">Liset Nahuel</span> y
-                        <span class="fw-bold">Adriana Figueroa</span>
-                    </p>
-                    <p class="mt-2">
-                        <small>
-                            Contacto:
-                            <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
-                                vibraverdearaucania@gmail.com
-                            </a>
-                        </small>
-                    </p>
+
+    <!-- Proyectos -->
+    <section id="projects" class="highlight-section">
+        <div class="container py-2">
+            <h2 class="text-center mb-5">Nuestras Ideas Febrero 2025</h2>
+            <div class="row g-4">
+                <!-- Proyecto Medio Ambiente -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <img src="https://img.freepik.com/foto-gratis/gente-construyendo-su-propio-arreglo-seco_23-2149697706.jpg?t=st=1738351052~exp=1738354652~hmac=b4f100b7cd0064996af5946f69672ee84a762f4e237a12cd246c8f4108433760&w=996" 
+                             class="card-img-top" alt="Taller de Medio Ambiente">
+                        <div class="card-body">
+                            <h3 class="card-title ">Talleres Comunitarios para Regenerar Espacios Verdes</h3>
+            <p class="card-text">
+                Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y accesibles.
+                <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
+            </p>
+                            <a href="medioambiental.html" class="btn btn-success">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto Coleccionismo -->
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <img src="https://img.freepik.com/foto-gratis/amigos-yendo-compras-tienda-antiguedades_23-2149525705.jpg?t=st=1738350878~exp=1738354478~hmac=03b44e67ca6d4696b86eba8484db44eb079e7280e08c45aca8cdb7a5036478fc&w=996" 
+                             class="card-img-top" alt="Taller de Coleccionismo">
+                        <div class="card-body">
+                            <h3 class="card-title">Talleres de Coleccionismo Sostenible</h3>
+            <p class="card-text">
+                Aprende a rescatar, restaurar y reinventar objetos olvidados con talleres prácticos y herramientas de IA.
+                <br>¡Conecta con el pasado y construye un futuro sostenible!
+            </p>
+                            <a href="coleccionismo.html" class="btn btn-success">Ver Proyecto</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h4>Contacto</h4>
+            <p>Email: vibraverdearaucania@gmail.com<br>
+            Tel: +56 9 8815 1695<br>
+            Temuco, Región de La Araucanía</p>
+            <p class="mb-0">© 2025 Liset Nahuel & Adriana Figueroa. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Gráfico de ganancias
-        const ctx = document.getElementById('profitChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Mes 1 (25 pers)', 'Mes 2 (30 pers)', 'Mes 3 (35 pers)'],
-                datasets: [{
-                    label: 'Ingresos por talleres',
-                    data: [750000, 900000, 1050000],
-                    backgroundColor: '#4CAF50'
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        ticks: {
-                            callback: function (value) {
-                                return '$' + value.toLocaleString('es-CL');
-                            }
-                        }
-                    }
-                }
-            }
+        // Smooth scroll para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
-
 </html>
