@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +11,46 @@
             transition: transform 0.3s;
             min-height: 450px;
         }
+
         .project-card:hover {
             transform: translateY(-10px);
         }
+
         .team-photo {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border: 3px solid #ff00cc;
         }
+
         .highlight-section {
             background-color: #f8f9fa;
             padding: 1rem 0;
         }
+
         .accordion-button:not(.collapsed) {
-    background-color: #e8f5e9 !important;
-    color: #009708 !important;
-}
-.social-links a:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-}
-.bg-info {
-    --bs-bg-opacity: 1;
-    background-color: #E91E63 !important;
-}
-.text-info {
-    --bs-text-opacity: 1;
-    color: #E91E63 !important;
-}
+            background-color: #e8f5e9 !important;
+            color: #009708 !important;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        .bg-info {
+            --bs-bg-opacity: 1;
+            background-color: #E91E63 !important;
+        }
+
+        .text-info {
+            --bs-text-opacity: 1;
+            color: #E91E63 !important;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -64,200 +73,243 @@
         </div>
     </nav>
 
-    
+
 
     <!-- Equipo -->
-<section id="team" class="py-4">
-    <div class="container">
-        <h2 class="text-center mb-5">Quienes Somos</h2>
-        <div class="row">
-            <!-- Sección Liset Nahuel -->
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 border-success shadow-lg">
-                    <!-- Header con Título y Subtítulo -->
-                    <div class="card-header bg-success text-white text-center py-2">
-                        <h3 class="mb-0">Liset Nahuel</h3>
-                        
-                    </div>
+    <section id="team" class="py-4">
+        <div class="container">
+            <h2 class="text-center mb-5">Quienes Somos</h2>
+            <div class="row">
+                <!-- Sección Liset Nahuel -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-success shadow-lg">
+                        <!-- Header con Título y Subtítulo -->
+                        <div class="card-header bg-success text-white text-center py-2">
+                            <h3 class="mb-0">Liset Nahuel</h3>
 
-                    <!-- Cuerpo de la Tarjeta -->
-                    <div class="card-body">
-                        <!-- Foto y Presentación -->
-                        <div class="text-center mb-4 ">
-                            <img src="assets/img/liset.png" width="200" alt="Liset Nahuel" 
-                                 class="img-fluid rounded-circle border border-success mb-3">
-                            <h4 class="text-success">¡Hola!</h4>
-                            <p class="fst-italic text-muted">"Una mujer dinámica, extrovertida y empoderada, con energía contagiosa y pasión por conectar con las personas."</p>
                         </div>
 
-                        <!-- Acordeón con Detalles -->
-                        <div class="accordion" id="lisetAccordion">
-                            <!-- Sección 1: Quién Soy -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button bg-light text-success" type="button" 
+                        <!-- Cuerpo de la Tarjeta -->
+                        <div class="card-body">
+                            <!-- Foto y Presentación -->
+                            <div class="text-center mb-4 ">
+                                <img src="assets/img/liset.png" width="200" alt="Liset Nahuel"
+                                    class="img-fluid rounded-circle border border-success mb-3">
+                                <h4 class="text-success">¡Hola!</h4>
+                                <p class="fst-italic text-muted">"Una mujer dinámica, extrovertida y empoderada, con
+                                    energía contagiosa y pasión por conectar con las personas."</p>
+                            </div>
+
+                            <!-- Acordeón con Detalles -->
+                            <div class="accordion" id="lisetAccordion">
+                                <!-- Sección 1: Quién Soy -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button bg-light text-success" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#quienSoy">
-                                        <i class="bi bi-person-fill me-2"></i>¿Quién Soy?
-                                    </button>
-                                </h2>
-                                <div id="quienSoy" class="accordion-collapse collapse show" 
-                                     data-bs-parent="#lisetAccordion">
-                                    <div class="accordion-body">
-                                        <p>
-                                            Soy mamá, activista social, defensora de los derechos de la infancia y el medio ambiente, y una líder comprometida con el crecimiento de mi comunidad. Mi experiencia como candidata a Concejal por Temuco me permitió fortalecer mi capacidad para comunicar, liderar y movilizar a las personas en torno a causas importantes. Hoy, estoy enfocada en aportar mi voz y mi experiencia a proyectos innovadores, comerciales y sociales que busquen generar un impacto real.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sección 2: Por Qué Elegirme -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-light text-success" type="button" 
-                                            data-bs-toggle="collapse" data-bs-target="#porQueElegirme">
-                                        <i class="bi bi-star-fill me-2"></i>¿Por Qué Elegirme?
-                                    </button>
-                                </h2>
-                                <div id="porQueElegirme" class="accordion-collapse collapse" 
-                                     data-bs-parent="#lisetAccordion">
-                                    <div class="accordion-body">
-                                        <ul class="list-unstyled">
-                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Dinamismo y Versatilidad:</strong> Me adapto fácilmente a diferentes contextos y audiencias. Mi estilo comunicativo es fresco, cercano y auténtico.</li>
-                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Empoderamiento y Liderazgo:</strong> Sé cómo inspirar a otros, movilizar comunidades y alinear esfuerzos hacia objetivos comunes.</li>
-                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Cercanía y Queribilidad:</strong> Mi estilo es cálido, humano y cercano. Soy una voz confiable y querible.</li>
-                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Visión Comercial y Comunicacional:</strong> Transmito mensajes que no solo inspiran, sino que también generan resultados concretos.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sección 3: Mi Enfoque -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-light text-success" type="button" 
-                                            data-bs-toggle="collapse" data-bs-target="#miEnfoque">
-                                        <i class="bi bi-bullseye me-2"></i>Mi Enfoque
-                                    </button>
-                                </h2>
-                                <div id="miEnfoque" class="accordion-collapse collapse" 
-                                     data-bs-parent="#lisetAccordion">
-                                    <div class="accordion-body">
-                                        <p>
-                                            Creo firmemente en el poder del emprendimiento para transformar comunidades. Estoy lista para ser la voz que promueva iniciativas comerciales que generen impacto social y económico, aportando mi experiencia y mi capacidad para conectar con diversos públicos. Mi enfoque siempre va más allá de vender un producto o servicio; busco transmitir valores, inspirar confianza y construir relaciones auténticas con la audiencia.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-
-            <!-- Sección Adriana Figueroa -->
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 border-info shadow-lg">
-                    <!-- Header con Título y Subtítulo -->
-                    <div class="card-header bg-info text-white text-center py-2">
-                        <h4 class="text-light">Adriana Figueroa</h4>
-                            </div>
-
-                    <!-- Cuerpo de la Tarjeta -->
-                    <div class="card-body">
-                        <!-- Foto y Presentación -->
-                        <div class="text-center mb-4">
-                            <img src="assets\img\Adry.png" width="200" alt="Adriana Figueroa" 
-                                 class="img-fluid rounded-circle border border-info mb-3">
-                            <h4 class="text-info">¡Hola!</h4>
-                            <p class="fst-italic text-muted">"Estoy donde la tecnología y el arte se encuentran para dar vida a proyectos que inspiran"</p>
-                        </div>
-
-                        <!-- Acordeón con Detalles -->
-                        <div class="accordion" id="adrianaAccordion">
-                            <!-- Sección 1: Mi Historia -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button bg-light text-info" type="button" 
-                                            data-bs-toggle="collapse" data-bs-target="#historia">
-                                        <i class="bi bi-journal-richtext me-2"></i>Mi Viaje
-                                    </button>
-                                </h2>
-                                <div id="historia" class="accordion-collapse collapse show" 
-                                     data-bs-parent="#adrianaAccordion">
-                                    <div class="accordion-body">
-                                        <p>
-                                            Soy una creadora digital neurodivergente y estoy donde la tecnología y el arte se encuentran para dar vida a proyectos que inspiran. Desde pequeña, he sentido una fascinación por dos mundos aparentemente opuestos: la lógica precisa de las computadoras y la libertad expresiva del arte. Esta dualidad me ha permitido desarrollar una visión única, donde cada línea de código tiene un toque de creatividad y cada diseño cuenta una historia.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sección 2: Cómo Creo -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-light text-info" type="button" 
-                                            data-bs-toggle="collapse" data-bs-target="#crear">
-                                        <i class="bi bi-magic me-2"></i>Mi Alquimia
-                                    </button>
-                                </h2>
-                                <div id="crear" class="accordion-collapse collapse" 
-                                     data-bs-parent="#adrianaAccordion">
-                                    <div class="accordion-body">
-                                        <p>
-                                            <strong>Transformo lo invisible en tangible:</strong><br>
-                                            ◍ Las ideas en experiencias digitales<br>
-                                            ◍ Los datos en historias que conmueven<br>
-                                            ◍ Los problemas técnicos en soluciones elegantes<br><br>
-                                            Mi taller es ese espacio donde el arte abraza a la tecnología para dar vida a proyectos que <span class="text-info">no sólo funcionan</span>, sino que <span class="text-info">inspiran</span>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sección 3: Por Qué Elegirme -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-light text-info" type="button" 
-                                            data-bs-toggle="collapse" data-bs-target="#elegirme">
-                                        <i class="bi bi-puzzle-fill me-2"></i>Lo Que Ofrezco
-                                    </button>
-                                </h2>
-                                <div id="elegirme" class="accordion-collapse collapse" 
-                                     data-bs-parent="#adrianaAccordion">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="text-center mb-3">
-                                                    <i class="bi bi-hexagon text-info display-6"></i>
-                                                    <p class="small mt-2">Visión técnica con sensibilidad artística</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="text-center mb-3">
-                                                    <i class="bi bi-translate text-info display-6"></i>
-                                                    <p class="small mt-2">Puente entre lo humano y lo digital</p>
-                                                </div>
-                                            </div>
+                                            <i class="bi bi-person-fill me-2"></i>¿Quién Soy?
+                                        </button>
+                                    </h2>
+                                    <div id="quienSoy" class="accordion-collapse collapse show"
+                                        data-bs-parent="#lisetAccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Soy mamá, activista social, defensora de los derechos de la infancia y
+                                                el medio ambiente, y una líder comprometida con el crecimiento de mi
+                                                comunidad. Mi experiencia como candidata a Concejal por Temuco me
+                                                permitió fortalecer mi capacidad para comunicar, liderar y movilizar a
+                                                las personas en torno a causas importantes. Hoy, estoy enfocada en
+                                                aportar mi voz y mi experiencia a proyectos innovadores, comerciales y
+                                                sociales que busquen generar un impacto real.
+                                            </p>
                                         </div>
-                                        <p>
-                                            Soy esa fuerza silenciosa que:<br>
-                                            <span class="text-info">▸</span> Convierte caos en sistemas armoniosos<br>
-                                            <span class="text-info">▸</span> Da voz visual a las ideas abstractas<br>
-                                            <span class="text-info">▸</span> Teje redes digitales con calidez humana
-                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Sección 2: Por Qué Elegirme -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed bg-light text-success" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#porQueElegirme">
+                                            <i class="bi bi-star-fill me-2"></i>Talentos
+                                        </button>
+                                    </h2>
+                                    <div id="porQueElegirme" class="accordion-collapse collapse"
+                                        data-bs-parent="#lisetAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Dinamismo
+                                                        y Versatilidad:</strong> Me adapto fácilmente a diferentes
+                                                    contextos y audiencias. Mi estilo comunicativo es fresco, cercano y
+                                                    auténtico.</li>
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Empoderamiento
+                                                        y Liderazgo:</strong> Sé cómo inspirar a otros, movilizar
+                                                    comunidades y alinear esfuerzos hacia objetivos comunes.</li>
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Cercanía
+                                                        y Queribilidad:</strong> Mi estilo es cálido, humano y cercano.
+                                                    Soy una voz confiable y querible.</li>
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Visión
+                                                        Comercial y Comunicacional:</strong> Transmito mensajes que no
+                                                    solo inspiran, sino que también generan resultados concretos.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sección 3: Mi Enfoque -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed bg-light text-success" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#miEnfoque">
+                                            <i class="bi bi-bullseye me-2"></i>Mi Enfoque
+                                        </button>
+                                    </h2>
+                                    <div id="miEnfoque" class="accordion-collapse collapse"
+                                        data-bs-parent="#lisetAccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Creo firmemente en el poder del emprendimiento para transformar
+                                                comunidades. Estoy lista para ser la voz que promueva iniciativas
+                                                comerciales que generen impacto social y económico, aportando mi
+                                                experiencia y mi capacidad para conectar con diversos públicos. Mi
+                                                enfoque siempre va más allá de vender un producto o servicio; busco
+                                                transmitir valores, inspirar confianza y construir relaciones auténticas
+                                                con la audiencia.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    
+
+                    </div>
+                </div>
+
+                <!-- Sección Adriana Figueroa -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-info shadow-lg">
+                        <!-- Header con Título y Subtítulo -->
+                        <div class="card-header bg-info text-white text-center py-2">
+                            <h4 class="text-light">Adriana Figueroa</h4>
+                        </div>
+
+                        <!-- Cuerpo de la Tarjeta -->
+                        <div class="card-body">
+                            <!-- Foto y Presentación -->
+                            <div class="text-center mb-4">
+                                <img src="assets\img\Adry.png" width="200" alt="Adriana Figueroa"
+                                    class="img-fluid rounded-circle border border-info mb-3">
+                                <h4 class="text-info">¡Hola!</h4>
+                                <p class="fst-italic text-muted">"Estoy donde la tecnología y el arte se encuentran para
+                                    dar vida a proyectos que inspiran"</p>
+                            </div>
+
+                            <!-- Acordeón con Detalles -->
+                            <div class="accordion" id="adrianaAccordion">
+                                <!-- Sección 1: Mi Historia -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button bg-light text-info" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#historia">
+                                            <i class="bi bi-journal-richtext me-2"></i>Mi Viaje
+                                        </button>
+                                    </h2>
+                                    <div id="historia" class="accordion-collapse collapse show"
+                                        data-bs-parent="#adrianaAccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Soy una creadora digital neurodivergente y estoy donde la tecnología y
+                                                el arte se encuentran para dar vida a proyectos que inspiran. Desde
+                                                pequeña, he sentido una fascinación por dos mundos aparentemente
+                                                opuestos: la lógica precisa de las computadoras y la libertad expresiva
+                                                del arte. Esta dualidad me ha permitido desarrollar una visión única,
+                                                donde cada línea de código tiene un toque de creatividad y cada diseño
+                                                cuenta una historia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sección 2: Cómo Creo -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed bg-light text-info" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#crear">
+                                            <i class="bi bi-magic me-2"></i>Mi Enfoque
+                                        </button>
+                                    </h2>
+                                    <div id="crear" class="accordion-collapse collapse"
+                                        data-bs-parent="#adrianaAccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                <strong>Transformo lo invisible en tangible:</strong><br>
+                                                ◍ Las ideas en experiencias digitales<br>
+                                                ◍ Los datos en historias que conmueven<br>
+                                                ◍ Los problemas técnicos en soluciones elegantes<br><br>
+                                                Mi oficina se transforma en ese espacio donde el arte abraza a la
+                                                tecnología para dar vida a proyectos que <span class="text-info">no sólo
+                                                    funcionan</span>, sino que <span class="text-info">inspiran</span>.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sección 3: Por Qué Elegirme -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed bg-light text-info" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#elegirme">
+                                            <i class="bi bi-puzzle-fill me-2"></i>Talentos
+                                        </button>
+                                    </h2>
+                                    <div id="elegirme" class="accordion-collapse collapse"
+                                        data-bs-parent="#adrianaAccordion">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="text-center mb-3">
+                                                        <i class="bi bi-hexagon text-info display-6"></i>
+                                                        <p class="small mt-2">Visión técnica con sensibilidad artística
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-center mb-3">
+                                                        <i class="bi bi-translate text-info display-6"></i>
+                                                        <p class="small mt-2">Puente entre lo humano y lo digital</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                Soy esa fuerza silenciosa que:<br>
+                                                <span class="text-info">▸</span> Convierte caos en sistemas
+                                                armoniosos<br>
+                                                <span class="text-info">▸</span> Da voz visual a las ideas
+                                                abstractas<br>
+                                                <span class="text-info">▸</span> Teje redes digitales con calidez humana
+                                            </p>
+                                            Estudios:
+                                             Bootcamp Front End Trainee - Beca Talento Digital - SENCE(2024)
+                                             Bootcamp Full Stack JAVA - Beca Talento Digital - SENCE(2023)
+                                             Programadora Computacional - IP AIEP (2019)
+                                             Licenciatura en Comunicación Audiovisual - Universidad Mayor (2008)
+                                             Diplomado en Reportajes y Documentales - Universidad Mayor (2008)
+                                             Estudiante de Intercambio AFS Letonia por un año - (1998 a 1999)
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Proyectos -->
     <section id="projects" class="highlight-section">
@@ -267,14 +319,15 @@
                 <!-- Proyecto Medio Ambiente -->
                 <div class="col-md-6">
                     <div class="card project-card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/gente-construyendo-su-propio-arreglo-seco_23-2149697706.jpg?t=st=1738351052~exp=1738354652~hmac=b4f100b7cd0064996af5946f69672ee84a762f4e237a12cd246c8f4108433760&w=996" 
-                             class="card-img-top" alt="Taller de Medio Ambiente">
+                        <img src="https://img.freepik.com/foto-gratis/gente-construyendo-su-propio-arreglo-seco_23-2149697706.jpg?t=st=1738351052~exp=1738354652~hmac=b4f100b7cd0064996af5946f69672ee84a762f4e237a12cd246c8f4108433760&w=996"
+                            class="card-img-top" alt="Taller de Medio Ambiente">
                         <div class="card-body">
                             <h3 class="card-title ">Talleres Comunitarios para Regenerar Espacios Verdes</h3>
-            <p class="card-text">
-                Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y accesibles.
-                <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
-            </p>
+                            <p class="card-text">
+                                Aprende a rescatar, cultivar y regenerar la biodiversidad local con talleres prácticos y
+                                accesibles.
+                                <br>¡Conoce los próximos talleres y siembra un futuro sostenible!
+                            </p>
                             <a href="medioambiental.html" class="btn btn-success">Ver Proyecto</a>
                         </div>
                     </div>
@@ -283,14 +336,15 @@
                 <!-- Proyecto Coleccionismo -->
                 <div class="col-md-6">
                     <div class="card project-card h-100">
-                        <img src="https://img.freepik.com/foto-gratis/amigos-yendo-compras-tienda-antiguedades_23-2149525705.jpg?t=st=1738350878~exp=1738354478~hmac=03b44e67ca6d4696b86eba8484db44eb079e7280e08c45aca8cdb7a5036478fc&w=996" 
-                             class="card-img-top" alt="Taller de Coleccionismo">
+                        <img src="https://img.freepik.com/foto-gratis/amigos-yendo-compras-tienda-antiguedades_23-2149525705.jpg?t=st=1738350878~exp=1738354478~hmac=03b44e67ca6d4696b86eba8484db44eb079e7280e08c45aca8cdb7a5036478fc&w=996"
+                            class="card-img-top" alt="Taller de Coleccionismo">
                         <div class="card-body">
                             <h3 class="card-title">Talleres de Coleccionismo Sostenible</h3>
-            <p class="card-text">
-                Aprende a rescatar, restaurar y reinventar objetos olvidados con talleres prácticos y herramientas de IA.
-                <br>¡Conecta con el pasado y construye un futuro sostenible!
-            </p>
+                            <p class="card-text">
+                                Aprende a rescatar, restaurar y reinventar objetos olvidados con talleres prácticos y
+                                herramientas de IA.
+                                <br>¡Conecta con el pasado y construye un futuro sostenible!
+                            </p>
                             <a href="coleccionismo.html" class="btn btn-success">Ver Proyecto</a>
                         </div>
                     </div>
@@ -304,8 +358,8 @@
         <div class="container text-center">
             <h4>Contacto</h4>
             <p>Email: vibraverdearaucania@gmail.com<br>
-            Tel: +56 9 8815 1695<br>
-            Temuco, Región de La Araucanía</p>
+                Tel: +56 9 8815 1695<br>
+                Temuco, Región de La Araucanía</p>
             <p class="mb-0">© 2025 Liset Nahuel & Adriana Figueroa. Todos los derechos reservados.</p>
         </div>
     </footer>
@@ -323,4 +377,5 @@
         });
     </script>
 </body>
+
 </html>
