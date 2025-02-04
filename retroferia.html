@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feria RetroSur - Dossier Ejecutivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --retro-pink: #FF69B4;
+      --cyber-teal: #00CED1;
+      --vintage-orange: #FFA500;
+      --matrix-green: #32CD32;
+      --retro-gradient: linear-gradient(45deg, var(--retro-pink), var(--cyber-teal));
+    }
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #ffffff 10px, #ffffff 20px);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Navbar personalizado */
+    .custom-navbar {
+      background: var(--retro-gradient) !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+      color: #fff !important;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      font-weight: bold;
+    }
+    .custom-navbar .nav-link:hover {
+      color: var(--vintage-orange) !important;
+    }
+
+    .retro-title {
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 3px 3px 0 var(--vintage-orange);
+    }
+    .pixel-border {
+      border: 4px dashed var(--matrix-green);
+      box-shadow: 8px 8px 0 var(--retro-pink);
+    }
+    .crt-effect {
+      background: repeating-linear-gradient(0deg, 
+          rgba(0,0,0,0.15) 0px, 
+          rgba(0,0,0,0.15) 1px, 
+          transparent 1px, 
+          transparent 2px);
+    }
+    .retro-card {
+      background: var(--retro-gradient);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .retro-card:hover {
+      transform: rotate(-5deg) scale(1.05);
+      box-shadow: 12px 12px 0 var(--matrix-green);
+    }
+    .gif-background {
+      background: url('https://i.gifer.com/7Gzx.gif') center/cover;
+      mix-blend-mode: multiply;
+    }
+    .neon-text {
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes neonGlow {
+      from { text-shadow: 0 0 5px var(--retro-pink), 0 0 10px var(--retro-pink); }
+      to { text-shadow: 0 0 20px var(--cyber-teal), 0 0 30px var(--cyber-teal); }
+    }
+    .info-popup {
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 1000;
+    }
+    .activity-item:hover .info-popup {
+      display: block;
+    }
+
+    /* Stickers en el background */
+    .sticker {
+      position: absolute;
+      opacity: 0.15;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .sticker-1 { top: 10%; left: 5%; width: 80px; }
+    .sticker-2 { top: 20%; right: 10%; width: 100px; }
+    .sticker-3 { bottom: 15%; left: 15%; width: 90px; }
+    .sticker-4 { bottom: 10%; right: 5%; width: 80px; }
+
+    /* Accordion: Colores diferenciados en cada item (colores inspirados en la estética de los 80/90) */
+    .accordion-item:nth-of-type(1) .accordion-button { background-color: #FF1493; color: #fff; }
+    .accordion-item:nth-of-type(2) .accordion-button { background-color: #39FF14; color: #000; }
+    .accordion-item:nth-of-type(3) .accordion-button { background-color: #00FFFF; color: #000; }
+    .accordion-item:nth-of-type(4) .accordion-button { background-color: #FF69B4; color: #fff; }
+    .accordion-item:nth-of-type(5) .accordion-button { background-color: #FFFF33; color: #000; }
+    .accordion-item:nth-of-type(6) .accordion-button { background-color: #BF00FF; color: #fff; }
+    .accordion-item:nth-of-type(7) .accordion-button { background-color: #FF5F1F; color: #fff; }
+    .accordion-item:nth-of-type(8) .accordion-button { background-color: #FF073A; color: #fff; }
+  </style>
+</head>
+<body class="crt-effect">
+  
+
+  <!-- Navbar Retro -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand retro-title" href="#">
+        <!-- Logo: estrella amarilla sin fondo ni texto -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 120 120" style="vertical-align: middle; margin-right: 10px;">
+          <polygon points="60,10 73,50 115,50 80,75 93,115 60,90 27,115 40,75 5,50 47,50" fill="#FFFF33" />
+        </svg>
+        FERIA RETROSUR
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#actividades">Actividades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#eventAccordion">Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Hero -->
+  <header id="hero" class="container-fluid p-5 text-center pixel-border bg-dark text-white mb-5 position-relative">
+    <div class="gif-background position-absolute top-0 start-0 w-100 h-100 opacity-25"></div>
+    <h1 class="neon-text display-4 mb-4">Feria RetroSur: Un viaje en el tiempo para todos</h1>
+    <p class="lead">Colecciones, historias y nostalgia sin límites</p>
+    <p class="lead">Sábado [fecha], de 11:00 a 19:00 hrs<br>Casa Aldunate (Temuco, Chile)</p>
+    <div class="mt-4">
+      <button class="btn btn-outline-warning btn-lg mx-2">Compra Entradas</button>
+      <button class="btn btn-outline-info btn-lg mx-2">Reserva Stand</button>
+    </div>
+  </header>
+
+  <!-- Sección Actividades Destacadas -->
+  <section id="actividades" class="container my-5">
+    <h2 class="retro-title text-center mb-5">✨ Actividades Destacadas</h2>
+    <div class="row g-4">
+      <!-- Café RetroSur -->
+      <div class="col-md-6">
+        <div class="card retro-card h-100">
+          <div class="card-body">
+            <h3 class="card-title neon-text">☕ Café RetroSur</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Sesión Pública</h4>
+                <p>14:30 - 15:30 hrs<br>Charla magistral + panel interactivo</p>
+              </div>
+              <div class="col-md-6">
+                <h4>Sesión Privada</h4>
+                <p>15:30 - 16:30 hrs<br>Exclusivo para coleccionistas registrados</p>
+              </div>
+            </div>
+            <button class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#cafeModal">
+              Más Info
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mural Retro Colectivo -->
+      <div class="col-md-6">
+        <div class="card retro-card h-100">
+          <div class="card-body">
+            <h3 class="card-title neon-text">🎨 Mural Retro Colectivo</h3>
+            <p>¡Contribuye con tu pieza de historia!</p>
+            <div class="progress">
+              <div class="progress-bar bg-info" style="width: 65%">65% Completado</div>
+            </div>
+            <button class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#muralModal">
+              Más Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Cronograma Detallado (similar a un Card) -->
+  <section id="cronograma-detallado" class="container my-5">
+    <h2 class="retro-title text-center mb-5">Cronograma Detallado del Día</h2>
+    <div class="card retro-card">
+      <div class="card-body">
+        <h3 class="card-title neon-text">Cronograma y Actividades</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">11:00: Apertura: Mercado Retro + Actividades para Todos</li>
+          <li class="list-group-item">12:30: Retro Fitness Challenge</li>
+          <li class="list-group-item">14:30: Café RetroSur (Sesión Pública)</li>
+          <li class="list-group-item">15:30: Café RetroSur (Sesión Privada)</li>
+          <li class="list-group-item">16:00: Retro-Pet Friendly</li>
+          <li class="list-group-item">17:30: Karaoke Retro</li>
+          <li class="list-group-item">18:30: Cierre: Revelación del mural "Retro Collage"</li>
+          <li class="list-group-item">19:00: Fin del evento</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Información Completa del Evento (Accordion con colores diferenciados) -->
+  <section class="container my-5">
+    <h2 class="retro-title text-center mb-4">Información Completa del Evento</h2>
+    <div class="accordion" id="eventAccordion">
+      <!-- Datos del Evento -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEvento">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEvento" aria-expanded="true" aria-controls="collapseEvento">
+            Datos del Evento
+          </button>
+        </h2>
+        <div id="collapseEvento" class="accordion-collapse collapse show" aria-labelledby="headingEvento" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <p><strong>Nombre del Evento:</strong> "Feria RetroSur: Un viaje en el tiempo para todos"</p>
+            <p><strong>Lema:</strong> "Colecciones, historias y nostalgia sin límites"</p>
+            <p><strong>Fecha y Horario:</strong> Sábado [fecha], de 11:00 a 19:00 hrs</p>
+            <p><strong>Lugar:</strong> Casa Aldunate (Temuco, Chile).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estructura General del Evento -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEstructura">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstructura" aria-expanded="false" aria-controls="collapseEstructura">
+            Estructura General del Evento
+          </button>
+        </h2>
+        <div id="collapseEstructura" class="accordion-collapse collapse" aria-labelledby="headingEstructura" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Mercado Retro:</strong> 10-15 puestos de venta/intercambio de objetos retro (álbumes, juguetes, vinilos). <em>(Todo el día)</em></li>
+              <li><strong>Café RetroSur (Evento Principal):</strong> Actividad central con dos segmentos: público y privado.
+                <ul>
+                  <li><strong>Sesión Pública:</strong> 14:30-15:30</li>
+                  <li><strong>Sesión Privada:</strong> 15:30-16:30</li>
+                </ul>
+              </li>
+              <li><strong>Actividades para Todos:</strong> Distribuidas en el espacio, con horarios específicos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actividades Integradas -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingActividades">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseActividades" aria-expanded="false" aria-controls="collapseActividades">
+            Actividades Integradas
+          </button>
+        </h2>
+        <div id="collapseActividades" class="accordion-collapse collapse" aria-labelledby="headingActividades" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>
+                <strong>Retro Collage Colectivo:</strong>
+                <p>Un mural de 2x2 metros donde cada persona añade un recorte, foto u objeto pequeño retro (láminas Frutillita, recortes de revistas Condorito, etiquetas de productos antiguos).<br>
+                <strong>Horario:</strong> 11:00-18:00 (revelación final a las 18:30)<br>
+                <strong>Viralidad:</strong> Hashtag: <em>#MiRecorteRetroSur</em>, fotos de participantes y revelación del diseño oculto (ej: logo de Canal 9 antiguo).</p>
+              </li>
+              <li>
+                <strong>Juego "Busca el Detalle":</strong>
+                <p>Lista de 10 objetos escondidos en la feria (ej: un osito de peluche con la bandera chilena vintage).<br>
+                <strong>Horario:</strong> Todo el día (premios a las 16:00 y 18:30)<br>
+                <strong>Premio:</strong> Set de stickers retro.</p>
+              </li>
+              <li>
+                <strong>Retro Fitness Challenge:</strong>
+                <p>Clase de aeróbicos con música de los 80 (ej: "Physical" de Olivia Newton-John).<br>
+                <strong>Horario:</strong> 12:30 (30 min)<br>
+                <strong>Premio:</strong> Polera tie-dye.</p>
+              </li>
+              <li>
+                <strong>Karaoke Retro:</strong>
+                <p>Playlist con éxitos chilenos (Los Prisioneros, Myriam Hernández) y latinos (Menudo).<br>
+                <strong>Horario:</strong> 17:30-18:30<br>
+                <strong>Premio:</strong> Casete personalizado.</p>
+              </li>
+              <li>
+                <strong>Retro-Pet Friendly:</strong>
+                <p>Zona para fotos con mascotas disfrazadas (gafas de sol retro, pañoletas).<br>
+                <strong>Horario:</strong> 16:00<br>
+                <strong>Hashtag:</strong> <em>#MascotasRetroSur</em> (premio: libro de fotos vintage para la foto más votada).</p>
+              </li>
+              <li>
+                <strong>Voluntarios con Pines "Pregúntame… o no":</strong>
+                <p>4-5 voluntarios con chalecos retro y pins, ubicados en puntos clave (entrada y cerca del mural).</p>
+              </li>
+              <li>
+                <strong>Máscaras/Disfraces Retro:</strong>
+                <p>Caja con antifaces de superhéroes (ej: versión retro de "Superman" o "Condorito") y pañoletas años 80 en autoservicio en la entrada.</p>
+              </li>
+              <li>
+                <h3><strong>Otras actividades:</strong></h3><br>
+                <strong>✨ Pingball o maquinas con juegos retro</strong><br>
+                <strong>✨ Sala de intercambio de esquelas y de laminas de albums 80s-90s</strong><br>
+                <strong>Horario:</strong> todo el día<br>
+                <strong>Viralidad:</strong> Hashtag: <em>#</em>, .
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalle del Café RetroSur -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCafe">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCafe" aria-expanded="false" aria-controls="collapseCafe">
+            Detalle del Café RetroSur (Actividad Principal)
+          </button>
+        </h2>
+        <div id="collapseCafe" class="accordion-collapse collapse" aria-labelledby="headingCafe" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <p><strong>Sesión Pública (14:30-15:30):</strong></p>
+            <ul>
+              <li>Charla: "Cómo tu colección puede salvar la historia local" (20 min, historiador local).</li>
+              <li>Panel: 3 coleccionistas comparten anécdotas (ej: "El día que encontré un vinilo en un galpón").</li>
+              <li>Preguntas del público: Escritas en tarjetas para fomentar la participación.</li>
+            </ul>
+            <p><strong>Sesión Privada (15:30-16:30):</strong></p>
+            <ul>
+              <li>Exclusivo para 15 coleccionistas/anticuarios preinscritos.</li>
+              <li>Tema: "Cómo evitar que lo retro chileno se pierda en la historia".</li>
+              <li>Dinámica: Creación de una red de WhatsApp para alertas de subastas y trueques.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cronograma del Día -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCronograma">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCronograma" aria-expanded="false" aria-controls="collapseCronograma">
+            Cronograma del Día
+          </button>
+        </h2>
+        <div id="collapseCronograma" class="accordion-collapse collapse" aria-labelledby="headingCronograma" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>11:00:</strong> Apertura: Mercado Retro + Actividades para Todos</li>
+              <li><strong>12:30:</strong> Retro Fitness Challenge</li>
+              <li><strong>14:30:</strong> Café RetroSur (Sesión Pública)</li>
+              <li><strong>15:30:</strong> Café RetroSur (Sesión Privada)</li>
+              <li><strong>16:00:</strong> Retro-Pet Friendly</li>
+              <li><strong>17:30:</strong> Karaoke Retro</li>
+              <li><strong>18:30:</strong> Cierre: Revelación del mural "Retro Collage"</li>
+              <li><strong>19:00:</strong> Fin del evento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logística y Presupuesto -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLogistica">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLogistica" aria-expanded="false" aria-controls="collapseLogistica">
+            Logística y Presupuesto
+          </button>
+        </h2>
+        <div id="collapseLogistica" class="accordion-collapse collapse" aria-labelledby="headingLogistica" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <p><strong>Recursos Humanos:</strong></p>
+            <ul>
+              <li>8 voluntarios: 2 en mercadotecnia, 2 en Café RetroSur, 2 en actividades interactivas y 2 en logística.</li>
+              <li>1 historiador/mediador para el Café RetroSur (contactar con UFRO o Museo Ferroviario).</li>
+            </ul>
+            <p><strong>Materiales:</strong></p>
+            <ul>
+              <li>Máscaras/antifaces: 50 unidades.</li>
+              <li>Listas "Busca el Detalle": 200 copias impresas.</li>
+            </ul>
+            <p><strong>Presupuesto Estimado (excluyendo mercado):</strong> $150.000 CLP (materiales, café, sonido básico y premios).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing y Estrategia -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingMarketing">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarketing" aria-expanded="false" aria-controls="collapseMarketing">
+            Marketing y Estrategia
+          </button>
+        </h2>
+        <div id="collapseMarketing" class="accordion-collapse collapse" aria-labelledby="headingMarketing" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            <p><strong>Redes Sociales:</strong></p>
+            <ul>
+              <li>Challenge <em>#RetroSurTemuco</em>: Subir fotos del objeto retro más raro (los 10 más votados entran gratis al Café privado).</li>
+              <li>Reels: Videos de voluntarios con disfraces preguntando: "¿Sabes qué es esto? Ven a descubrirlo".</li>
+            </ul>
+            <p><strong>Presencial:</strong></p>
+            <ul>
+              <li>Afiches en La Feria Pinto y Universidad de La Frontera, con diseño retro y QR para registro.</li>
+              <li>Alianza con Radio FM para sortear entradas al Café privado respondiendo: "¿Qué salvarías de los 90?".</li>
+            </ul>
+            <p><strong>Estrategia de Ingresos:</strong></p>
+            <ul>
+              <li>Venta de publicidad (paquetes: Principal, Medio y Básico).</li>
+              <li>Talleres VIP post-feria (ej. autenticación y restauración de objetos retro).</li>
+              <li>Crowdfunding con recompensas (sticker pack, acceso prioritario y taller VIP).</li>
+              <li>Donación voluntaria y Pasaporte RetroSur (beneficios y sorteos).</li>
+              <li>Inscripción de stands ($10.000 CLP por puesto, meta de 15 stands).</li>
+            </ul>
+            <p><strong>Reducción de Costos:</strong></p>
+            <ul>
+              <li>Uso de recursos propios: Casa Aldunate, medios propios y vehículos.</li>
+              <li>Premios canjeados y voluntariado especializado.</li>
+            </ul>
+            <p><strong>Cronograma de Ejecución:</strong></p>
+            <ul>
+              <li><strong>Pre-Evento:</strong> 4 semanas (crowdfunding, publicidad, montaje de stands).</li>
+              <li><strong>Durante el Evento:</strong> Donación, merchandising y subasta relámpago (opcional).</li>
+              <li><strong>Post-Evento:</strong> Talleres VIP y cierre financiero.</li>
+            </ul>
+            <p><strong>Presupuesto Resumido:</strong></p>
+            <ul>
+              <li><strong>Ingresos Totales:</strong> $1.730.000 CLP</li>
+              <li><strong>Costos Totales:</strong> $330.000 CLP</li>
+              <li><strong>Ganancia Neta Estimada:</strong> $1.400.000 CLP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conclusión -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingConclusion">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConclusion" aria-expanded="false" aria-controls="collapseConclusion">
+            Conclusión
+          </button>
+        </h2>
+        <div id="collapseConclusion" class="accordion-collapse collapse" aria-labelledby="headingConclusion" data-bs-parent="#eventAccordion">
+          <div class="accordion-body">
+            Con esta estrategia, la Feria RetroSur no solo será viable, sino que generará una ganancia significativa mientras sienta las bases para futuras ediciones. El uso de recursos propios, la venta de publicidad y la diversificación de ingresos (talleres VIP, crowdfunding, pasaportes) aseguran un evento sostenible y escalable. ¡Manos a la obra! 🚀
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Sección Cronograma y Presupuesto -->
+<section class="container my-5">
+    <div class="row g-4">
+      <!-- Carta Gantt -->
+      <div class="col-md-8">
+        <div class="card retro-card">
+          <div class="card-body">
+            <h3 class="card-title neon-text">📅 Cronograma de Producción</h3>
+            <canvas id="ganttChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- Presupuesto Interactivo -->
+      <div class="col-md-4">
+        <div class="card retro-card h-100">
+          <div class="card-body">
+            <h3 class="card-title neon-text">💰 Presupuesto 2025</h3>
+            <canvas id="budgetChart"></canvas>
+            <div class="mt-3">
+              <button class="btn btn-outline-light w-100 mb-2" data-bs-toggle="modal" data-bs-target="#sponsorModal">
+                ¡Conviértete en Sponsor!
+              </button>
+              <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#crowdModal">
+                Participa en Crowdfunding
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modales -->
+  <div class="modal fade" id="cafeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">☕ Café RetroSur</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>El Café RetroSur es el corazón del evento, con dos segmentos:</p>
+          <ul>
+            <li><strong>Sesión Pública (14:30 - 15:30):</strong> Charla magistral y panel interactivo sobre el valor cultural de lo retro.</li>
+            <li><strong>Sesión Privada (15:30 - 16:30):</strong> Exclusivo para coleccionistas registrados, con networking y discusiones especializadas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="muralModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">🎨 Mural Retro Colectivo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Un espacio interactivo donde los participantes contribuyen con recortes, fotos u objetos pequeños retro. La revelación final será a las 18:30 hrs.</p>
+          <ul>
+            <li><strong>Hashtag:</strong> #MiRecorteRetroSur</li>
+            <li><strong>Premio:</strong> El diseño más votado gana un kit retro.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<footer id="footer" class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-1">© 2025 Tiempo Vivo: Coleccionismo Sostenible</p>
+                <p class="mb-0">
+                    Creado por:
+                    <span class="fw-bold">Liset Nahuel y Adriana Figueroa</span>
+                </p>
+                <p class="mt-2">
+                    <small>
+                        Contacto:
+                        <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
+                            vibraverdearaucania@gmail.com
+                        </a>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Definición de colores en hexadecimal para Chart.js
+    const colors = {
+      retroPink: "#FF69B4",
+      cyberTeal: "#00CED1",
+      vintageOrange: "#FFA500",
+      matrixGreen: "#32CD32"
+    };
+
+    // Configuración del gráfico de Cronograma (Carta Gantt)
+    const ganttCtx = document.getElementById('ganttChart').getContext('2d');
+    new Chart(ganttCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Preproducción', 'Logística', 'Ejecución', 'Postproducción'],
+        datasets: [{
+          label: 'Semanas',
+          data: [2, 3, 1, 2],
+          backgroundColor: [
+            colors.retroPink,
+            colors.cyberTeal,
+            colors.vintageOrange,
+            colors.matrixGreen
+          ]
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Fases' } },
+          y: { title: { display: true, text: 'Semanas' }, beginAtZero: true }
+        }
+      }
+    });
+
+    // Configuración del gráfico de Presupuesto (Doughnut)
+    const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+    new Chart(budgetCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Stands', 'Sponsors', 'Merchandising', 'Crowdfunding'],
+        datasets: [{
+          data: [150000, 200000, 80000, 120000],
+          backgroundColor: [
+            colors.retroPink,
+            colors.cyberTeal,
+            colors.vintageOrange,
+            colors.matrixGreen
+          ]
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
