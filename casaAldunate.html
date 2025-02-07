@@ -16,7 +16,7 @@
       body {
         background-image: url(assets/img/bg-alicia.png);
         background-repeat: repeat-y;
-    background-size: contain;
+    
       }
       .card {
         margin-bottom: 1.5rem;
@@ -31,15 +31,57 @@
     padding: 0;
     margin: 0;
 }
+.text-brown{ color: #b18642;}
+.vintage-card {
+  background: #ffffff;
+    border: 3px solid #ffe7cc;
+    border-radius: 15px;
+    margin: 1rem;
+    box-shadow: 5px 5px 15px rgb(180 139 73 / 25%);
+}
+        .vintage-card img {
+            border-radius: 12px 12px 0 0;
+            filter: sepia(0.3);
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title {
+            color: #b18642;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        .vintage-btn {
+    background: #ffd8ac9d;
+    color: rgb(0, 0, 0);
+    border: 0px solid #FFC107;
+    border-radius: 5px;
+}
+        .vintage-btn:hover {
+            background: #fe7762;
+            color: #000000;
+        }
+       
+      
 /* Opcional: ajustar el alto máximo de la tabla en el modal */
 .table-responsive {
-      max-height: 500px;
+      max-height: auto;
     }
+    .modal {height: auto;}
+    .modal-content {
+    background: #fff8f0;
+    border: 2px solid #6d4c41;
+    max-height: 90vh; /* Limita la altura del modal */
+    overflow-y: auto; /* Activa el scroll si el contenido es muy grande */
+}
+.modal-backdrop {
+    
+    position: relative;}
     </style>
   </head>
   <body>
     
-    <div class="container py-5">
+    <section class=" py-5">
       <!-- Encabezado General -->
       
       <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
@@ -51,924 +93,1074 @@
         </p>
       
      
-      <!-- Sección: Concepto Central del Negocio -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800">
-        <h2 class=" text-success fw-bold text-dark">
-          I) INVESTIGACION INICIAL: ANALISIS DE CASOS EN CHILE.
-        </h2>
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">1. Concepto Central del Negocio</h2>
-          <p>
-            Los emprendimientos de arriendo de vitrinas colaborativas funcionan como plataformas físicas donde múltiples marcas o emprendedores comparten un espacio para exhibir y vender productos, reduciendo costos fijos y generando sinergias comerciales. Por ejemplo Casa Holandesa en Temuco utiliza este modelo, combinando un mercado urbano con experiencias comunitarias, cafetería y eventos temporales .
-          </p>
-          <p class="fw-semibold">Características clave:</p>
-          <ul>
-            <li>Espacios modulares: Diseño adaptable para diferentes productos (ej.: estantes, mesas, zonas temáticas) </li>
-            <li>Rotación estratégica: Periodos de arriendo flexibles (semanas a meses) para mantener novedad </li>
-            <li>Integración de servicios: Cafeterías, talleres y eventos que atraen tráfico recurrente </li>
-          </ul>
-          <hr />
-        </div>
-      </div>
-
-      <!-- Sección: Sistema de Ganancias -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">2. Sistema de Ganancias</h2>
-          <h3 class="h5 text-success fw-bold">Fuentes de Ingresos</h3>
-          <p><strong>1. Arriendo de espacios:</strong></p>
-          <ul>
-            <li>Tarifas fijas: Ejemplo: Casa Holandesa alberga a 8 emprendedores que visibilizan a ~100 creadores locales, con arriendos mensuales por espacios específicos </li>
-            <li>Comisiones por ventas: En el Bazar Modular (Vitacura), se cobra un 5% sobre las ventas para cubrir Transbank y gestión </li>
-          </ul>
-          <p><strong>2. Ventas propias (cafetería):</strong></p>
-          <p>Casa Holandesa incluye una cafetería que genera ingresos adicionales y atrae clientes </p>
-          <p><strong>3. Eventos y talleres:</strong></p>
-          <p>Ferias temáticas: Ej.: La Feria Navideña en Casa Holandesa reúne a 30 emprendedores, con cobro por participación y entrada al público </p>
-          <p><strong>4. Servicios complementarios:</strong></p>
-          <p>Gestión de redes sociales: Cobro por promoción digital de marcas alojadas </p>
-          <h3 class="h5 text-success fw-bold mt-4">Estructura de Costos</h3>
-          <ul>
-            <li>Alquiler del local: Principal gasto (ej.: Casa Holandesa ocupa una casona heredada, reduciendo costos iniciales) 5.</li>
-            <li>Mantenimiento: Luz, agua, internet, y sistemas de pago.</li>
-            <li>Marketing: Inversión en Instagram y colaboraciones con influencers locales </li>
-          </ul>
-          <hr />
-        </div>
-      </div>
+        <div class="container py-5">
+          <div class="row">
+              <!-- Card I -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/fotos-premium/maquina-escribir-blanca-junto-lampara-escritorio-turnedon-foto_195114-16014.jpg?w=996" class="card-img-top" alt="Investigación">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">I) INVESTIGACION INICIAL</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalI">
+                              Ver Detalles
+                          </button>
+                          <br>
+                      </div><br>
+                  </div>
+              </div>
       
-      <!-- Sección: Casos de Éxito -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">3. Casos de Éxito</h2>
-          <p><strong>a) Casa Holandesa (Temuco) </strong></p>
-          <ul>
-            <li>
-              <strong>Modelo:</strong>
-              <ul>
-                <li>Primer piso: Tienda colaborativa + cafetería.</li>
-                <li>Eventos: Ferias navideñas, talleres y actividades comunitarias.</li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Claves del éxito:</strong>
-              <ul>
-                <li>Enfoque en experiencia: Los clientes interactúan directamente con los creadores.</li>
-                <li>Sinergias: 8 espacios fijos visibilizan a 100 emprendedores locales.</li>
-                <li>Adaptabilidad: Nació post-pandemia como respuesta a la crisis comercial.</li>
-              </ul>
-            </li>
-          </ul>
-          <p><strong>b) Bazar Modular (Vitacura) </strong></p>
-          <ul>
-            <li>Modelo: 120 marcas en 180 m², con módulos desde $20.000/mes + 5% de comisión.</li>
-            <li>Innovación: Lista de espera de 600 emprendedores garantiza rotación constante.</li>
-          </ul>
-          <p><strong>c) Mezclaconcept y Kleemarket</strong></p>
-          <p>Estrategia: Especialización en nichos (diseño urbano y moda sostenible) y rotación temática por temporadas.</p>
-          <hr />
-        </div>
+              <!-- Card II -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/joven-disenadora-eligiendo-material-textil-su-trabajo_171337-14490.jpg?t=st=1738896525~exp=1738900125~hmac=284b672cacc8470fc35f20091f3f0ef0456437125e26ccff2aa60b453e9725d5&w=996" class="card-img-top" alt="Presupuesto">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">II) ANALISIS DE PRESUPUESTO EN %</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalII">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+      
+              <!-- Card III -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/pareja-compras-tienda-ecologica_482257-76223.jpg?t=st=1738897234~exp=1738900834~hmac=c96b8f61927b1bc7630482ffe6cce5438f2ee20aeaa7c38504071b8ea8e28e97&w=996" class="card-img-top" alt="Viabilidad">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">III) PROCESO DE MARCHA BLANCA</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalIII">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="row mt-4">
+              <!-- Card IV -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/bullet-journal-plano-suministros-escritorio_23-2149740046.jpg?t=st=1738897437~exp=1738901037~hmac=5899c889dfcfee4018746a2bcdd3dddefe21bb3fbc770fca78f0eb086c062c8a&w=996" class="card-img-top" alt="Análisis Financiero">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">IV) ANALISIS FINANCIERO</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalIV">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+      
+              <!-- Card V -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/nino-talentoso-haciendo-ceramica_23-2151693922.jpg?t=st=1738897701~exp=1738901301~hmac=ae576680c903076c9e63fa3290fc7c308941f9624daf80966967498f767eb4f8&w=996" class="card-img-top" alt="Infraestructura">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">V) FACTIBILIDAD: INFRAESTRUCTURA</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalV">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+      
+              <!-- Card VI -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/lavabo-blanco_74190-3612.jpg?t=st=1738897957~exp=1738901557~hmac=0c3dbadbcf41fac2497684e45324eebce0fffb4aa41c028d45398756c8b31e08&w=996" class="card-img-top" alt="Diseño de Baños">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">VI) DISEÑO DE BAÑOS</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalVI">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+          </div>
+      
+      
+      <!-- Modals -->
+      <div class="modal" id="modalI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title text-center">I) INVESTIGACION INICIAL:</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Sección: Concepto Central del Negocio -->
+            <div class="card text-brown" data-aos="fade-up" data-aos-duration="800">
+              <h2 class=" fw-bold text-brown">
+                I) ANALISIS DE CASOS EN CHILE.
+              </h2>
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">1. Concepto Central del Negocio</h2>
+                <p>
+                  Los emprendimientos de arriendo de vitrinas colaborativas funcionan como plataformas físicas donde múltiples marcas o emprendedores comparten un espacio para exhibir y vender productos, reduciendo costos fijos y generando sinergias comerciales. Por ejemplo Casa Holandesa en Temuco utiliza este modelo, combinando un mercado urbano con experiencias comunitarias, cafetería y eventos temporales .
+                </p>
+                <p class="fw-semibold">Características clave:</p>
+                <ul>
+                  <li>Espacios modulares: Diseño adaptable para diferentes productos (ej.: estantes, mesas, zonas temáticas) </li>
+                  <li>Rotación estratégica: Periodos de arriendo flexibles (semanas a meses) para mantener novedad </li>
+                  <li>Integración de servicios: Cafeterías, talleres y eventos que atraen tráfico recurrente </li>
+                </ul>
+                <hr />
+              </div>
+            </div>
+      
+            <!-- Sección: Sistema de Ganancias -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">2. Sistema de Ganancias</h2>
+                <h3 class="h5 text-success fw-bold">Fuentes de Ingresos</h3>
+                <p><strong>1. Arriendo de espacios:</strong></p>
+                <ul>
+                  <li>Tarifas fijas: Ejemplo: Casa Holandesa alberga a 8 emprendedores que visibilizan a ~100 creadores locales, con arriendos mensuales por espacios específicos </li>
+                  <li>Comisiones por ventas: En el Bazar Modular (Vitacura), se cobra un 5% sobre las ventas para cubrir Transbank y gestión </li>
+                </ul>
+                <p><strong>2. Ventas propias (cafetería):</strong></p>
+                <p>Casa Holandesa incluye una cafetería que genera ingresos adicionales y atrae clientes </p>
+                <p><strong>3. Eventos y talleres:</strong></p>
+                <p>Ferias temáticas: Ej.: La Feria Navideña en Casa Holandesa reúne a 30 emprendedores, con cobro por participación y entrada al público </p>
+                <p><strong>4. Servicios complementarios:</strong></p>
+                <p>Gestión de redes sociales: Cobro por promoción digital de marcas alojadas </p>
+                <h3 class="h5 text-success fw-bold mt-4">Estructura de Costos</h3>
+                <ul>
+                  <li>Alquiler del local: Principal gasto (ej.: Casa Holandesa ocupa una casona heredada, reduciendo costos iniciales) 5.</li>
+                  <li>Mantenimiento: Luz, agua, internet, y sistemas de pago.</li>
+                  <li>Marketing: Inversión en Instagram y colaboraciones con influencers locales </li>
+                </ul>
+                <hr />
+              </div>
+            </div>
+            
+            <!-- Sección: Casos de Éxito -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">3. Casos de Éxito</h2>
+                <p><strong>a) Casa Holandesa (Temuco) </strong></p>
+                <ul>
+                  <li>
+                    <strong>Modelo:</strong>
+                    <ul>
+                      <li>Primer piso: Tienda colaborativa + cafetería.</li>
+                      <li>Eventos: Ferias navideñas, talleres y actividades comunitarias.</li>
+                    </ul>
+                  </li>
+                  <li class="mt-2">
+                    <strong>Claves del éxito:</strong>
+                    <ul>
+                      <li>Enfoque en experiencia: Los clientes interactúan directamente con los creadores.</li>
+                      <li>Sinergias: 8 espacios fijos visibilizan a 100 emprendedores locales.</li>
+                      <li>Adaptabilidad: Nació post-pandemia como respuesta a la crisis comercial.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><strong>b) Bazar Modular (Vitacura) </strong></p>
+                <ul>
+                  <li>Modelo: 120 marcas en 180 m², con módulos desde $20.000/mes + 5% de comisión.</li>
+                  <li>Innovación: Lista de espera de 600 emprendedores garantiza rotación constante.</li>
+                </ul>
+                <p><strong>c) Mezclaconcept y Kleemarket</strong></p>
+                <p>Estrategia: Especialización en nichos (diseño urbano y moda sostenible) y rotación temática por temporadas.</p>
+                <hr />
+              </div>
+            </div>
+      
+         
+      
+            <!-- Sección: Pasos para Replicar el Modelo -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">4. Pasos para Replicar el Modelo</h2>
+                <p><strong>1. Diseño del espacio:</strong></p>
+                <ul>
+                  <li>Modularidad: Estantes móviles y zonas multifuncionales (ej.: cafetería integrada) .</li>
+                  <li>Tecnología: Sistemas de pago QR y pantallas digitales para promociones.</li>
+                </ul>
+                <p><strong>2. Gestión operativa:</strong></p>
+                <ul>
+                  <li>Contratos flexibles: Ofrecer planes diarios a semestrales según necesidades.</li>
+                  <li>Selección de marcas: Evitar competencia directa (ej.: solo un emprendedor de velas por espacio) </li>
+                </ul>
+                <p><strong>3. Marketing comunitario:</strong></p>
+                <ul>
+                  <li>Redes sociales: Publicar contenido diario en Instagram (ej.: @casaholandesa).</li>
+                  <li>Alianzas: Colaborar con la Municipalidad de Temuco para acceder a asesorías gratuitas </li>
+                </ul>
+                <hr />
+              </div>
+            </div>
+      
+            <!-- Sección: Desafíos y Soluciones -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">5. Desafíos y Soluciones</h2>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead class="table-success">
+                      <tr>
+                        <th>Desafío</th>
+                        <th>Solución Propuesta</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alta rotación de marcas</td>
+                        <td>Calendario temático (ej.: "Mes del diseño sustentable") para atraer audiencias nuevas </td>
+                      </tr>
+                      <tr>
+                        <td>Competencia con online</td>
+                        <td>Experiencias únicas: Talleres en vivo o personalización de productos en el local </td>
+                      </tr>
+                      <tr>
+                        <td>Logística compleja</td>
+                        <td>Software de inventario compartido (ej.: Trello) para gestión en tiempo real </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr />
+              </div>
+            </div>
+      
+            <!-- Sección: Impacto y Sostenibilidad -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">6. Impacto y Sostenibilidad</h2>
+                <ul>
+                  <li>Comunidad: Casa Holandesa genera empleo para 30 personas, incluyendo estudiantes universitarios </li>
+                  <li>Medioambiente: Modelos como Biofilia (eco-cosmética en Bazar Modular) promueven consumo responsable </li>
+                </ul>
+                <hr />
+              </div>
+            </div>
+      
+            <!-- Sección: Conclusión del Modelo -->
+            <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+              <div class="card-body">
+                <h2 class="h4 text-success fw-bold mb-3">Conclusión</h2>
+                <p>
+                  El modelo de arriendo de vitrinas colaborativas es viable y escalable, como demuestran Casa Holandesa y Bazar Modular. Para replicarlo:
+                </p>
+                <ul>
+                  <li>Diversificar ingresos: Combinar arriendos, ventas propias (cafetería) y eventos.</li>
+                  <li>Priorizar comunidad: Fomentar interacciones entre creadores y clientes.</li>
+                  <li>Usar tecnología: Herramientas digitales para gestión y promoción.</li>
+                </ul>
+              </div>
+            </div>
+                  </div>
+              </div>
+          </div>
       </div>
-
-   
-
-      <!-- Sección: Pasos para Replicar el Modelo -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">4. Pasos para Replicar el Modelo</h2>
-          <p><strong>1. Diseño del espacio:</strong></p>
-          <ul>
-            <li>Modularidad: Estantes móviles y zonas multifuncionales (ej.: cafetería integrada) .</li>
-            <li>Tecnología: Sistemas de pago QR y pantallas digitales para promociones.</li>
-          </ul>
-          <p><strong>2. Gestión operativa:</strong></p>
-          <ul>
-            <li>Contratos flexibles: Ofrecer planes diarios a semestrales según necesidades.</li>
-            <li>Selección de marcas: Evitar competencia directa (ej.: solo un emprendedor de velas por espacio) </li>
-          </ul>
-          <p><strong>3. Marketing comunitario:</strong></p>
-          <ul>
-            <li>Redes sociales: Publicar contenido diario en Instagram (ej.: @casaholandesa).</li>
-            <li>Alianzas: Colaborar con la Municipalidad de Temuco para acceder a asesorías gratuitas </li>
-          </ul>
-          <hr />
-        </div>
+      <div class="modal fade " id="modalII" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">II) ANALISIS DE PRESUPUESTO (%) EN BASE A CASOS ANTERIORES.</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              II) ANALISIS DE PRESUPUESTO (%) EN BASE A CASOS ANTERIORES.
+                            </h2>
+                            <p class="mb-3">
+                              Postulación a Financiamiento Público/Privado<br />
+                              Temuco, Región de La Araucanía
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Objetivo del Proyecto</h3>
+                            <p>
+                              Crear un espacio multifuncional en el centro de Temuco que integre:
+                            </p>
+                            <ul>
+                              <li>Primer piso: Workcafé + vitrinas rotativas para emprendedores locales.</li>
+                              <li>Segundo piso: Oficinas y salas de reuniones para coworking.</li>
+                            </ul>
+                            <p class="mt-2">
+                              Meta: Apoyar a 50 emprendedores anuales y generar 20 empleos indirectos en La Araucanía.
+                            </p>
+                            <h3 class="h5 text-success fw-bold mt-4">2. Componentes Clave y Estructura Financiera (Porcentajes)</h3>
+                            <p class="fw-semibold">A. Primer Piso: Workcafé + Vitrinas Colaborativas</p>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Actividad</th>
+                                    <th>Ingresos</th>
+                                    <th>Distribución de Recursos</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Arriendo de vitrinas</td>
+                                    <td>60% del total de ingresos</td>
+                                    <td>
+                                      - 50%: Costos fijos (luz, agua, alquiler).<br />
+                                      - 30%: Marketing y promoción.<br />
+                                      - 20%: Mantención del espacio.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ventas del workcafé</td>
+                                    <td>30% del total de ingresos</td>
+                                    <td>
+                                      - 40%: Insumos (café, alimentos).<br />
+                                      - 30%: Salarios.<br />
+                                      - 30%: Reinversión en equipos (ej.: máquina de café profesional).
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Eventos temáticos</td>
+                                    <td>10% del total de ingresos</td>
+                                    <td>
+                                      - 70%: Logística (stands, sonido).<br />
+                                      - 30%: Publicidad.
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <p class="fw-semibold">B. Segundo Piso: Coworking y Oficinas</p>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Actividad</th>
+                                    <th>Ingresos</th>
+                                    <th>Distribución de Recursos</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Arriendo de oficinas</td>
+                                    <td>70% del total de ingresos</td>
+                                    <td>
+                                      - 60%: Costos fijos (internet, limpieza).<br />
+                                      - 25%: Mejoras de infraestructura.<br />
+                                      - 15%: Capacitaciones para usuarios.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Salas de reuniones</td>
+                                    <td>30% del total de ingresos</td>
+                                    <td>
+                                      - 50%: Mantención tecnológica (proyectores, Wi-Fi).<br />
+                                      - 50%: Reserva para descuentos a emprendedores locales.
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">3. Presupuesto General Basado en Porcentajes</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Distribución</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Inversión Inicial</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 40%: Remodelación y diseño modular.<br />
+                                      - 30%: Equipos (cafetería, muebles).<br />
+                                      - 20%: Tecnología (Transbank, sistema de reservas).<br />
+                                      - 10%: Marketing de lanzamiento.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Costos Operativos (anuales)</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 45%: Alquiler del local.<br />
+                                      - 25%: Servicios básicos.<br />
+                                      - 20%: Salarios.<br />
+                                      - 10%: Impuestos y seguros.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ganancias Netas (anuales)</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 60%: Reinversión en el proyecto.<br />
+                                      - 30%: Reserva para emergencias.<br />
+                                      - 10%: Dividendos (si aplica).
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">4. Plan de Sostenibilidad</h3>
+                            <ul>
+                              <li>
+                                <strong>Alianzas estratégicas:</strong>
+                                <ul>
+                                  <li>Municipalidad de Temuco: Acceso a fondos concursables para emprendedores (ej.: Fosis, Sercotec).</li>
+                                  <li>Universidades locales: Estudiantes en práctica para gestión de redes sociales y eventos.</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Impacto comunitario:</strong>
+                                <ul>
+                                  <li>15% de las vitrinas reservadas para emprendimientos indígenas (platería mapuche, textiles).</li>
+                                  <li>Talleres gratuitos mensuales (ej.: "Cómo vender en Instagram").</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">5. Riesgos y Mitigación</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Riesgo</th>
+                                    <th>Solución</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Baja ocupación de vitrinas</td>
+                                    <td>Alianzas con gremios (ej.: Cámara de Comercio) para difusión.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Competencia con tiendas online</td>
+                                    <td>Experiencias presenciales únicas (ej.: catas de café con productores locales).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Aumento de costos fijos</td>
+                                    <td>Negociación con proveedores por volumen (ej.: compra colectiva de insumos).</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">6. Indicadores de Éxito</h3>
+                            <ul>
+                              <li>
+                                <strong>Corto plazo (1 año):</strong>
+                                <ul>
+                                  <li>70% de ocupación en vitrinas y oficinas.</li>
+                                  <li>3 alianzas con instituciones locales.</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Mediano plazo (3 años):</strong>
+                                <ul>
+                                  <li>30% de los emprendedores escalan a locales propios.</li>
+                                  <li>20% de ingresos por ventas online (vinculadas al workcafé).</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">7. Solicitud de Financiamiento</h3>
+                            <ul>
+                              <li>Infraestructura: 50% del costo de remodelación (equipos modulares y tecnología).</li>
+                              <li>Capacitación: 30% para talleres de marketing digital y gestión financiera.</li>
+                              <li>Difusión: 20% para campañas en redes sociales y radios locales.</li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">8. Cierre</h3>
+                            <p>
+                              Casa Aldunate no solo será un punto de venta, sino un hub de innovación social que impulsará la economía local. Con este modelo, el 80% de las ganancias se reinvertirán en la comunidad, asegurando un impacto duradero en La Araucanía.
+                            </p>
+                            <p class="fw-semibold">¡Apóyanos para construir un Temuco más emprendedor! <span aria-label="hoja" role="img">🌱</span></p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
       </div>
-
-      <!-- Sección: Desafíos y Soluciones -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">5. Desafíos y Soluciones</h2>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Desafío</th>
-                  <th>Solución Propuesta</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alta rotación de marcas</td>
-                  <td>Calendario temático (ej.: "Mes del diseño sustentable") para atraer audiencias nuevas </td>
-                </tr>
-                <tr>
-                  <td>Competencia con online</td>
-                  <td>Experiencias únicas: Talleres en vivo o personalización de productos en el local </td>
-                </tr>
-                <tr>
-                  <td>Logística compleja</td>
-                  <td>Software de inventario compartido (ej.: Trello) para gestión en tiempo real </td>
-                </tr>
-              </tbody>
-            </table>
+      <div class="modal fade" id="modalI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">I) INVESTIGACION INICIAL</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              III) VIABILIDAD DE MARCHA BLANCA DE CASA ALDUNATE (1 MES)
+                            </h2>
+                            <p class="mb-3">
+                              Implementación en 1 Mes – Pilotaje Realista para Temuco<br />
+                              Adaptado al contexto actual de la ciudad (ej.: baja ocupación inicial, temporada de invierno, presupuesto ajustado)
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Objetivo del Pilotaje</h3>
+                            <p>
+                              Validar la viabilidad del modelo de vitrinas colaborativas + workcafé en Temuco con:
+                            </p>
+                            <ul>
+                              <li>10 emprendedores locales (meta ajustada por baja ocupación inicial).</li>
+                              <li>Eventos semanales para atraer tráfico.</li>
+                              <li>Costos operativos reducidos en un 40% vs. proyección original.</li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">2. Cronograma de Actividades (Carta Gantt)</h3>
+                            <pre>
+                  Semana      Actividades Clave                                        Responsable
+                  Semana 1    Reclutamiento de 10 emprendedores + alianza con 1 cafetería local    Equipo Comercial
+                  Semana 2    Montaje de 5 vitrinas modulares + diseño básico de workcafé            Equipo Logístico
+                  Semana 3    Apertura soft con 3 eventos (taller, feria, live en Instagram)         Equipo Marketing
+                  Semana 4    Encuestas a clientes + ajuste de horarios y precios                  Equipo Operaciones
+                            </pre>
+                            <h3 class="h5 text-success fw-bold mt-4">3. Presupuesto Ajustado (Porcentajes)</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Distribución</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Inversión Inicial</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 50%: Adaptación del local (pintura, iluminación).<br />
+                                      - 30%: Vitrinas móviles (5 unidades).<br />
+                                      - 20%: Señalética y materiales promocionales.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Costos Operativos (mensuales)</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 50%: Alquiler proporcional (solo 50 m² usado).<br />
+                                      - 30%: Servicios (luz, agua, Wi-Fi).<br />
+                                      - 20%: Marketing en redes sociales.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ingresos Esperados (mensuales)</td>
+                                    <td>100%</td>
+                                    <td>
+                                      - 60%: Arriendo de vitrinas ($150.000/emprendedor).<br />
+                                      - 30%: Ventas de cafetería.<br />
+                                      - 10%: Donaciones de socios estratégicos.
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">4. Estrategia de Baja Ocupación</h3>
+                            <p class="fw-semibold">Atracción de Emprendedores</p>
+                            <ul>
+                              <li>Alianzas con gremios: Cámara de Comercio de Temuco para difusión.</li>
+                              <li>Descuentos del 50% en el primer mes para los 10 pioneros.</li>
+                            </ul>
+                            <p class="fw-semibold mt-3">Atracción de Clientes</p>
+                            <ul>
+                              <li>
+                                <strong>Eventos gratuitos:</strong>
+                                <ul>
+                                  <li>Taller de emprendimiento: Impartido por la Universidad de La Frontera.</li>
+                                  <li>Feria “Winter Edition”: Productos de invierno (ej.: lana, chocolates calientes).</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">Promoción en radios locales: Ej.: Radio Frontera.</li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">5. KPIs Realistas (Indicadores Clave)</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Indicador</th>
+                                    <th>Meta Mensual</th>
+                                    <th>Herramienta de Medición</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Ocupación de vitrinas</td>
+                                    <td>70% (7/10)</td>
+                                    <td>Registro diario de ventas</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tráfico en workcafé</td>
+                                    <td>15 clientes/día</td>
+                                    <td>Contador manual/App</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Interacción en Instagram</td>
+                                    <td>500 seguidores</td>
+                                    <td>Instagram Insights</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Satisfacción emprendedores</td>
+                                    <td>8/10 puntos</td>
+                                    <td>Encuestas post-pilotaje</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">6. Gestión de Riesgos</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Riesgo</th>
+                                    <th>Acción Correctiva</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Solo 5 emprendedores inscritos</td>
+                                    <td>Ofrecer vitrinas gratis a estudiantes de diseño de la UFRO.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Baja venta en cafetería</td>
+                                    <td>Paquetes combo: "Café + producto local con 20% descuento".</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Poco tráfico en eventos</td>
+                                    <td>Colaborar con microinfluencers temucanos (&gt;5K seguidores).</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">7. Gráfico de Progreso Esperado</h3>
+                            <pre>
+                  [Barra de Progreso Mensual]  
+                  - Semana 1: 25% (Reclutamiento) ████▌  
+                  - Semana 2: 50% (Montaje) ████████▌  
+                  - Semana 3: 75% (Operación) ████████████▌  
+                  - Semana 4: 100% (Evaluación) ████████████████
+                            </pre>
+                            <h3 class="h5 text-success fw-bold mt-4">8. Conclusión</h3>
+                            <ul>
+                              <li>Validar demanda real en Temuco con inversión controlada.</li>
+                              <li>Ajustar precios y horarios según feedback local.</li>
+                              <li>Construir alianzas clave para escalar en fases posteriores.</li>
+                            </ul>
+                            <p class="fw-semibold">¡Menos es más! Con un enfoque simple y comunitario, este modelo puede convertirse en un referente de innovación comercial en La Araucanía.</p>
+                          </div>
+                        </div>
+                  
+                  </div>
+              </div>
           </div>
-          <hr />
-        </div>
       </div>
-
-      <!-- Sección: Impacto y Sostenibilidad -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">6. Impacto y Sostenibilidad</h2>
-          <ul>
-            <li>Comunidad: Casa Holandesa genera empleo para 30 personas, incluyendo estudiantes universitarios </li>
-            <li>Medioambiente: Modelos como Biofilia (eco-cosmética en Bazar Modular) promueven consumo responsable </li>
-          </ul>
-          <hr />
-        </div>
+      <div class="modal fade" id="modalI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">I) INVESTIGACION INICIAL</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              IV) ANALISIS FINANCIERO CONTEXTUALIZADO EN TEMUCO. 
+                            </h2>
+                            <p class="mb-3">
+                              Modelo de financiamiento colaborativo para emprendedores y arriendo de oficinas por hora<br />
+                              *Basado en análisis del mercado de Temuco y casos como Edificio Vanguardia Center, Coworking K Business y Bazar Modular.
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Objetivo</h3>
+                            <p>
+                              Fomentar el acceso a espacios de trabajo y exhibición para emprendedores en Temuco mediante:
+                            </p>
+                            <ul>
+                              <li>
+                                Tarifa plana de $20.000 mensuales por emprendimiento (incluye vitrina en primer piso + 5 horas mensuales de uso de salas de reuniones).
+                              </li>
+                              <li>
+                                Arriendo de oficinas por hora desde $3.000 CLP (precio mínimo competitivo, ajustado a la realidad local).
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">2. Análisis de Precios</h3>
+                            <p class="fw-semibold">a) Cobro por emprendimiento ($20.000 mensuales)</p>
+                            <ul>
+                              <li>
+                                <strong>Cobertura de costos:</strong>
+                                <ul>
+                                  <li>50%: Alquiler del local y servicios básicos (luz, agua, internet).</li>
+                                  <li>30%: Mantención y limpieza del espacio colaborativo.</li>
+                                  <li>20%: Marketing y promoción en redes sociales (ej.: Instagram @casaholandesa).</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Beneficios para emprendedores:</strong>
+                                <ul>
+                                  <li>Acceso a vitrina en zona céntrica (ej.: calle Aldunate, similar a locales en Vanguardia Center).</li>
+                                  <li>Participación en ferias temáticas mensuales (ej.: "Mercado de Invierno").</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <p class="fw-semibold mt-3">b) Arriendo de oficinas por hora (desde $3.000 CLP)</p>
+                            <p>
+                              <strong>Precio mínimo justificado:</strong>
+                            </p>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Costo por hora</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Espacio físico</td>
+                                    <td>$1.500</td>
+                                    <td>Proporcional al alquiler de oficinas en Temuco (ej.: 330.000/mes por 22m² = 157/hora) .</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Servicios</td>
+                                    <td>$1.000</td>
+                                    <td>Internet, uso de impresora y acceso a cafetería.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Margen de ganancia</td>
+                                    <td>$500</td>
+                                    <td>Para reinversión en mejoras del espacio.</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Total mínimo recomendado:</td>
+                                    <td><strong>3.000 CLP/hora</strong> (competitivo frente a coworkings flexibles en Temuco que cobran $3.000 - $6.000/hora) .</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">3. Estructura de Ingresos</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Fuente</th>
+                                    <th>Meta Mensual</th>
+                                    <th>Distribución</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>30 emprendedores</td>
+                                    <td>$600.000</td>
+                                    <td>30 x $20.000 (60% para costos fijos, 40% para reinversión).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Oficinas por hora</td>
+                                    <td>100 horas vendidas</td>
+                                    <td>100 x $3.000 = $300.000 (70% para costos, 30% para reserva).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Eventos adicionales</td>
+                                    <td>2 eventos/mes</td>
+                                    <td>$200.000 (ej.: talleres pagados o alquiler de salas) 8.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">4. Presupuesto Operativo (Porcentajes)</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Distribución</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Costos fijos</td>
+                                    <td>60%</td>
+                                    <td>Alquiler, servicios básicos, sueldo de 1 administrador.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Marketing</td>
+                                    <td>20%</td>
+                                    <td>Redes sociales, folletos en puntos estratégicos (ej.: Plaza de Armas).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Mantención</td>
+                                    <td>15%</td>
+                                    <td>Reparaciones, limpieza y reposición de mobiliario.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reserva</td>
+                                    <td>5%</td>
+                                    <td>Emergencias o ajustes de tarifas.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">5. Cronograma de Implementación (1-2 meses)</h3>
+                            <!-- Cronograma de Implementación -->
+                  <div id="cronograma" class="py-5">
+                      <div class="container">
+                        <h2 class="text-center text-success mb-4" data-aos="fade-down" data-aos-duration="800">
+                          Cronograma de Implementación (1-2 meses)
+                        </h2>
+                        <div class="mermaid">
+                          gantt
+                              title Cronograma de Implementación
+                              dateFormat  YYYY-MM-DD
+                              section Fase 1
+                              Reclutamiento de emprendedores      : 2025-02-10, 15d
+                              Adaptación del espacio              : 2025-02-25, 10d
+                              section Fase 2
+                              Lanzamiento en redes sociales       : 2025-03-05, 7d
+                              Operación piloto (30 días)          : 2025-03-12, 30d
+                        </div>
+                      </div>
+                  </div>
+                            <h3 class="h5 text-success fw-bold mt-4">6. Sostenibilidad y Alianzas</h3>
+                            <ul>
+                              <li>
+                                <strong>Alianzas clave:</strong>
+                                <ul>
+                                  <li>Municipalidad de Temuco: Acceso a subsidios para emprendedores (ej.: programa "Temuco Emprende") .</li>
+                                  <li>Universidades: Estudiantes de diseño UFRO para curatoría de vitrinas 11.</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Impacto social:</strong>
+                                <ul>
+                                  <li>20% de espacios reservados para emprendimientos de pueblos originarios (ej.: platería mapuche).</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">7. Riesgos y Mitigación</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Riesgo</th>
+                                    <th>Solución</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Baja ocupación inicial</td>
+                                    <td>Ofrecer primer mes gratis a 10 emprendedores pioneros 8.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Competencia con coworkings</td>
+                                    <td>Destacar valor agregado: vitrinas integradas y precios accesibles.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">8. Conclusión</h3>
+                            <p class="mb-2">
+                              Con un modelo que combina $20.000 mensuales por emprendimiento y $3.000 CLP/hora para oficinas, Casa Aldunate se posiciona como un espacio inclusivo y económicamente viable.
+                            </p>
+                            <p class="mb-2">
+                              Este proyecto prioriza la accesibilidad sin descuidar la sostenibilidad financiera, alineándose con las necesidades de Temuco, donde el 67% de los emprendimientos son informales.
+                            </p>
+                            <p class="fw-semibold">¡Un espacio para crecer, colaborar y vender! <span role="img" aria-label="cohete">🚀</span></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-
-      <!-- Sección: Conclusión del Modelo -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-        <div class="card-body">
-          <h2 class="h4 text-success fw-bold mb-3">Conclusión</h2>
-          <p>
-            El modelo de arriendo de vitrinas colaborativas es viable y escalable, como demuestran Casa Holandesa y Bazar Modular. Para replicarlo:
-          </p>
-          <ul>
-            <li>Diversificar ingresos: Combinar arriendos, ventas propias (cafetería) y eventos.</li>
-            <li>Priorizar comunidad: Fomentar interacciones entre creadores y clientes.</li>
-            <li>Usar tecnología: Herramientas digitales para gestión y promoción.</li>
-          </ul>
-        </div>
+      <div class="modal fade" id="modalI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">I) INVESTIGACION INICIAL</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              V) FACTIBILIDAD: ANÁLISIS DE INFRAESTRUCTURA Y ACCESIBILIDAD UNIVERSAL EN TEMUCO
+                            </h2>
+                            <p class="mb-3">
+                              Evaluación sobre la posibilidad de arrendar oficinas por hora en el segundo piso de una casa antigua (Casa Aldunate) y la viabilidad de mantener una pyme, considerando la normativa de accesibilidad universal en Chile.
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Consideraciones Legales y Normativas</h3>
+                            <p>
+                              La legislación chilena, a través de la Ley N°20.422 y el Decreto Supremo N°50 (modificando la OGUC), exige que los espacios destinados a atención al público sean accesibles para todas las personas, incluidas aquellas con movilidad reducida. 
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Accesibilidad Universal:</strong> Los edificios de uso público o que presten servicios deben contar con rutas accesibles (por ejemplo, rampas, ascensores o alternativas para salvar desniveles). 
+                              </li>
+                              <li>
+                                <strong>Edificios Antiguos:</strong> Si bien existen posibilidades de acogerse al concepto de "carga desproporcionada", cualquier uso que implique atención al público (como arrendar oficinas) requiere justificar formalmente la imposibilidad de adaptaciones o, de lo contrario, implementar las mejoras necesarias.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">2. Implicaciones para Arrendar Oficinas</h3>
+                            <p>
+                              Utilizar la Casa Aldunate para arrendar oficinas por hora implica:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Uso de Espacio Público:</strong> Si se ofrece acceso a clientes externos, es obligatorio cumplir con los estándares de accesibilidad, lo que requiere alternativas de acceso al segundo piso (por ejemplo, instalación de ascensor o rampa adecuada).
+                              </li>
+                              <li>
+                                <strong>Impacto en el Modelo de Negocio:</strong> El hecho de contar únicamente con una escalera empinada y no adaptada puede limitar la clientela y generar riesgos legales, afectando tanto la imagen del negocio como la seguridad de los usuarios.
+                              </li>
+                              <li>
+                                <strong>Posibles Exenciones:</strong> En ciertos casos, los edificios antiguos pueden acogerse a exenciones por "carga desproporcionada", pero esto requiere un análisis técnico especializado y aprobación por parte de la municipalidad.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">3. Recomendaciones Estratégicas</h3>
+                            <p>
+                              Para que el uso de Casa Aldunate sea viable y legalmente conforme:
+                            </p>
+                            <ul>
+                              <li>
+                                Realizar un <strong>diagnóstico técnico de accesibilidad</strong> del inmueble.
+                              </li>
+                              <li>
+                                Consultar con profesionales en accesibilidad y la autoridad municipal de Temuco para determinar si se puede aplicar una exención o si es necesario efectuar adaptaciones (por ejemplo, instalar un elevador o construir una rampa).
+                              </li>
+                              <li>
+                                Evaluar si el modelo de arrendamiento (oficinas por hora) se dirige a un público amplio, en cuyo caso la accesibilidad se vuelve esencial para evitar sanciones y garantizar la inclusión.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">4. Conclusión</h3>
+                            <p class="mb-2">
+                              Si se desea arrendar oficinas en Casa Aldunate y operar una pyme en ella, es imprescindible que el espacio cumpla con las normas de accesibilidad universal o se justifique formalmente su exención. Esto no solo es un requisito legal, sino también una estrategia para garantizar el acceso equitativo y la seguridad de todos los usuarios.
+                            </p>
+                            <p class="fw-semibold">
+                              ¡Adaptar el espacio es clave para crecer y ser inclusivos en Temuco! <span role="img" aria-label="check">✅</span>
+                            </p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
       </div>
-
-      <!-- PROYECTO: CASA ALDUNATE – CENTRO DE EMPRENDIMIENTO COLABORATIVO -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-        <div class="card-body">
-          <h2 class="h3 text-dark fw-bold mb-3">
-            II) ANALISIS DE PRESUPUESTO (%) EN BASE A CASOS ANTERIORES.
-          </h2>
-          <p class="mb-3">
-            Postulación a Financiamiento Público/Privado<br />
-            Temuco, Región de La Araucanía
-          </p>
-          <h3 class="h5 text-success fw-bold">1. Objetivo del Proyecto</h3>
-          <p>
-            Crear un espacio multifuncional en el centro de Temuco que integre:
-          </p>
-          <ul>
-            <li>Primer piso: Workcafé + vitrinas rotativas para emprendedores locales.</li>
-            <li>Segundo piso: Oficinas y salas de reuniones para coworking.</li>
-          </ul>
-          <p class="mt-2">
-            Meta: Apoyar a 50 emprendedores anuales y generar 20 empleos indirectos en La Araucanía.
-          </p>
-          <h3 class="h5 text-success fw-bold mt-4">2. Componentes Clave y Estructura Financiera (Porcentajes)</h3>
-          <p class="fw-semibold">A. Primer Piso: Workcafé + Vitrinas Colaborativas</p>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Actividad</th>
-                  <th>Ingresos</th>
-                  <th>Distribución de Recursos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Arriendo de vitrinas</td>
-                  <td>60% del total de ingresos</td>
-                  <td>
-                    - 50%: Costos fijos (luz, agua, alquiler).<br />
-                    - 30%: Marketing y promoción.<br />
-                    - 20%: Mantención del espacio.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ventas del workcafé</td>
-                  <td>30% del total de ingresos</td>
-                  <td>
-                    - 40%: Insumos (café, alimentos).<br />
-                    - 30%: Salarios.<br />
-                    - 30%: Reinversión en equipos (ej.: máquina de café profesional).
-                  </td>
-                </tr>
-                <tr>
-                  <td>Eventos temáticos</td>
-                  <td>10% del total de ingresos</td>
-                  <td>
-                    - 70%: Logística (stands, sonido).<br />
-                    - 30%: Publicidad.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+      <div class="modal fade" id="modalI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">I) INVESTIGACION INICIAL</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              VI) FACTIBILIDAD: INFORME SOBRE REQUERIMIENTOS MÍNIMOS Y DISEÑO DE BAÑOS EN ESTABLECIMIENTOS EN CHILE
+                            </h2>
+                            <p class="mb-3">
+                              Este informe analiza los requerimientos mínimos, diseño, calidad y normativas de accesibilidad que deben cumplir los baños en establecimientos públicos y de trabajo en Chile, basándose en el Decreto Supremo N°594/99, la OGUC y otras normativas relevantes.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold">1. Introducción</h3>
+                            <p>
+                              Los baños en establecimientos en Chile están regulados para garantizar condiciones sanitarias, seguridad y accesibilidad, protegiendo la salud y el bienestar de los usuarios y asegurando el cumplimiento legal.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">2. Requerimientos Mínimos según Cantidad de Personas</h3>
+                            <p>
+                              Basados en el Decreto Supremo N°594/99 (Artículo 23), se establecen:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Para 15 trabajadores (hombres):</strong> 2 excusados, 2 lavamanos y 2 duchas.
+                              </li>
+                              <li>
+                                <strong>Para 15 trabajadores (12 hombres y 3 mujeres):</strong> 2 WC, 2 lavamanos y 2 duchas para hombres; 1 WC, 1 lavamanos y 1 ducha para mujeres.
+                              </li>
+                              <li>
+                                <strong>Micro y pequeñas empresas (hasta 10 trabajadores):</strong> Se permite un baño compartido para ambos sexos.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">3. Diseño y Calidad de los Baños</h3>
+                            <h4 class="h6 text-success fw-bold">a) Dimensiones y Distribución</h4>
+                            <ul>
+                              <li>
+                                <strong>Baños accesibles:</strong> Deben permitir un giro de 360° para sillas de ruedas, con un diámetro mínimo de 1,50 m.
+                              </li>
+                              <li>
+                                <strong>Puertas:</strong> Ancho libre mínimo de 0,80 m, abriéndose preferiblemente hacia el exterior para facilitar la maniobra.
+                              </li>
+                            </ul>
+                            <h4 class="h6 text-success fw-bold mt-3">b) Artefactos y Accesorios</h4>
+                            <ul>
+                              <li>
+                                <strong>Lavamanos:</strong> Ubicados a 0,80 m de altura, equipados con grifería de palanca o sensor.
+                              </li>
+                              <li>
+                                <strong>Inodoros:</strong> Con espacio de transferencia lateral de 0,80 x 1,20 m y barras de apoyo antideslizantes a 0,75 m de altura.
+                              </li>
+                              <li>
+                                <strong>Accesorios:</strong> Jaboneras, toalleros y dispensadores deben instalarse a una altura máxima de 1,20 m.
+                              </li>
+                            </ul>
+                            <h4 class="h6 text-success fw-bold mt-3">c) Materiales y Mantenimiento</h4>
+                            <p>
+                              Los pisos deben ser sólidos, antideslizantes y fáciles de limpiar. Las paredes y techos deben estar en buen estado y pintados de acuerdo con la función del espacio.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">4. Requisitos de Accesibilidad Universal</h3>
+                            <p>
+                              La OGUC exige que los baños en establecimientos públicos cuenten con al menos un servicio higiénico accesible para personas con discapacidad. Esto implica:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Dimensiones:</strong> Espacio suficiente para giros de sillas de ruedas.
+                              </li>
+                              <li>
+                                <strong>Barras de apoyo:</strong> Instaladas a ambos lados del inodoro, con una longitud mínima de 0,60 m.
+                              </li>
+                              <li>
+                                <strong>Señalización:</strong> Claras, con elementos visuales y táctiles (incluyendo Braille) para identificar el servicio.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">5. Consideraciones Adicionales</h3>
+                            <ul>
+                              <li>
+                                <strong>Agua potable:</strong> Suministro mínimo de 100 litros por persona al día para consumo y aseo.
+                              </li>
+                              <li>
+                                <strong>Ventilación:</strong> Sistemas de ventilación natural o artificial para evitar humedad y malos olores.
+                              </li>
+                              <li>
+                                <strong>Ley 21.559:</strong> Establece el acceso gratuito a baños para personas con enfermedades inflamatorias intestinales u ostomizadas, mediante la presentación de credencial o certificado médico.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">6. Recomendaciones para Establecimientos</h3>
+                            <ul>
+                              <li>
+                                <strong>Planificación:</strong> Realizar un cálculo preciso de la cantidad de baños necesarios según la capacidad y distribución de género.
+                              </li>
+                              <li>
+                                <strong>Diseño inclusivo:</strong> Incorporar baños accesibles desde la etapa de diseño, conforme a la OGUC.
+                              </li>
+                              <li>
+                                <strong>Mantenimiento:</strong> Implementar protocolos de limpieza y desinfección periódicos para asegurar higiene y durabilidad.
+                              </li>
+                              <li>
+                                <strong>Señalización:</strong> Utilizar pictogramas y Braille para facilitar la identificación de baños accesibles.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">7. Conclusión</h3>
+                            <p class="mb-2">
+                              Los baños en establecimientos en Chile deben cumplir normativas estrictas para garantizar funcionalidad, higiene y accesibilidad. La implementación de estos requerimientos no solo asegura el cumplimiento legal, sino que mejora la experiencia de los usuarios y fomenta la inclusión social.
+                            </p>
+                            <p class="fw-semibold">
+                              ¡Un diseño de baños inclusivo es clave para el bienestar y la salud de todos! <span role="img" aria-label="check">✅</span>
+                            </p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
           </div>
-          <p class="fw-semibold">B. Segundo Piso: Coworking y Oficinas</p>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Actividad</th>
-                  <th>Ingresos</th>
-                  <th>Distribución de Recursos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Arriendo de oficinas</td>
-                  <td>70% del total de ingresos</td>
-                  <td>
-                    - 60%: Costos fijos (internet, limpieza).<br />
-                    - 25%: Mejoras de infraestructura.<br />
-                    - 15%: Capacitaciones para usuarios.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Salas de reuniones</td>
-                  <td>30% del total de ingresos</td>
-                  <td>
-                    - 50%: Mantención tecnológica (proyectores, Wi-Fi).<br />
-                    - 50%: Reserva para descuentos a emprendedores locales.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">3. Presupuesto General Basado en Porcentajes</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Concepto</th>
-                  <th>Distribución</th>
-                  <th>Detalle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Inversión Inicial</td>
-                  <td>100%</td>
-                  <td>
-                    - 40%: Remodelación y diseño modular.<br />
-                    - 30%: Equipos (cafetería, muebles).<br />
-                    - 20%: Tecnología (Transbank, sistema de reservas).<br />
-                    - 10%: Marketing de lanzamiento.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Costos Operativos (anuales)</td>
-                  <td>100%</td>
-                  <td>
-                    - 45%: Alquiler del local.<br />
-                    - 25%: Servicios básicos.<br />
-                    - 20%: Salarios.<br />
-                    - 10%: Impuestos y seguros.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ganancias Netas (anuales)</td>
-                  <td>100%</td>
-                  <td>
-                    - 60%: Reinversión en el proyecto.<br />
-                    - 30%: Reserva para emergencias.<br />
-                    - 10%: Dividendos (si aplica).
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">4. Plan de Sostenibilidad</h3>
-          <ul>
-            <li>
-              <strong>Alianzas estratégicas:</strong>
-              <ul>
-                <li>Municipalidad de Temuco: Acceso a fondos concursables para emprendedores (ej.: Fosis, Sercotec).</li>
-                <li>Universidades locales: Estudiantes en práctica para gestión de redes sociales y eventos.</li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Impacto comunitario:</strong>
-              <ul>
-                <li>15% de las vitrinas reservadas para emprendimientos indígenas (platería mapuche, textiles).</li>
-                <li>Talleres gratuitos mensuales (ej.: "Cómo vender en Instagram").</li>
-              </ul>
-            </li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">5. Riesgos y Mitigación</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Riesgo</th>
-                  <th>Solución</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baja ocupación de vitrinas</td>
-                  <td>Alianzas con gremios (ej.: Cámara de Comercio) para difusión.</td>
-                </tr>
-                <tr>
-                  <td>Competencia con tiendas online</td>
-                  <td>Experiencias presenciales únicas (ej.: catas de café con productores locales).</td>
-                </tr>
-                <tr>
-                  <td>Aumento de costos fijos</td>
-                  <td>Negociación con proveedores por volumen (ej.: compra colectiva de insumos).</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">6. Indicadores de Éxito</h3>
-          <ul>
-            <li>
-              <strong>Corto plazo (1 año):</strong>
-              <ul>
-                <li>70% de ocupación en vitrinas y oficinas.</li>
-                <li>3 alianzas con instituciones locales.</li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Mediano plazo (3 años):</strong>
-              <ul>
-                <li>30% de los emprendedores escalan a locales propios.</li>
-                <li>20% de ingresos por ventas online (vinculadas al workcafé).</li>
-              </ul>
-            </li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">7. Solicitud de Financiamiento</h3>
-          <ul>
-            <li>Infraestructura: 50% del costo de remodelación (equipos modulares y tecnología).</li>
-            <li>Capacitación: 30% para talleres de marketing digital y gestión financiera.</li>
-            <li>Difusión: 20% para campañas en redes sociales y radios locales.</li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">8. Cierre</h3>
-          <p>
-            Casa Aldunate no solo será un punto de venta, sino un hub de innovación social que impulsará la economía local. Con este modelo, el 80% de las ganancias se reinvertirán en la comunidad, asegurando un impacto duradero en La Araucanía.
-          </p>
-          <p class="fw-semibold">¡Apóyanos para construir un Temuco más emprendedor! <span aria-label="hoja" role="img">🌱</span></p>
-        </div>
       </div>
-
-      <!-- PROYECTO: MARCHA BLANCA DE CASA ALDUNATE -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-        <div class="card-body">
-          <h2 class="h3 text-bold fw-bold mb-3">
-            III) VIABILIDAD DE MARCHA BLANCA DE CASA ALDUNATE (1 MES)
-          </h2>
-          <p class="mb-3">
-            Implementación en 1 Mes – Pilotaje Realista para Temuco<br />
-            Adaptado al contexto actual de la ciudad (ej.: baja ocupación inicial, temporada de invierno, presupuesto ajustado)
-          </p>
-          <h3 class="h5 text-success fw-bold">1. Objetivo del Pilotaje</h3>
-          <p>
-            Validar la viabilidad del modelo de vitrinas colaborativas + workcafé en Temuco con:
-          </p>
-          <ul>
-            <li>10 emprendedores locales (meta ajustada por baja ocupación inicial).</li>
-            <li>Eventos semanales para atraer tráfico.</li>
-            <li>Costos operativos reducidos en un 40% vs. proyección original.</li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">2. Cronograma de Actividades (Carta Gantt)</h3>
-          <pre>
-Semana      Actividades Clave                                        Responsable
-Semana 1    Reclutamiento de 10 emprendedores + alianza con 1 cafetería local    Equipo Comercial
-Semana 2    Montaje de 5 vitrinas modulares + diseño básico de workcafé            Equipo Logístico
-Semana 3    Apertura soft con 3 eventos (taller, feria, live en Instagram)         Equipo Marketing
-Semana 4    Encuestas a clientes + ajuste de horarios y precios                  Equipo Operaciones
-          </pre>
-          <h3 class="h5 text-success fw-bold mt-4">3. Presupuesto Ajustado (Porcentajes)</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Concepto</th>
-                  <th>Distribución</th>
-                  <th>Detalle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Inversión Inicial</td>
-                  <td>100%</td>
-                  <td>
-                    - 50%: Adaptación del local (pintura, iluminación).<br />
-                    - 30%: Vitrinas móviles (5 unidades).<br />
-                    - 20%: Señalética y materiales promocionales.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Costos Operativos (mensuales)</td>
-                  <td>100%</td>
-                  <td>
-                    - 50%: Alquiler proporcional (solo 50 m² usado).<br />
-                    - 30%: Servicios (luz, agua, Wi-Fi).<br />
-                    - 20%: Marketing en redes sociales.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ingresos Esperados (mensuales)</td>
-                  <td>100%</td>
-                  <td>
-                    - 60%: Arriendo de vitrinas ($150.000/emprendedor).<br />
-                    - 30%: Ventas de cafetería.<br />
-                    - 10%: Donaciones de socios estratégicos.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">4. Estrategia de Baja Ocupación</h3>
-          <p class="fw-semibold">Atracción de Emprendedores</p>
-          <ul>
-            <li>Alianzas con gremios: Cámara de Comercio de Temuco para difusión.</li>
-            <li>Descuentos del 50% en el primer mes para los 10 pioneros.</li>
-          </ul>
-          <p class="fw-semibold mt-3">Atracción de Clientes</p>
-          <ul>
-            <li>
-              <strong>Eventos gratuitos:</strong>
-              <ul>
-                <li>Taller de emprendimiento: Impartido por la Universidad de La Frontera.</li>
-                <li>Feria “Winter Edition”: Productos de invierno (ej.: lana, chocolates calientes).</li>
-              </ul>
-            </li>
-            <li class="mt-2">Promoción en radios locales: Ej.: Radio Frontera.</li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">5. KPIs Realistas (Indicadores Clave)</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Indicador</th>
-                  <th>Meta Mensual</th>
-                  <th>Herramienta de Medición</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Ocupación de vitrinas</td>
-                  <td>70% (7/10)</td>
-                  <td>Registro diario de ventas</td>
-                </tr>
-                <tr>
-                  <td>Tráfico en workcafé</td>
-                  <td>15 clientes/día</td>
-                  <td>Contador manual/App</td>
-                </tr>
-                <tr>
-                  <td>Interacción en Instagram</td>
-                  <td>500 seguidores</td>
-                  <td>Instagram Insights</td>
-                </tr>
-                <tr>
-                  <td>Satisfacción emprendedores</td>
-                  <td>8/10 puntos</td>
-                  <td>Encuestas post-pilotaje</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">6. Gestión de Riesgos</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Riesgo</th>
-                  <th>Acción Correctiva</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Solo 5 emprendedores inscritos</td>
-                  <td>Ofrecer vitrinas gratis a estudiantes de diseño de la UFRO.</td>
-                </tr>
-                <tr>
-                  <td>Baja venta en cafetería</td>
-                  <td>Paquetes combo: "Café + producto local con 20% descuento".</td>
-                </tr>
-                <tr>
-                  <td>Poco tráfico en eventos</td>
-                  <td>Colaborar con microinfluencers temucanos (&gt;5K seguidores).</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">7. Gráfico de Progreso Esperado</h3>
-          <pre>
-[Barra de Progreso Mensual]  
-- Semana 1: 25% (Reclutamiento) ████▌  
-- Semana 2: 50% (Montaje) ████████▌  
-- Semana 3: 75% (Operación) ████████████▌  
-- Semana 4: 100% (Evaluación) ████████████████
-          </pre>
-          <h3 class="h5 text-success fw-bold mt-4">8. Conclusión</h3>
-          <ul>
-            <li>Validar demanda real en Temuco con inversión controlada.</li>
-            <li>Ajustar precios y horarios según feedback local.</li>
-            <li>Construir alianzas clave para escalar en fases posteriores.</li>
-          </ul>
-          <p class="fw-semibold">¡Menos es más! Con un enfoque simple y comunitario, este modelo puede convertirse en un referente de innovación comercial en La Araucanía.</p>
-        </div>
-      </div>
-
-      <!-- PROYECTO: IMPULSANDO CASA ALDUNATE -->
-      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-        <div class="card-body">
-          <h2 class="h3 text-dark fw-bold mb-3">
-            IV) ANALISIS FINANCIERO CONTEXTUALIZADO EN TEMUCO. 
-          </h2>
-          <p class="mb-3">
-            Modelo de financiamiento colaborativo para emprendedores y arriendo de oficinas por hora<br />
-            *Basado en análisis del mercado de Temuco y casos como Edificio Vanguardia Center, Coworking K Business y Bazar Modular.
-          </p>
-          <h3 class="h5 text-success fw-bold">1. Objetivo</h3>
-          <p>
-            Fomentar el acceso a espacios de trabajo y exhibición para emprendedores en Temuco mediante:
-          </p>
-          <ul>
-            <li>
-              Tarifa plana de $20.000 mensuales por emprendimiento (incluye vitrina en primer piso + 5 horas mensuales de uso de salas de reuniones).
-            </li>
-            <li>
-              Arriendo de oficinas por hora desde $3.000 CLP (precio mínimo competitivo, ajustado a la realidad local).
-            </li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">2. Análisis de Precios</h3>
-          <p class="fw-semibold">a) Cobro por emprendimiento ($20.000 mensuales)</p>
-          <ul>
-            <li>
-              <strong>Cobertura de costos:</strong>
-              <ul>
-                <li>50%: Alquiler del local y servicios básicos (luz, agua, internet).</li>
-                <li>30%: Mantención y limpieza del espacio colaborativo.</li>
-                <li>20%: Marketing y promoción en redes sociales (ej.: Instagram @casaholandesa).</li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Beneficios para emprendedores:</strong>
-              <ul>
-                <li>Acceso a vitrina en zona céntrica (ej.: calle Aldunate, similar a locales en Vanguardia Center).</li>
-                <li>Participación en ferias temáticas mensuales (ej.: "Mercado de Invierno").</li>
-              </ul>
-            </li>
-          </ul>
-          <p class="fw-semibold mt-3">b) Arriendo de oficinas por hora (desde $3.000 CLP)</p>
-          <p>
-            <strong>Precio mínimo justificado:</strong>
-          </p>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Concepto</th>
-                  <th>Costo por hora</th>
-                  <th>Detalle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Espacio físico</td>
-                  <td>$1.500</td>
-                  <td>Proporcional al alquiler de oficinas en Temuco (ej.: 330.000/mes por 22m² = 157/hora) .</td>
-                </tr>
-                <tr>
-                  <td>Servicios</td>
-                  <td>$1.000</td>
-                  <td>Internet, uso de impresora y acceso a cafetería.</td>
-                </tr>
-                <tr>
-                  <td>Margen de ganancia</td>
-                  <td>$500</td>
-                  <td>Para reinversión en mejoras del espacio.</td>
-                </tr>
-                <tr>
-                  <td colspan="2">Total mínimo recomendado:</td>
-                  <td><strong>3.000 CLP/hora</strong> (competitivo frente a coworkings flexibles en Temuco que cobran $3.000 - $6.000/hora) .</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">3. Estructura de Ingresos</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Fuente</th>
-                  <th>Meta Mensual</th>
-                  <th>Distribución</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>30 emprendedores</td>
-                  <td>$600.000</td>
-                  <td>30 x $20.000 (60% para costos fijos, 40% para reinversión).</td>
-                </tr>
-                <tr>
-                  <td>Oficinas por hora</td>
-                  <td>100 horas vendidas</td>
-                  <td>100 x $3.000 = $300.000 (70% para costos, 30% para reserva).</td>
-                </tr>
-                <tr>
-                  <td>Eventos adicionales</td>
-                  <td>2 eventos/mes</td>
-                  <td>$200.000 (ej.: talleres pagados o alquiler de salas) 8.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">4. Presupuesto Operativo (Porcentajes)</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Concepto</th>
-                  <th>Distribución</th>
-                  <th>Detalle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Costos fijos</td>
-                  <td>60%</td>
-                  <td>Alquiler, servicios básicos, sueldo de 1 administrador.</td>
-                </tr>
-                <tr>
-                  <td>Marketing</td>
-                  <td>20%</td>
-                  <td>Redes sociales, folletos en puntos estratégicos (ej.: Plaza de Armas).</td>
-                </tr>
-                <tr>
-                  <td>Mantención</td>
-                  <td>15%</td>
-                  <td>Reparaciones, limpieza y reposición de mobiliario.</td>
-                </tr>
-                <tr>
-                  <td>Reserva</td>
-                  <td>5%</td>
-                  <td>Emergencias o ajustes de tarifas.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">5. Cronograma de Implementación (1-2 meses)</h3>
-          <!-- Cronograma de Implementación -->
-<div id="cronograma" class="py-5">
-    <div class="container">
-      <h2 class="text-center text-success mb-4" data-aos="fade-down" data-aos-duration="800">
-        Cronograma de Implementación (1-2 meses)
-      </h2>
-      <div class="mermaid">
-        gantt
-            title Cronograma de Implementación
-            dateFormat  YYYY-MM-DD
-            section Fase 1
-            Reclutamiento de emprendedores      : 2025-02-10, 15d
-            Adaptación del espacio              : 2025-02-25, 10d
-            section Fase 2
-            Lanzamiento en redes sociales       : 2025-03-05, 7d
-            Operación piloto (30 días)          : 2025-03-12, 30d
-      </div>
-    </div>
-</div>
-          <h3 class="h5 text-success fw-bold mt-4">6. Sostenibilidad y Alianzas</h3>
-          <ul>
-            <li>
-              <strong>Alianzas clave:</strong>
-              <ul>
-                <li>Municipalidad de Temuco: Acceso a subsidios para emprendedores (ej.: programa "Temuco Emprende") .</li>
-                <li>Universidades: Estudiantes de diseño UFRO para curatoría de vitrinas 11.</li>
-              </ul>
-            </li>
-            <li class="mt-2">
-              <strong>Impacto social:</strong>
-              <ul>
-                <li>20% de espacios reservados para emprendimientos de pueblos originarios (ej.: platería mapuche).</li>
-              </ul>
-            </li>
-          </ul>
-          <h3 class="h5 text-success fw-bold mt-4">7. Riesgos y Mitigación</h3>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-success">
-                <tr>
-                  <th>Riesgo</th>
-                  <th>Solución</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baja ocupación inicial</td>
-                  <td>Ofrecer primer mes gratis a 10 emprendedores pioneros 8.</td>
-                </tr>
-                <tr>
-                  <td>Competencia con coworkings</td>
-                  <td>Destacar valor agregado: vitrinas integradas y precios accesibles.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3 class="h5 text-success fw-bold mt-4">8. Conclusión</h3>
-          <p class="mb-2">
-            Con un modelo que combina $20.000 mensuales por emprendimiento y $3.000 CLP/hora para oficinas, Casa Aldunate se posiciona como un espacio inclusivo y económicamente viable.
-          </p>
-          <p class="mb-2">
-            Este proyecto prioriza la accesibilidad sin descuidar la sostenibilidad financiera, alineándose con las necesidades de Temuco, donde el 67% de los emprendimientos son informales.
-          </p>
-          <p class="fw-semibold">¡Un espacio para crecer, colaborar y vender! <span role="img" aria-label="cohete">🚀</span></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- FACTIBILIDAD: IMPULSANDO CASA ALDUNATE -->
-<div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-  <div class="card-body">
-    <h2 class="h3 text-dark fw-bold mb-3">
-      V) FACTIBILIDAD: ANÁLISIS DE INFRAESTRUCTURA Y ACCESIBILIDAD UNIVERSAL EN TEMUCO
-    </h2>
-    <p class="mb-3">
-      Evaluación sobre la posibilidad de arrendar oficinas por hora en el segundo piso de una casa antigua (Casa Aldunate) y la viabilidad de mantener una pyme, considerando la normativa de accesibilidad universal en Chile.
-    </p>
-    <h3 class="h5 text-success fw-bold">1. Consideraciones Legales y Normativas</h3>
-    <p>
-      La legislación chilena, a través de la Ley N°20.422 y el Decreto Supremo N°50 (modificando la OGUC), exige que los espacios destinados a atención al público sean accesibles para todas las personas, incluidas aquellas con movilidad reducida. 
-    </p>
-    <ul>
-      <li>
-        <strong>Accesibilidad Universal:</strong> Los edificios de uso público o que presten servicios deben contar con rutas accesibles (por ejemplo, rampas, ascensores o alternativas para salvar desniveles). 
-      </li>
-      <li>
-        <strong>Edificios Antiguos:</strong> Si bien existen posibilidades de acogerse al concepto de "carga desproporcionada", cualquier uso que implique atención al público (como arrendar oficinas) requiere justificar formalmente la imposibilidad de adaptaciones o, de lo contrario, implementar las mejoras necesarias.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">2. Implicaciones para Arrendar Oficinas</h3>
-    <p>
-      Utilizar la Casa Aldunate para arrendar oficinas por hora implica:
-    </p>
-    <ul>
-      <li>
-        <strong>Uso de Espacio Público:</strong> Si se ofrece acceso a clientes externos, es obligatorio cumplir con los estándares de accesibilidad, lo que requiere alternativas de acceso al segundo piso (por ejemplo, instalación de ascensor o rampa adecuada).
-      </li>
-      <li>
-        <strong>Impacto en el Modelo de Negocio:</strong> El hecho de contar únicamente con una escalera empinada y no adaptada puede limitar la clientela y generar riesgos legales, afectando tanto la imagen del negocio como la seguridad de los usuarios.
-      </li>
-      <li>
-        <strong>Posibles Exenciones:</strong> En ciertos casos, los edificios antiguos pueden acogerse a exenciones por "carga desproporcionada", pero esto requiere un análisis técnico especializado y aprobación por parte de la municipalidad.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">3. Recomendaciones Estratégicas</h3>
-    <p>
-      Para que el uso de Casa Aldunate sea viable y legalmente conforme:
-    </p>
-    <ul>
-      <li>
-        Realizar un <strong>diagnóstico técnico de accesibilidad</strong> del inmueble.
-      </li>
-      <li>
-        Consultar con profesionales en accesibilidad y la autoridad municipal de Temuco para determinar si se puede aplicar una exención o si es necesario efectuar adaptaciones (por ejemplo, instalar un elevador o construir una rampa).
-      </li>
-      <li>
-        Evaluar si el modelo de arrendamiento (oficinas por hora) se dirige a un público amplio, en cuyo caso la accesibilidad se vuelve esencial para evitar sanciones y garantizar la inclusión.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">4. Conclusión</h3>
-    <p class="mb-2">
-      Si se desea arrendar oficinas en Casa Aldunate y operar una pyme en ella, es imprescindible que el espacio cumpla con las normas de accesibilidad universal o se justifique formalmente su exención. Esto no solo es un requisito legal, sino también una estrategia para garantizar el acceso equitativo y la seguridad de todos los usuarios.
-    </p>
-    <p class="fw-semibold">
-      ¡Adaptar el espacio es clave para crecer y ser inclusivos en Temuco! <span role="img" aria-label="check">✅</span>
-    </p>
-  </div>
-</div>
-<!-- FACTIBILIDAD: INFORME SOBRE REQUERIMIENTOS MÍNIMOS Y DISEÑO DE BAÑOS EN ESTABLECIMIENTOS EN CHILE -->
-<div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-  <div class="card-body">
-    <h2 class="h3 text-dark fw-bold mb-3">
-      VI) FACTIBILIDAD: INFORME SOBRE REQUERIMIENTOS MÍNIMOS Y DISEÑO DE BAÑOS EN ESTABLECIMIENTOS EN CHILE
-    </h2>
-    <p class="mb-3">
-      Este informe analiza los requerimientos mínimos, diseño, calidad y normativas de accesibilidad que deben cumplir los baños en establecimientos públicos y de trabajo en Chile, basándose en el Decreto Supremo N°594/99, la OGUC y otras normativas relevantes.
-    </p>
-    
-    <h3 class="h5 text-success fw-bold">1. Introducción</h3>
-    <p>
-      Los baños en establecimientos en Chile están regulados para garantizar condiciones sanitarias, seguridad y accesibilidad, protegiendo la salud y el bienestar de los usuarios y asegurando el cumplimiento legal.
-    </p>
-    
-    <h3 class="h5 text-success fw-bold mt-4">2. Requerimientos Mínimos según Cantidad de Personas</h3>
-    <p>
-      Basados en el Decreto Supremo N°594/99 (Artículo 23), se establecen:
-    </p>
-    <ul>
-      <li>
-        <strong>Para 15 trabajadores (hombres):</strong> 2 excusados, 2 lavamanos y 2 duchas.
-      </li>
-      <li>
-        <strong>Para 15 trabajadores (12 hombres y 3 mujeres):</strong> 2 WC, 2 lavamanos y 2 duchas para hombres; 1 WC, 1 lavamanos y 1 ducha para mujeres.
-      </li>
-      <li>
-        <strong>Micro y pequeñas empresas (hasta 10 trabajadores):</strong> Se permite un baño compartido para ambos sexos.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">3. Diseño y Calidad de los Baños</h3>
-    <h4 class="h6 text-success fw-bold">a) Dimensiones y Distribución</h4>
-    <ul>
-      <li>
-        <strong>Baños accesibles:</strong> Deben permitir un giro de 360° para sillas de ruedas, con un diámetro mínimo de 1,50 m.
-      </li>
-      <li>
-        <strong>Puertas:</strong> Ancho libre mínimo de 0,80 m, abriéndose preferiblemente hacia el exterior para facilitar la maniobra.
-      </li>
-    </ul>
-    <h4 class="h6 text-success fw-bold mt-3">b) Artefactos y Accesorios</h4>
-    <ul>
-      <li>
-        <strong>Lavamanos:</strong> Ubicados a 0,80 m de altura, equipados con grifería de palanca o sensor.
-      </li>
-      <li>
-        <strong>Inodoros:</strong> Con espacio de transferencia lateral de 0,80 x 1,20 m y barras de apoyo antideslizantes a 0,75 m de altura.
-      </li>
-      <li>
-        <strong>Accesorios:</strong> Jaboneras, toalleros y dispensadores deben instalarse a una altura máxima de 1,20 m.
-      </li>
-    </ul>
-    <h4 class="h6 text-success fw-bold mt-3">c) Materiales y Mantenimiento</h4>
-    <p>
-      Los pisos deben ser sólidos, antideslizantes y fáciles de limpiar. Las paredes y techos deben estar en buen estado y pintados de acuerdo con la función del espacio.
-    </p>
-    
-    <h3 class="h5 text-success fw-bold mt-4">4. Requisitos de Accesibilidad Universal</h3>
-    <p>
-      La OGUC exige que los baños en establecimientos públicos cuenten con al menos un servicio higiénico accesible para personas con discapacidad. Esto implica:
-    </p>
-    <ul>
-      <li>
-        <strong>Dimensiones:</strong> Espacio suficiente para giros de sillas de ruedas.
-      </li>
-      <li>
-        <strong>Barras de apoyo:</strong> Instaladas a ambos lados del inodoro, con una longitud mínima de 0,60 m.
-      </li>
-      <li>
-        <strong>Señalización:</strong> Claras, con elementos visuales y táctiles (incluyendo Braille) para identificar el servicio.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">5. Consideraciones Adicionales</h3>
-    <ul>
-      <li>
-        <strong>Agua potable:</strong> Suministro mínimo de 100 litros por persona al día para consumo y aseo.
-      </li>
-      <li>
-        <strong>Ventilación:</strong> Sistemas de ventilación natural o artificial para evitar humedad y malos olores.
-      </li>
-      <li>
-        <strong>Ley 21.559:</strong> Establece el acceso gratuito a baños para personas con enfermedades inflamatorias intestinales u ostomizadas, mediante la presentación de credencial o certificado médico.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">6. Recomendaciones para Establecimientos</h3>
-    <ul>
-      <li>
-        <strong>Planificación:</strong> Realizar un cálculo preciso de la cantidad de baños necesarios según la capacidad y distribución de género.
-      </li>
-      <li>
-        <strong>Diseño inclusivo:</strong> Incorporar baños accesibles desde la etapa de diseño, conforme a la OGUC.
-      </li>
-      <li>
-        <strong>Mantenimiento:</strong> Implementar protocolos de limpieza y desinfección periódicos para asegurar higiene y durabilidad.
-      </li>
-      <li>
-        <strong>Señalización:</strong> Utilizar pictogramas y Braille para facilitar la identificación de baños accesibles.
-      </li>
-    </ul>
-    
-    <h3 class="h5 text-success fw-bold mt-4">7. Conclusión</h3>
-    <p class="mb-2">
-      Los baños en establecimientos en Chile deben cumplir normativas estrictas para garantizar funcionalidad, higiene y accesibilidad. La implementación de estos requerimientos no solo asegura el cumplimiento legal, sino que mejora la experiencia de los usuarios y fomenta la inclusión social.
-    </p>
-    <p class="fw-semibold">
-      ¡Un diseño de baños inclusivo es clave para el bienestar y la salud de todos! <span role="img" aria-label="check">✅</span>
-    </p>
-  </div>
-</div>
 
 
     
@@ -1554,10 +1746,11 @@ Semana 4    Encuestas a clientes + ajuste de horarios y precios                 
         </div>
       </div>
       <!-- Pie del Modal -->
-      
+    
     </div>
   </div>
-</div>
+</section>
+
 <!-- Footer -->
 <footer id="footer" class="bg-dark text-white py-4 mt-5">
     <div class="container">
@@ -1590,16 +1783,16 @@ Semana 4    Encuestas a clientes + ajuste de horarios y precios                 
  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script>// Inicializar AOS para animaciones scroll
+  <script>// Inicializar AOS para animaciones scroll
     AOS.init();
     // Inicializar Mermaid
-    mermaid.initialize({ startOnLoad: true });
+    //mermaid.initialize({ startOnLoad: true });
    
       
       // Si aún no se renderiza, forzar el renderizado cuando el documento esté listo
-      document.addEventListener("DOMContentLoaded", function() {
-        mermaid.contentLoaded();
-      });
+     // document.addEventListener("DOMContentLoaded", function() {
+     //   mermaid.contentLoaded();
+     // });
       
     </script>
  </body>
