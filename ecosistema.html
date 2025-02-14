@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casa Aldunate – Centro de Emprendimiento Colaborativo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Estilos personalizados -->
+    <style>
+      body {
+        background-image: url(assets/img/fondoeco.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top; /* Centra la imagen */
+      }
+      .card {
+        margin-bottom: 1.5rem;
+      }
+      pre {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+      ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.text-brown{ color: #00bf63;}
+.vintage-card {
+  background: #ffffff;
+    border: 3px solid #ff0099;
+    border-radius: 15px;
+    margin: 1rem;
+    box-shadow: 5px 5px 15px rgb(180 139 73 / 25%);
+}
+        .vintage-card img {
+            border-radius: 12px 12px 0 0;
+            filter: sepia(0.3);
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title {
+            color: #00bf63;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        .vintage-btn {
+    background: #0cc0df;
+    color: rgb(0, 0, 0);
+    border: 0px solid #0cc0df;
+    border-radius: 5px;
+}
+        .vintage-btn:hover {
+            background: #fe7762;
+            color: #000000;
+        }
+       
+      
+/* Opcional: ajustar el alto máximo de la tabla en el modal */
+.table-responsive {
+      max-height: auto;
+    }
+    .modal {height: auto;}
+    .modal-content {
+    background: #ffffff;
+    border: 2px solid #6d4c41;
+    max-height: 90vh; /* Limita la altura del modal */
+    overflow-y: auto; /* Activa el scroll si el contenido es muy grande */
+}
+.modal-backdrop {
+    
+    position: relative;}
+    </style>
+  </head>
+  <body>
+    
+    <section class=" py-5">
+      <!-- Encabezado General -->
+      
+      <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+        <!-- Logo centrado -->
+    <div class="d-flex justify-content-center mb-4">
+      <img src="assets\img\CasaAldunate.png" alt="Logo Casa Aldunate" class="img-fluid" style="max-width: 500px;">
+    </div>
+        <div class="container py-5">
+          <div class="row">
+              <!-- Card I -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/discos-viejos-alto-angulo-mercado-segunda-mano_23-2149338470.jpg?t=st=1739410633~exp=1739414233~hmac=16d58963cf4058fc2bca389697cc72ad1eb995c4423bf24f655017300c27b8dc&w=996" class="card-img-top" alt="Investigación">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">I) RESUMEN EJECUTIVO</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalI">
+                              Ver Detalles
+                          </button>
+                          <br>
+                      </div><br>
+                  </div>
+              </div>
+      
+              <!-- Card II -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/companeros-trabajo-que-trabajan-oficina-ambiente-relajado_329181-12384.jpg?uid=R186973948&ga=GA1.1.1299815580.1738263703" class="card-img-top" alt="Presupuesto">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">II) SISTEMA DE INSCRIPCION</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalII">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+      
+              <!-- Card III -->
+              <div class="col-md-4">
+                  <div class="vintage-card">
+                      <img src="https://img.freepik.com/foto-gratis/manos-empresarios-mesa-madera-documentos-borradores_176420-367.jpg?t=st=1739490180~exp=1739493780~hmac=6e9925e664c15e57c01a99ca1e595133855782ea257ce4413ed97206446c9f56&w=996" class="card-img-top" alt="Viabilidad">
+                      <div class="card-body"><br>
+                          <h5 class="card-title">III) CARTA GANTT</h5><br>
+                          <button type="button" class="btn vintage-btn" data-bs-toggle="modal" data-bs-target="#modalIII">
+                              Ver Detalles
+                          </button><br>
+                      </div><br>
+                  </div>
+              </div>
+          </div>
+      
+          
+                  
+              
+          </div>
+      
+      
+<!-- Modals -->
+<div class="modal" id="modalI" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title text-center">Casa Aldunate – Ecosistema Colaborativo (Etapa I)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Sección: Resumen Ejecutivo -->
+              <div class="card text-brown" data-aos="fade-up" data-aos-duration="800">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">1. Resumen Ejecutivo</h2>
+                      <p>Casa Aldunate es un espacio colaborativo en Temuco que integra tres áreas principales para impulsar emprendedores, fomentar la cultura local y promover la sostenibilidad mediante la economía circular. El proyecto se compone de:</p>
+                      <ul>
+                          <li><strong>Feria Indoor:</strong> Módulos fijos para que emprendedores exhiban y vendan sus productos mediante contratos de arriendo mínimo de un mes (salvo eventos pop-up de corta duración).</li>
+                          <li><strong>Café Artes y Letras:</strong> Una cafetería que también funciona como espacio cultural, con una pequeña biblioteca y exposiciones de arte local.</li>
+                          <li><strong>Rincón de Formalización:</strong> Área de apoyo para que los emprendedores formalicen sus negocios, con asesorías y recursos prácticos.</li>
+                      </ul>
+                      <p>El equipo inicial está conformado por tres personas:</p>
+                      <ul>
+                          <li>Adriana: Responsable de la gestión digital y de la plataforma online.</li>
+                          <li>Liset: Encargada de la decoración y relaciones públicas.</li>
+                          <li>Miguel: A cargo de la asesoría legal y contable.</li>
+                      </ul>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Modelo de Ingresos -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">2. Modelo de Ingresos</h2>
+                      <h3 class="h5 text-success fw-bold">Fuentes de Ingreso Principales:</h3>
+                      <p><strong>Arriendo de Espacios:</strong></p>
+                      <ul>
+                          <li>Módulos de Feria: Contratos de arriendo mínimo de un mes</li>
+                          <li>Ejemplo: Si se alquilan 6 módulos a $40,000 CLP mensuales cada uno, se generan ingresos de $240,000 CLP mensuales</li>
+                      </ul>
+                      
+                      <p><strong>Café Artes y Letras:</strong></p>
+                      <ul>
+                          <li>Ventas diarias de café, infusiones, snacks y productos culturales</li>
+                          <li>Ejemplo: Aproximadamente 80 ventas diarias a un precio promedio de $1,500 CLP pueden generar alrededor de $3,600,000 CLP mensuales</li>
+                      </ul>
+
+                      <p><strong>Talleres y Cursos de Formalización:</strong></p>
+                      <ul>
+                          <li>Inscripción a capacitaciones y asesorías</li>
+                          <li>Ejemplo: Ingresos estimados de $50,000 CLP mensuales</li>
+                      </ul>
+
+                      <p><strong>Eventos Especiales:</strong></p>
+                      <ul>
+                          <li>Organización de eventos culturales que aporten ingresos adicionales (venta de entradas o participación en actividades)</li>
+                      </ul>
+
+                      <p class="fw-bold mt-4">Total Ingresos Estimados (Mensual): Aproximadamente $4,000,000 CLP</p>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Estructura de Costos -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">3. Estructura de Costos</h2>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>Concepto</th>
+                                      <th>Costo Mensual</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>Servicios Básicos</td>
+                                      <td>$80,000 CLP</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Insumos para el Café</td>
+                                      <td>$120,000 CLP</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Materiales para Talleres</td>
+                                      <td>$50,000 CLP</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Publicidad y Promoción</td>
+                                      <td>$30,000 CLP</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Gastos Administrativos</td>
+                                      <td>$100,000 CLP</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Arriendo del Local (imputado)</td>
+                                      <td>$1,000,000 CLP</td>
+                                  </tr>
+                                  <tr class="table-warning">
+                                      <td><strong>Total Costos Operativos</strong></td>
+                                      <td><strong>$1,480,000 CLP</strong></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <p class="fw-bold mt-3">Utilidad Operativa Estimada:<br>
+                      Ingresos ($4,000,000 CLP) – Costos ($1,480,000 CLP) ≈ $2,520,000 CLP mensuales</p>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Plan de Implementación -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">4. Plan de Implementación y Cronograma</h2>
+                      <h3 class="h5 text-success fw-bold">Fase de Preparación:</h3>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>Semana</th>
+                                      <th>Actividades</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>1</td>
+                                      <td>Formalización del equipo de trabajo<br>
+                                      Revisión y adecuación del espacio</td>
+                                  </tr>
+                                  <tr>
+                                      <td>2</td>
+                                      <td>Instalación de mobiliario y equipos<br>
+                                      Desarrollo de plataforma digital</td>
+                                  </tr>
+                                  <tr>
+                                      <td>3</td>
+                                      <td>Capacitación interna<br>
+                                      Preparación de materiales</td>
+                                  </tr>
+                                  <tr>
+                                      <td>4</td>
+                                      <td>Lanzamiento oficial ("Fiesta de Saberes")<br>
+                                      Inicio de contratos de arriendo</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Conclusión -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">5. Conclusión</h2>
+                      <p>Casa Aldunate es un proyecto integral que fusiona emprendimiento, cultura y sostenibilidad, adaptado a la realidad financiera de Temuco y la Araucanía. Con ingresos diversificados, un control riguroso de costos y el respaldo de un equipo comprometido (Adriana, Liset y Miguel), el proyecto se posiciona para convertirse en un referente de innovación colaborativa en el sur de Chile.</p>
+                      <p class="fw-semibold">Nota: Estos números son estimaciones iniciales y se ajustarán conforme se obtengan datos reales durante la marcha blanca y el seguimiento del proyecto.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+      <!-- Modal Sistema de Inscripción -->
+<div class="modal fade" id="modalII" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title text-center">Sistema de Inscripción para "Aliados de Casa Aldunate"</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Sección: Objetivo -->
+              <div class="card text-brown" data-aos="fade-up" data-aos-duration="800">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">1. Objetivo del Sistema</h2>
+                      <p>El sistema de inscripción tiene como finalidad que la comunidad se convierta en parte activa del ecosistema colaborativo, permitiéndole:</p>
+                      <ul>
+                          <li>Acceder a beneficios y contenidos exclusivos que impulsen el emprendimiento y el desarrollo personal.</li>
+                          <li>Recibir información actualizada sobre actividades, talleres, eventos culturales y oportunidades de formalización.</li>
+                          <li>Participar en eventos especiales y experiencias que fortalezcan la identidad y el tejido social de Temuco y la región.</li>
+                      </ul>
+                      <div class="alert alert-info mt-3">
+                          <strong>Nota:</strong> La membresía no otorga derechos de voto en decisiones operativas, financieras o estratégicas, pero sí la oportunidad de colaborar, aprender y crecer juntos.
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Estructura -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">2. Estructura de la Inscripción</h2>
+                      
+                      <h3 class="h5 text-success fw-bold mt-4">a) Canales de Registro</h3>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>Canal</th>
+                                      <th>Proceso</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td><strong>Web</strong></td>
+                                      <td>Formulario digital integrado en el sitio oficial (usando plataformas como Google Forms o Typeform)</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Presencial</strong></td>
+                                      <td>Inscripción mediante fichas físicas en el Café Artes y Letras y en ferias locales</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Código QR</strong></td>
+                                      <td>Acceso a través de códigos en materiales promocionales (afiches, redes sociales)</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                      <h3 class="h5 text-success fw-bold mt-4">b) Datos Solicitados</h3>
+                      <ul>
+                          <li>Nombre completo</li>
+                          <li>Correo electrónico y/o WhatsApp</li>
+                          <li>Comuna de residencia</li>
+                          <li>Áreas de interés (seleccionar entre):
+                              <ul>
+                                  <li>🎨 Talleres de arte y artesanía</li>
+                                  <li>📚 Eventos literarios y culturales</li>
+                                  <li>🛒 Arriendo de mesas para emprendedores</li>
+                                  <li>📝 Asesorías para formalización de emprendimientos</li>
+                              </ul>
+                          </li>
+                          <li>Aceptación de los términos y condiciones (ver sección 4)</li>
+                      </ul>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Beneficios -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">3. Beneficios para Inscritos</h2>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>Nivel</th>
+                                      <th>Ventajas</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td><strong>Básico</strong></td>
+                                      <td>
+                                          <ul>
+                                              <li>Boletín mensual con consejos y novedades</li>
+                                              <li>Acceso a contenido formativo gratuito</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Activo</strong></td>
+                                      <td>
+                                          <ul>
+                                              <li>10% de descuento en talleres y cursos</li>
+                                              <li>Acceso prioritario a eventos especiales</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Premium</strong><br><small>(Requiere 3 eventos asistidos)</small></td>
+                                      <td>
+                                          <ul>
+                                              <li>1 día gratis de arriendo de mesa al año</li>
+                                              <li>Cupón mensual para café gratuito</li>
+                                              <li>Acceso a mentoría exclusiva</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Términos -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">4. Términos y Condiciones</h2>
+                      <p><strong>No Societario:</strong><br>
+                      "La inscripción no otorga calidad de socio ni derecho a participar en decisiones estratégicas o operativas de Casa Aldunate."</p>
+
+                      <p><strong>Uso de Datos:</strong><br>
+                      "La información proporcionada se utilizará exclusivamente para fines comunicacionales y para mejorar la experiencia de la comunidad."</p>
+
+                      <p><strong>Renovación Anual:</strong><br>
+                      "La membresía se reactiva automáticamente cada año, salvo que el miembro solicite su baja."</p>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Gestión de Datos -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">5. Gestión de la Base de Datos</h2>
+                      <p><strong>Herramientas:</strong><br>
+                      Se utilizará un CRM sencillo basado en una hoja de cálculo de Google, con filtros por intereses y comuna para segmentar la información.</p>
+
+                      <p><strong>Segmentación Automática:</strong><br>
+                      Uso de etiquetas para enviar información personalizada (por ejemplo, talleres para artesanos o eventos literarios).</p>
+
+                      <p><strong>Actualización:</strong><br>
+                      Revisión trimestral de la base de datos para eliminar correos rebotados o solicitudes de baja, asegurando una comunicación eficaz.</p>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Comunicación -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">6. Comunicación Post-Inscripción</h2>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>Canal</th>
+                                      <th>Frecuencia</th>
+                                      <th>Contenido Ejemplo</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td><strong>Newsletter</strong></td>
+                                      <td>Mensual</td>
+                                      <td>Próximos talleres, historias de éxito</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>WhatsApp</strong></td>
+                                      <td>Semanal</td>
+                                      <td>Recordatorios de eventos, ofertas</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Redes Sociales</strong></td>
+                                      <td>Diario</td>
+                                      <td>Contenido exclusivo, tutoriales</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Flujo -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">7. Ejemplo de Flujo de Registro</h2>
+                      <ol>
+                          <li>El usuario escanea el código QR en un afiche promocional</li>
+                          <li>Completa el formulario digital en aproximadamente 3 minutos</li>
+                          <li>Recibe un email de bienvenida con:
+                              <ul>
+                                  <li>Código de descuento del 10%</li>
+                                  <li>Enlace a términos y condiciones</li>
+                              </ul>
+                          </li>
+                          <li>Clasificación en la base de datos según interés</li>
+                          <li>Recibe invitación personalizada a taller</li>
+                      </ol>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Indicadores -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">8. Indicadores de Éxito</h2>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead class="table-success">
+                                  <tr>
+                                      <th>KPI</th>
+                                      <th>Meta (Primer Trimestre)</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>Número Total de Inscritos</td>
+                                      <td>150 personas</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Tasa de Retención</td>
+                                      <td>60% apertura newsletter</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Conversión a Premium</td>
+                                      <td>20% de activos</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- Sección: Conclusión -->
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                  <div class="card-body">
+                      <h2 class="h4 text-success fw-bold mb-3">9. Conclusión</h2>
+                      <p>Este sistema de inscripción "Aliados de Casa Aldunate" fomenta la inclusión sin comprometer la estructura legal, permite una segmentación precisa de la audiencia y fortalece la fidelización a través de beneficios concretos. Bajo el respaldo de la Fundación Ecorecicla, el proyecto no solo impulsa el emprendimiento local, sino que también contribuye al desarrollo social y económico de Temuco y la Araucanía, justificando así el ingreso monetario del proyecto principal.</p>
+                      <p class="lead text-center mt-4">¡Una comunidad empoderada y unida por el emprendimiento, sin burocracia, para transformar el sur de Chile!</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="modalIII" tabindex="-1"> 
+  <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                  <div class="card-body">
+                    <h2 class="h3 text-brown fw-bold mb-3">
+                      III) CARTA GANTT FEBRERO A MARZO 2025
+                    </h2>
+                    <p class="mb-3">
+                      <section class="container my-5">
+                        <div class="card shadow">
+                          <div class="card-header bg-primary text-white">
+                            Calendario de Actividades
+                          </div>
+                          <div class="card-body">
+                            <div class="table-responsive">
+                              <table class="table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Fecha</th>
+                                    <th>Día</th>
+                                    <th>Horario</th>
+                                    <th>Área de Trabajo</th>
+                                    <th>Actividad Detallada</th>
+                                    <th>Responsable</th>
+                                    <th>Meta / Resultado Esperado</th>
+                                  </tr>           
+                                </thead>
+                                <tbody>
+                                  <tr><td>17-02-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Organización del Espacio</td><td>Revisión integral del local y elaboración del plano de distribución.</td><td>Equipo</td><td>Plano aprobado; zonas definidas para Feria, Café y Rincón.</td></tr>
+                                  <tr><td>18-02-2025</td><td>Martes</td><td>13:00-17:00</td><td>Adecuación y Decoración</td><td>Pintura de paredes en áreas comunes y definición del esquema de colores.</td><td>Liset y Miguel</td><td>Áreas pintadas y esquema de colores definido.</td></tr>
+                                  <tr><td>19-02-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Adecuación y Decoración</td><td>Instalación de elementos decorativos y disposición del mobiliario (mesas y sillas).</td><td>Liset</td><td>Mobiliario y decoración instalados según el plano.</td></tr>
+                                  <tr><td>20-02-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Instalación de Equipos</td><td>Instalación del WiFi, cámaras de seguridad y configuración del sistema audiovisual.</td><td>Miguel</td><td>Equipos instalados y conectados correctamente.</td></tr>
+                                  <tr><td>21-02-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Instalación de Equipos</td><td>Pruebas de conectividad y funcionamiento de todos los sistemas; solución de incidencias.</td><td>Miguel</td><td>Sistemas operativos sin fallas.</td></tr>
+                                  <tr><td>24-02-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Desarrollo Digital</td><td>Diseño y programación inicial del sitio web y formulario de inscripción.</td><td>Adriana</td><td>Sitio web y formulario activos en línea.</td></tr>
+                                  <tr><td>25-02-2025</td><td>Martes</td><td>13:00-17:00</td><td>Desarrollo Digital</td><td>Integración de la base de datos en un CRM y segmentación inicial por intereses.</td><td>Adriana</td><td>Base de datos configurada y segmentada.</td></tr>
+                                  <tr><td>26-02-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Materiales Promocionales</td><td>Diseño e impresión de afiches, fichas de inscripción y generación de códigos QR.</td><td>Liset y Adriana</td><td>Materiales promocionales listos para distribución.</td></tr>
+                                  <tr><td>27-02-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Planificación de Eventos</td><td>Elaboración del programa y agenda para la 'Fiesta de Saberes'; coordinación de logística del evento.</td><td>Miguel y Liset</td><td>Programa de evento completo y agenda coordinada.</td></tr>
+                                  <tr><td>28-02-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Capacitación y Revisión</td><td>Capacitación interna sobre procesos operativos y uso de la plataforma digital; revisión final general.</td><td>Todo el equipo</td><td>Equipo capacitado y ajustes finales implementados.</td></tr>
+                                  <tr><td>03-03-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Café</td><td>Actualización de menú e inventario; revisión de proveedores y stock.</td><td>Liset y Miguel</td><td>Menú actualizado y stock revisado.</td></tr>
+                                  <tr><td>04-03-2025</td><td>Martes</td><td>13:00-17:00</td><td>Café</td><td>Capacitación para atención y servicio en el café; entrenamiento en manejo de equipos.</td><td>Liset</td><td>Personal capacitado y protocolos de atención definidos.</td></tr>
+                                  <tr><td>05-03-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Café</td><td>Revisión y mantenimiento de equipos (cafetera, sistema de sonido).</td><td>Adriana</td><td>Equipos en óptimas condiciones.</td></tr>
+                                  <tr><td>06-03-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Feria</td><td>Revisión de módulos de la feria y definición de rotación temática semanal.</td><td>Liset y Adriana</td><td>Plan de rotación actualizado.</td></tr>
+                                  <tr><td>07-03-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Feria</td><td>Reunión con emprendedores para recoger feedback y planificar próximas actividades.</td><td>Equipo</td><td>Feedback recopilado y plan preliminar establecido.</td></tr>
+                                  <tr><td>10-03-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Feria</td><td>Diseño y actualización de material promocional para la feria; revisión de afiches y generación de códigos QR.</td><td>Adriana</td><td>Materiales listos para impresión.</td></tr>
+                                  <tr><td>11-03-2025</td><td>Martes</td><td>13:00-17:00</td><td>Feria</td><td>Actualización de la base de datos de emprendedores y segmentación en el CRM.</td><td>Adriana</td><td>CRM actualizado y segmentación establecida.</td></tr>
+                                  <tr><td>12-03-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Feria</td><td>Coordinación logística para próximos eventos de la feria; contacto con emprendedores.</td><td>Miguel y Liset</td><td>Agenda de eventos definida y confirmaciones iniciales obtenidas.</td></tr>
+                                  <tr><td>13-03-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Café</td><td>Planificación de promociones especiales para aumentar la afluencia en el café.</td><td>Liset y Miguel</td><td>Estrategia promocional definida y documentada.</td></tr>
+                                  <tr><td>14-03-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Café/Feria</td><td>Sesión de lluvia de ideas conjunta para integrar actividades de café y feria.</td><td>Equipo</td><td>Lista de ideas y propuestas de eventos integrados.</td></tr>
+                                  <tr><td>17-03-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Digital</td><td>Actualización del sitio web con novedades sobre el café y la feria.</td><td>Adriana</td><td>Página web actualizada y sección de eventos activa.</td></tr>
+                                  <tr><td>18-03-2025</td><td>Martes</td><td>13:00-17:00</td><td>Digital</td><td>Lanzamiento de campaña en redes sociales enfocada en el café.</td><td>Adriana</td><td>Campaña lanzada y primeras métricas de alcance positivas.</td></tr>
+                                  <tr><td>19-03-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Café</td><td>Evaluación de la satisfacción de clientes en el café; recopilación de feedback.</td><td>Liset y Adriana</td><td>Informe de satisfacción generado.</td></tr>
+                                  <tr><td>20-03-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Feria</td><td>Seguimiento a la organización de la feria; confirmación de participación de emprendedores.</td><td>Miguel y Liset</td><td>Participación confirmada y ajustes logísticos realizados.</td></tr>
+                                  <tr><td>21-03-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Digital</td><td>Integración de feedback en la plataforma digital; ajustes en CRM y comunicaciones.</td><td>Adriana</td><td>Sistema actualizado y comunicación optimizada.</td></tr>
+                                  <tr><td>24-03-2025</td><td>Lunes</td><td>13:00-17:00</td><td>Evaluación</td><td>Revisión general del desempeño del café y la feria durante la primera mitad del mes.</td><td>Equipo</td><td>Informe preliminar de evaluación completado.</td></tr>
+                                  <tr><td>25-03-2025</td><td>Martes</td><td>13:00-17:00</td><td>Evaluación</td><td>Reunión de feedback con emprendedores y clientes; recopilación de sugerencias.</td><td>Miguel y Liset</td><td>Feedback recopilado para plan de mejoras.</td></tr>
+                                  <tr><td>26-03-2025</td><td>Miércoles</td><td>13:00-17:00</td><td>Planificación</td><td>Elaboración del plan de mejoras para el próximo mes, basándose en evaluaciones.</td><td>Equipo</td><td>Plan de mejoras documentado.</td></tr>
+                                  <tr><td>27-03-2025</td><td>Jueves</td><td>13:00-17:00</td><td>Café</td><td>Preparación de promociones especiales de cierre de mes; organización de degustaciones y eventos internos.</td><td>Liset</td><td>Promociones definidas y planificadas para cierre de mes.</td></tr>
+                                  <tr><td>28-03-2025</td><td>Viernes</td><td>13:00-17:00</td><td>Feria</td><td>Organización final y coordinación para el evento especial de cierre de mes en la feria.</td><td>Miguel</td><td>Evento de cierre planificado y listo para ejecución.</td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </p>
+                    
+                  </div>
+                </div>
+          
+          </div>
+      </div>
+  </div>
+</div>
+
+      <div class="modal fade" id="modalIV" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              IV) ANALISIS FINANCIERO CONTEXTUALIZADO EN TEMUCO. 
+                            </h2>
+                            <p class="mb-3">
+                              Modelo de financiamiento colaborativo para emprendedores y arriendo de oficinas por hora<br />
+                              *Basado en análisis del mercado de Temuco y casos como Edificio Vanguardia Center, Coworking K Business y Bazar Modular.
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Objetivo</h3>
+                            <p>
+                              Fomentar el acceso a espacios de trabajo y exhibición para emprendedores en Temuco mediante:
+                            </p>
+                            <ul>
+                              <li>
+                                Tarifa plana de $20.000 mensuales por emprendimiento (incluye vitrina en primer piso + 5 horas mensuales de uso de salas de reuniones).
+                              </li>
+                              <li>
+                                Arriendo de oficinas por hora desde $3.000 CLP (precio mínimo competitivo, ajustado a la realidad local).
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">2. Análisis de Precios</h3>
+                            <p class="fw-semibold">a) Cobro por emprendimiento ($20.000 mensuales)</p>
+                            <ul>
+                              <li>
+                                <strong>Cobertura de costos:</strong>
+                                <ul>
+                                  <li>50%: Alquiler del local y servicios básicos (luz, agua, internet).</li>
+                                  <li>30%: Mantención y limpieza del espacio colaborativo.</li>
+                                  <li>20%: Marketing y promoción en redes sociales (ej.: Instagram @casaholandesa).</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Beneficios para emprendedores:</strong>
+                                <ul>
+                                  <li>Acceso a vitrina en zona céntrica (ej.: calle Aldunate, similar a locales en Vanguardia Center).</li>
+                                  <li>Participación en ferias temáticas mensuales (ej.: "Mercado de Invierno").</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <p class="fw-semibold mt-3">b) Arriendo de oficinas por hora (desde $3.000 CLP)</p>
+                            <p>
+                              <strong>Precio mínimo justificado:</strong>
+                            </p>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Costo por hora</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Espacio físico</td>
+                                    <td>$1.500</td>
+                                    <td>Proporcional al alquiler de oficinas en Temuco (ej.: 330.000/mes por 22m² = 157/hora) .</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Servicios</td>
+                                    <td>$1.000</td>
+                                    <td>Internet, uso de impresora y acceso a cafetería.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Margen de ganancia</td>
+                                    <td>$500</td>
+                                    <td>Para reinversión en mejoras del espacio.</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Total mínimo recomendado:</td>
+                                    <td><strong>3.000 CLP/hora</strong> (competitivo frente a coworkings flexibles en Temuco que cobran $3.000 - $6.000/hora) .</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">3. Estructura de Ingresos</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Fuente</th>
+                                    <th>Meta Mensual</th>
+                                    <th>Distribución</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>30 emprendedores</td>
+                                    <td>$600.000</td>
+                                    <td>30 x $20.000 (60% para costos fijos, 40% para reinversión).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Oficinas por hora</td>
+                                    <td>100 horas vendidas</td>
+                                    <td>100 x $3.000 = $300.000 (70% para costos, 30% para reserva).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Eventos adicionales</td>
+                                    <td>2 eventos/mes</td>
+                                    <td>$200.000 (ej.: talleres pagados o alquiler de salas) 8.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">4. Presupuesto Operativo (Porcentajes)</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Distribución</th>
+                                    <th>Detalle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Costos fijos</td>
+                                    <td>60%</td>
+                                    <td>Alquiler, servicios básicos, sueldo de 1 administrador.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Marketing</td>
+                                    <td>20%</td>
+                                    <td>Redes sociales, folletos en puntos estratégicos (ej.: Plaza de Armas).</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Mantención</td>
+                                    <td>15%</td>
+                                    <td>Reparaciones, limpieza y reposición de mobiliario.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reserva</td>
+                                    <td>5%</td>
+                                    <td>Emergencias o ajustes de tarifas.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">5. Cronograma de Implementación (1-2 meses)</h3>
+                            <!-- Cronograma de Implementación -->
+                  <div id="cronograma" class="py-5">
+                      <div class="container">
+                        <h2 class="text-center text-success mb-4" data-aos="fade-down" data-aos-duration="800">
+                          Cronograma de Implementación (1-2 meses)
+                        </h2>
+                        <div class="mermaid">
+                          gantt
+                              title Cronograma de Implementación
+                              dateFormat  YYYY-MM-DD
+                              section Fase 1
+                              Reclutamiento de emprendedores      : 2025-02-10, 15d
+                              Adaptación del espacio              : 2025-02-25, 10d
+                              section Fase 2
+                              Lanzamiento en redes sociales       : 2025-03-05, 7d
+                              Operación piloto (30 días)          : 2025-03-12, 30d
+                        </div>
+                      </div>
+                  </div>
+                            <h3 class="h5 text-success fw-bold mt-4">6. Sostenibilidad y Alianzas</h3>
+                            <ul>
+                              <li>
+                                <strong>Alianzas clave:</strong>
+                                <ul>
+                                  <li>Municipalidad de Temuco: Acceso a subsidios para emprendedores (ej.: programa "Temuco Emprende") .</li>
+                                  <li>Universidades: Estudiantes de diseño UFRO para curatoría de vitrinas 11.</li>
+                                </ul>
+                              </li>
+                              <li class="mt-2">
+                                <strong>Impacto social:</strong>
+                                <ul>
+                                  <li>20% de espacios reservados para emprendimientos de pueblos originarios (ej.: platería mapuche).</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h3 class="h5 text-success fw-bold mt-4">7. Riesgos y Mitigación</h3>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead class="table-success">
+                                  <tr>
+                                    <th>Riesgo</th>
+                                    <th>Solución</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Baja ocupación inicial</td>
+                                    <td>Ofrecer primer mes gratis a 10 emprendedores pioneros 8.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Competencia con coworkings</td>
+                                    <td>Destacar valor agregado: vitrinas integradas y precios accesibles.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <h3 class="h5 text-success fw-bold mt-4">8. Conclusión</h3>
+                            <p class="mb-2">
+                              Con un modelo que combina $20.000 mensuales por emprendimiento y $3.000 CLP/hora para oficinas, Casa Aldunate se posiciona como un espacio inclusivo y económicamente viable.
+                            </p>
+                            <p class="mb-2">
+                              Este proyecto prioriza la accesibilidad sin descuidar la sostenibilidad financiera, alineándose con las necesidades de Temuco, donde el 67% de los emprendimientos son informales.
+                            </p>
+                            <p class="fw-semibold">¡Un espacio para crecer, colaborar y vender! <span role="img" aria-label="cohete">🚀</span></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="modalV" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              V) FACTIBILIDAD: ANÁLISIS DE INFRAESTRUCTURA Y ACCESIBILIDAD UNIVERSAL EN TEMUCO
+                            </h2>
+                            <p class="mb-3">
+                              Evaluación sobre la posibilidad de arrendar oficinas por hora en el segundo piso de una casa antigua (Casa Aldunate) y la viabilidad de mantener una pyme, considerando la normativa de accesibilidad universal en Chile.
+                            </p>
+                            <h3 class="h5 text-success fw-bold">1. Consideraciones Legales y Normativas</h3>
+                            <p>
+                              La legislación chilena, a través de la Ley N°20.422 y el Decreto Supremo N°50 (modificando la OGUC), exige que los espacios destinados a atención al público sean accesibles para todas las personas, incluidas aquellas con movilidad reducida. 
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Accesibilidad Universal:</strong> Los edificios de uso público o que presten servicios deben contar con rutas accesibles (por ejemplo, rampas, ascensores o alternativas para salvar desniveles). 
+                              </li>
+                              <li>
+                                <strong>Edificios Antiguos:</strong> Si bien existen posibilidades de acogerse al concepto de "carga desproporcionada", cualquier uso que implique atención al público (como arrendar oficinas) requiere justificar formalmente la imposibilidad de adaptaciones o, de lo contrario, implementar las mejoras necesarias.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">2. Implicaciones para Arrendar Oficinas</h3>
+                            <p>
+                              Utilizar la Casa Aldunate para arrendar oficinas por hora implica:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Uso de Espacio Público:</strong> Si se ofrece acceso a clientes externos, es obligatorio cumplir con los estándares de accesibilidad, lo que requiere alternativas de acceso al segundo piso (por ejemplo, instalación de ascensor o rampa adecuada).
+                              </li>
+                              <li>
+                                <strong>Impacto en el Modelo de Negocio:</strong> El hecho de contar únicamente con una escalera empinada y no adaptada puede limitar la clientela y generar riesgos legales, afectando tanto la imagen del negocio como la seguridad de los usuarios.
+                              </li>
+                              <li>
+                                <strong>Posibles Exenciones:</strong> En ciertos casos, los edificios antiguos pueden acogerse a exenciones por "carga desproporcionada", pero esto requiere un análisis técnico especializado y aprobación por parte de la municipalidad.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">3. Recomendaciones Estratégicas</h3>
+                            <p>
+                              Para que el uso de Casa Aldunate sea viable y legalmente conforme:
+                            </p>
+                            <ul>
+                              <li>
+                                Realizar un <strong>diagnóstico técnico de accesibilidad</strong> del inmueble.
+                              </li>
+                              <li>
+                                Consultar con profesionales en accesibilidad y la autoridad municipal de Temuco para determinar si se puede aplicar una exención o si es necesario efectuar adaptaciones (por ejemplo, instalar un elevador o construir una rampa).
+                              </li>
+                              <li>
+                                Evaluar si el modelo de arrendamiento (oficinas por hora) se dirige a un público amplio, en cuyo caso la accesibilidad se vuelve esencial para evitar sanciones y garantizar la inclusión.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">4. Conclusión</h3>
+                            <p class="mb-2">
+                              Si se desea arrendar oficinas en Casa Aldunate y operar una pyme en ella, es imprescindible que el espacio cumpla con las normas de accesibilidad universal o se justifique formalmente su exención. Esto no solo es un requisito legal, sino también una estrategia para garantizar el acceso equitativo y la seguridad de todos los usuarios.
+                            </p>
+                            <p class="fw-semibold">
+                              ¡Adaptar el espacio es clave para crecer y ser inclusivos en Temuco! <span role="img" aria-label="check">✅</span>
+                            </p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="modalVI" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="card text-brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                          <div class="card-body">
+                            <h2 class="h3 text-brown fw-bold mb-3">
+                              VI) FACTIBILIDAD: INFORME SOBRE REQUERIMIENTOS MÍNIMOS Y DISEÑO DE BAÑOS EN ESTABLECIMIENTOS EN CHILE
+                            </h2>
+                            <p class="mb-3">
+                              Este informe analiza los requerimientos mínimos, diseño, calidad y normativas de accesibilidad que deben cumplir los baños en establecimientos públicos y de trabajo en Chile, basándose en el Decreto Supremo N°594/99, la OGUC y otras normativas relevantes.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold">1. Introducción</h3>
+                            <p>
+                              Los baños en establecimientos en Chile están regulados para garantizar condiciones sanitarias, seguridad y accesibilidad, protegiendo la salud y el bienestar de los usuarios y asegurando el cumplimiento legal.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">2. Requerimientos Mínimos según Cantidad de Personas</h3>
+                            <p>
+                              Basados en el Decreto Supremo N°594/99 (Artículo 23), se establecen:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Para 15 trabajadores (hombres):</strong> 2 excusados, 2 lavamanos y 2 duchas.
+                              </li>
+                              <li>
+                                <strong>Para 15 trabajadores (12 hombres y 3 mujeres):</strong> 2 WC, 2 lavamanos y 2 duchas para hombres; 1 WC, 1 lavamanos y 1 ducha para mujeres.
+                              </li>
+                              <li>
+                                <strong>Micro y pequeñas empresas (hasta 10 trabajadores):</strong> Se permite un baño compartido para ambos sexos.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">3. Diseño y Calidad de los Baños</h3>
+                            <h4 class="h6 text-success fw-bold">a) Dimensiones y Distribución</h4>
+                            <ul>
+                              <li>
+                                <strong>Baños accesibles:</strong> Deben permitir un giro de 360° para sillas de ruedas, con un diámetro mínimo de 1,50 m.
+                              </li>
+                              <li>
+                                <strong>Puertas:</strong> Ancho libre mínimo de 0,80 m, abriéndose preferiblemente hacia el exterior para facilitar la maniobra.
+                              </li>
+                            </ul>
+                            <h4 class="h6 text-success fw-bold mt-3">b) Artefactos y Accesorios</h4>
+                            <ul>
+                              <li>
+                                <strong>Lavamanos:</strong> Ubicados a 0,80 m de altura, equipados con grifería de palanca o sensor.
+                              </li>
+                              <li>
+                                <strong>Inodoros:</strong> Con espacio de transferencia lateral de 0,80 x 1,20 m y barras de apoyo antideslizantes a 0,75 m de altura.
+                              </li>
+                              <li>
+                                <strong>Accesorios:</strong> Jaboneras, toalleros y dispensadores deben instalarse a una altura máxima de 1,20 m.
+                              </li>
+                            </ul>
+                            <h4 class="h6 text-success fw-bold mt-3">c) Materiales y Mantenimiento</h4>
+                            <p>
+                              Los pisos deben ser sólidos, antideslizantes y fáciles de limpiar. Las paredes y techos deben estar en buen estado y pintados de acuerdo con la función del espacio.
+                            </p>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">4. Requisitos de Accesibilidad Universal</h3>
+                            <p>
+                              La OGUC exige que los baños en establecimientos públicos cuenten con al menos un servicio higiénico accesible para personas con discapacidad. Esto implica:
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Dimensiones:</strong> Espacio suficiente para giros de sillas de ruedas.
+                              </li>
+                              <li>
+                                <strong>Barras de apoyo:</strong> Instaladas a ambos lados del inodoro, con una longitud mínima de 0,60 m.
+                              </li>
+                              <li>
+                                <strong>Señalización:</strong> Claras, con elementos visuales y táctiles (incluyendo Braille) para identificar el servicio.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">5. Consideraciones Adicionales</h3>
+                            <ul>
+                              <li>
+                                <strong>Agua potable:</strong> Suministro mínimo de 100 litros por persona al día para consumo y aseo.
+                              </li>
+                              <li>
+                                <strong>Ventilación:</strong> Sistemas de ventilación natural o artificial para evitar humedad y malos olores.
+                              </li>
+                              <li>
+                                <strong>Ley 21.559:</strong> Establece el acceso gratuito a baños para personas con enfermedades inflamatorias intestinales u ostomizadas, mediante la presentación de credencial o certificado médico.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">6. Recomendaciones para Establecimientos</h3>
+                            <ul>
+                              <li>
+                                <strong>Planificación:</strong> Realizar un cálculo preciso de la cantidad de baños necesarios según la capacidad y distribución de género.
+                              </li>
+                              <li>
+                                <strong>Diseño inclusivo:</strong> Incorporar baños accesibles desde la etapa de diseño, conforme a la OGUC.
+                              </li>
+                              <li>
+                                <strong>Mantenimiento:</strong> Implementar protocolos de limpieza y desinfección periódicos para asegurar higiene y durabilidad.
+                              </li>
+                              <li>
+                                <strong>Señalización:</strong> Utilizar pictogramas y Braille para facilitar la identificación de baños accesibles.
+                              </li>
+                            </ul>
+                            
+                            <h3 class="h5 text-success fw-bold mt-4">7. Conclusión</h3>
+                            <p class="mb-2">
+                              Los baños en establecimientos en Chile deben cumplir normativas estrictas para garantizar funcionalidad, higiene y accesibilidad. La implementación de estos requerimientos no solo asegura el cumplimiento legal, sino que mejora la experiencia de los usuarios y fomenta la inclusión social.
+                            </p>
+                            <p class="fw-semibold">
+                              ¡Un diseño de baños inclusivo es clave para el bienestar y la salud de todos! <span role="img" aria-label="check">✅</span>
+                            </p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+<!-- Modal -->
+<div class="modal fade" id="ganttModal" tabindex="-1" aria-labelledby="ganttModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ganttModalLabel">Carta Gantt</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <video controls autoplay muted playsinline>
+            <source src="assets\vid\casaAdunate3d.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <!-- Sección de agradecimiento (opcional) -->
+    <div class="container text-center my-5" data-aos="zoom-in" data-aos-duration="1000">
+      <!-- Botón para abrir el modal -->
+      <div class="container mt-2">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ganttModal">
+          Ver PLANO 3D
+        </button>
+      </div>
+      
+      
+      
+      <div class="d-inline-flex align-items-center">
+        
+        <!-- Ícono (puedes reemplazar por otro si se requiere) -->
+        <img src="assets\img\vibraverde.png" alt="Logo" width="40" class="d-inline-block align-text-top me-2">
+        <h2 class="h4 text-success fw-bold">¡Gracias por tu vibra!</h2>
+      </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ganttModal" tabindex="-1" aria-labelledby="ganttModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Encabezado del Modal -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="ganttModalLabel">Carta Gantt: 01/02/2025 al 31/03/2025</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <!-- Cuerpo del Modal con la tabla -->
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm">
+            <thead class="table-light">
+              <tr>
+                <th>Fecha</th>
+                <th>Actividad</th>
+                <th>Responsable(s)</th>
+                <th>Hito/Objetivo</th>
+                <th>Comentarios</th>
+                <th>Términos (Anglos)</th>
+                <th>Explicación Simple</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Febrero 2025 -->
+              <tr>
+                <td>01/02/2025</td>
+                <td>Inicio de investigación de mercado y análisis de competencia</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Kick-Off del proyecto</td>
+                <td>Recopilar datos de modelos similares</td>
+                <td>Kick-Off: Inicio del proyecto</td>
+                <td>Comenzar a buscar información sobre el mercado y competidores.</td>
+              </tr>
+              <tr>
+                <td>02/02/2025</td>
+                <td>Continuación de investigación de mercado y revisión de casos de éxito (ej. Casa Aldunate, etc.)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Seguir analizando casos exitosos</td>
+                <td>Stakeholders: Interesados clave</td>
+                <td>Revisar ejemplos de proyectos similares y sus participantes.</td>
+              </tr>
+              <tr>
+                <td>03/02/2025</td>
+                <td>Conclusión de la investigación y elaboración de informe preliminar</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 1: Investigación completada</td>
+                <td>Informe compartido con el equipo</td>
+                <td>Informe: Reporte de hallazgos</td>
+                <td>Terminar la investigación y redactar un resumen de lo encontrado.</td>
+              </tr>
+              <tr>
+                <td>04/02/2025</td>
+                <td>Reunión de planificación general y definición de alcance del proyecto</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Kick-Off de planificación</td>
+                <td>Definir objetivos y KPIs</td>
+                <td>KPIs: Indicadores clave de desempeño</td>
+                <td>Reunirse para establecer qué se quiere lograr y cómo medirlo.</td>
+              </tr>
+              <tr>
+                <td>05/02/2025</td>
+                <td>Definición de objetivos, alcance y elaboración del backlog de tareas (metodología Agile)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Crear historias de usuario</td>
+                <td>Backlog: Lista de tareas y requerimientos</td>
+                <td>Establecer qué tareas se deben hacer y en qué orden.</td>
+              </tr>
+              <tr>
+                <td>06/02/2025</td>
+                <td>Revisión y aprobación del backlog y definición de roles y responsabilidades</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 2: Roles asignados</td>
+                <td>Documentación interna</td>
+                <td>Roles: Funciones asignadas</td>
+                <td>Acordar quién hace qué y dejarlo por escrito.</td>
+              </tr>
+              <tr>
+                <td>07/02/2025</td>
+                <td>Planificación detallada de la infraestructura y adaptación del local</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Inicio de Sprint 1: Planificación técnica</td>
+                <td>Esquematizar áreas y distribución</td>
+                <td>Sprint: Período de trabajo (iteración)</td>
+                <td>Organizar en detalle cómo se adaptará el local y se usará el espacio.</td>
+              </tr>
+              <tr>
+                <td>08/02/2025</td>
+                <td>Elaboración de requerimientos técnicos y selección de materiales (vitrinas, mobiliario, etc.)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Buscar materiales de bajo costo</td>
+                <td>Requerimientos: Necesidades técnicas</td>
+                <td>Definir qué se necesita y elegir materiales económicos.</td>
+              </tr>
+              <tr>
+                <td>09/02/2025</td>
+                <td>Reunión para asignar tareas específicas y confirmar proveedores</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Confirmar acuerdos y tiempos</td>
+                <td>Proveedor: Quien suministra materiales</td>
+                <td>Asignar tareas concretas y acordar con proveedores.</td>
+              </tr>
+              <tr>
+                <td>10/02/2025</td>
+                <td>Desarrollo de prototipos y mock-up de vitrinas y mobiliario</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Prototipo validado</td>
+                <td>Bocetos y pruebas iniciales</td>
+                <td>Mock-up: Modelo a escala o demostración</td>
+                <td>Crear modelos de muestra de vitrinas y muebles para ver su diseño.</td>
+              </tr>
+              <tr>
+                <td>11/02/2025</td>
+                <td>Revisión y ajustes del diseño del espacio y definición del layout final</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 3: Diseño del espacio aprobado</td>
+                <td>Ajustes según feedback interno</td>
+                <td>Layout: Distribución del espacio</td>
+                <td>Revisar y ajustar la distribución del local hasta quedar de acuerdo.</td>
+              </tr>
+              <tr>
+                <td>12/02/2025</td>
+                <td>Planificación logística de compras y adquisición de materiales</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Elaborar cronograma de adquisiciones</td>
+                <td>Logística: Organización de procesos</td>
+                <td>Organizar cómo y cuándo se comprarán los materiales necesarios.</td>
+              </tr>
+              <tr>
+                <td>13/02/2025</td>
+                <td>Confirmación de proveedores y negociación de precios</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Registro de acuerdos comerciales</td>
+                <td>Negociación: Acordar condiciones</td>
+                <td>Confirmar proveedores y negociar para obtener mejores precios.</td>
+              </tr>
+              <tr>
+                <td>14/02/2025</td>
+                <td>Preparación del cronograma detallado de sprints y actividades del piloto</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Inicio de Sprint 1</td>
+                <td>Definir tareas para adaptación y montaje</td>
+                <td>Sprint: Iteración de trabajo</td>
+                <td>Organizar el calendario de tareas para el primer ciclo de trabajo.</td>
+              </tr>
+              <tr>
+                <td>15/02/2025</td>
+                <td>Finalización de la planificación y documentación del Sprint 1</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Documentar backlog y roadmap</td>
+                <td>Roadmap: Plan de ruta a seguir</td>
+                <td>Terminar la planificación y dejar por escrito todas las tareas.</td>
+              </tr>
+              <tr>
+                <td>16/02/2025</td>
+                <td>Inicio de la adaptación del local: mejoras básicas (pintura, iluminación, adecuación del área)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 4: Adaptación iniciada</td>
+                <td>Uso de materiales económicos</td>
+                <td>Adaptación: Ajustar el espacio</td>
+                <td>Comenzar a realizar mejoras básicas en el local.</td>
+              </tr>
+              <tr>
+                <td>17/02/2025</td>
+                <td>Montaje inicial de mobiliario (mesas, sillas para workcafé)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Instalación de mobiliario reciclado</td>
+                <td>Mobiliario: Muebles y enseres</td>
+                <td>Colocar mesas y sillas para el área del café.</td>
+              </tr>
+              <tr>
+                <td>18/02/2025</td>
+                <td>Montaje de espacios para vitrinas modulares</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Definir ubicación óptima en el local</td>
+                <td>Vitrinas: Expositores modulares</td>
+                <td>Armar y ubicar los espacios para exhibir productos.</td>
+              </tr>
+              <tr>
+                <td>19/02/2025</td>
+                <td>Verificación de materiales y control de calidad de la adaptación</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Revisión final de instalaciones</td>
+                <td>Control de Calidad: Verificar estándares</td>
+                <td>Revisar que todo esté instalado correctamente y con buena calidad.</td>
+              </tr>
+              <tr>
+                <td>20/02/2025</td>
+                <td>Configuración y preparación del área de workcafé</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Ajustes de distribución y funcionalidad</td>
+                <td>Workcafé: Café con ambiente de trabajo</td>
+                <td>Organizar el área destinada al café y al trabajo colaborativo.</td>
+              </tr>
+              <tr>
+                <td>21/02/2025</td>
+                <td>Instalación de señalética y distribución de material promocional impreso (sin digital)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Colocación en áreas estratégicas</td>
+                <td>Señalética: Carteles e indicaciones</td>
+                <td>Colocar letreros y material impreso para orientar a los clientes.</td>
+              </tr>
+              <tr>
+                <td>22/02/2025</td>
+                <td>Revisión general del avance de la adaptación y preparación para pruebas internas</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Registro de avances diarios</td>
+                <td>Revisión: Comprobación de progreso</td>
+                <td>Hacer un repaso general para ver el avance de la adaptación.</td>
+              </tr>
+              <tr>
+                <td>23/02/2025</td>
+                <td>Reunión diaria (stand-up Agile) para revisar avances y resolver bloqueos</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Seguimiento Sprint 1</td>
+                <td>Actualización de tareas en el backlog</td>
+                <td>Stand-up: Reunión corta diaria</td>
+                <td>Reunirse brevemente para revisar el progreso y solucionar problemas.</td>
+              </tr>
+              <tr>
+                <td>24/02/2025</td>
+                <td>Ajustes y mejoras en la infraestructura basados en feedback interno</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Optimización de procesos y recursos</td>
+                <td>Feedback: Retroalimentación</td>
+                <td>Realizar ajustes según comentarios y sugerencias del equipo.</td>
+              </tr>
+              <tr>
+                <td>25/02/2025</td>
+                <td>Simulación y ensayo de operaciones internas (prueba de mock-up operativo: vitrinas y workcafé)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 5: Prueba interna completada</td>
+                <td>Corrección de incidencias identificadas</td>
+                <td>Mock-up: Modelo de prueba</td>
+                <td>Simular el funcionamiento del espacio para detectar errores.</td>
+              </tr>
+              <tr>
+                <td>26/02/2025</td>
+                <td>Capacitación interna en procedimientos operativos y uso de equipos</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Sesión práctica y revisión de protocolos</td>
+                <td>Capacitación: Entrenamiento interno</td>
+                <td>Entrenar al equipo sobre cómo operar y usar los equipos.</td>
+              </tr>
+              <tr>
+                <td>27/02/2025</td>
+                <td>Documentación de resultados y retroalimentación del Sprint 1</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Registro de aprendizajes y mejoras</td>
+                <td>Documentación: Registro escrito</td>
+                <td>Escribir lo aprendido y registrar sugerencias de mejora.</td>
+              </tr>
+              <tr>
+                <td>28/02/2025</td>
+                <td>Cierre del Sprint 1 y planificación del Sprint 2 (adaptación y montaje final)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 6: Sprint 1 cerrado</td>
+                <td>Definir tareas críticas para el siguiente sprint</td>
+                <td>Cierre de Sprint: Fin de iteración</td>
+                <td>Terminar el primer ciclo de trabajo y planificar el siguiente.</td>
+              </tr>
+              <!-- Marzo 2025 -->
+              <tr>
+                <td>01/03/2025</td>
+                <td>Inicio del Sprint 2: Preparación para montaje final y ajustes en la infraestructura</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Inicio de Sprint 2</td>
+                <td>Revisión del backlog y priorización de tareas</td>
+                <td>Sprint: Nueva iteración de trabajo</td>
+                <td>Comenzar la segunda fase con nuevas tareas y ajustes necesarios.</td>
+              </tr>
+              <tr>
+                <td>02/03/2025</td>
+                <td>Montaje final de vitrinas y mobiliario definitivo</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Ejecución de montaje según diseño aprobado</td>
+                <td>Montaje: Instalación final</td>
+                <td>Armar y colocar definitivamente los expositores y muebles.</td>
+              </tr>
+              <tr>
+                <td>03/03/2025</td>
+                <td>Instalación de oficinas: montaje y equipamiento de 3 oficinas (para arrendar a CLP 3.000/hora)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 7: Oficinas instaladas</td>
+                <td>Verificar funcionalidad de cada oficina</td>
+                <td>Oficinas: Espacios de trabajo rentables</td>
+                <td>Montar y equipar tres oficinas para alquiler por hora.</td>
+              </tr>
+              <tr>
+                <td>04/03/2025</td>
+                <td>Configuración de sistemas básicos en oficinas (prueba de arrendamiento y comunicación interna)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Test de sistemas de reserva y uso</td>
+                <td>Sistema: Conjunto de herramientas</td>
+                <td>Probar que los sistemas de reserva y comunicación funcionen correctamente.</td>
+              </tr>
+              <tr>
+                <td>05/03/2025</td>
+                <td>Reunión de seguimiento y ajustes en la infraestructura post montaje final</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Correcciones en base a pruebas</td>
+                <td>Seguimiento: Control de avances</td>
+                <td>Reunirse para revisar lo instalado y ajustar si es necesario.</td>
+              </tr>
+              <tr>
+                <td>06/03/2025</td>
+                <td>Pruebas y simulación de flujo operativo en el workcafé</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Simulación de atención y control de clientes</td>
+                <td>Simulación: Ensayo del sistema</td>
+                <td>Probar el funcionamiento del café y atención a clientes.</td>
+              </tr>
+              <tr>
+                <td>07/03/2025</td>
+                <td>Capacitación final para el personal en procesos operativos y manejo de incidentes</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Capacitación intensiva y simulacros</td>
+                <td>Incidentes: Problemas operativos</td>
+                <td>Dar el entrenamiento final al equipo para manejar emergencias.</td>
+              </tr>
+              <tr>
+                <td>08/03/2025</td>
+                <td>Soft opening interno: simulacro de atención al cliente y operación integral</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 8: Soft opening completado</td>
+                <td>Prueba de atención con stakeholders internos</td>
+                <td>Soft Opening: Apertura de prueba</td>
+                <td>Realizar una apertura de prueba para evaluar el servicio.</td>
+              </tr>
+              <tr>
+                <td>09/03/2025</td>
+                <td>Revisión de indicadores y retroalimentación del soft opening</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Registro de KPIs y aprendizajes</td>
+                <td>KPIs: Indicadores de éxito</td>
+                <td>Revisar los resultados y medir el rendimiento obtenido.</td>
+              </tr>
+              <tr>
+                <td>10/03/2025</td>
+                <td>Ajustes operativos basados en feedback del soft opening</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Implementar mejoras inmediatas</td>
+                <td>Feedback: Comentarios recibidos</td>
+                <td>Realizar cambios rápidos según lo sugerido tras la prueba.</td>
+              </tr>
+              <tr>
+                <td>11/03/2025</td>
+                <td>Revisión de inventario, control de calidad y verificación de sistemas en vitrinas y oficinas</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Control de incidencias y verificación</td>
+                <td>Inventario: Lista de materiales</td>
+                <td>Revisar que todos los elementos estén en orden y funcionando.</td>
+              </tr>
+              <tr>
+                <td>12/03/2025</td>
+                <td>Preparación de material promocional impreso adicional (para difusión local)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Producción y distribución de volantes</td>
+                <td>Material Promocional: Folletos, etc.</td>
+                <td>Preparar y repartir material impreso para promocionar localmente.</td>
+              </tr>
+              <tr>
+                <td>13/03/2025</td>
+                <td>Inauguración oficial del espacio (evento interno y stakeholders clave)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 9: Inauguración oficial</td>
+                <td>Evento de lanzamiento, invitación impresa</td>
+                <td>Inauguración: Apertura oficial</td>
+                <td>Realizar un evento formal para dar a conocer el proyecto.</td>
+              </tr>
+              <tr>
+                <td>14/03/2025</td>
+                <td>Inicio de operaciones reales: apertura al público (vitrinas, workcafé y oficinas en arrendamiento)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Monitoreo de flujo y atención al cliente</td>
+                <td>Operación: Puesta en marcha</td>
+                <td>Abrir el espacio al público y comenzar a operar oficialmente.</td>
+              </tr>
+              <tr>
+                <td>15/03/2025</td>
+                <td>Monitoreo intensivo de la operación y registro de KPIs (ocupación, ventas, arrendamiento de oficinas)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Seguimiento en tiempo real</td>
+                <td>Monitoreo: Supervisión continua</td>
+                <td>Vigilar de cerca el funcionamiento y los indicadores diarios.</td>
+              </tr>
+              <tr>
+                <td>16/03/2025</td>
+                <td>Reunión diaria (stand-up Agile) para análisis de la jornada y ajustes operativos</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Seguimiento Sprint 2</td>
+                <td>Actualización del backlog</td>
+                <td>Stand-up: Reunión diaria</td>
+                <td>Reunirse cada día brevemente para ajustar tareas.</td>
+              </tr>
+              <tr>
+                <td>17/03/2025</td>
+                <td>Registro y análisis de KPIs iniciales (flujo de clientes, ocupación de vitrinas, arrendamiento oficinas)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Documentación de resultados</td>
+                <td>KPIs: Medición de desempeño</td>
+                <td>Anotar y analizar datos clave del desempeño del proyecto.</td>
+              </tr>
+              <tr>
+                <td>18/03/2025</td>
+                <td>Evaluación del feedback de emprendedores y clientes</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Recopilación de comentarios</td>
+                <td>Feedback: Comentarios y sugerencias</td>
+                <td>Revisar opiniones de clientes y emprendedores para mejorar.</td>
+              </tr>
+              <tr>
+                <td>19/03/2025</td>
+                <td>Monitoreo del arriendo de oficinas y ajustes en la atención del workcafé</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Verificar cumplimiento de metas</td>
+                <td>Arriendo: Alquiler de oficinas</td>
+                <td>Supervisar el uso de las oficinas y la atención en el café.</td>
+              </tr>
+              <tr>
+                <td>20/03/2025</td>
+                <td>Reunión de evaluación y planificación de ajustes operativos</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Identificar acciones correctivas</td>
+                <td>Evaluación: Revisión y planificación</td>
+                <td>Reunirse para discutir mejoras basadas en la experiencia.</td>
+              </tr>
+              <tr>
+                <td>21/03/2025</td>
+                <td>Implementación de mejoras operativas y ajustes finales en infraestructura y procesos</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Ejecutar cambios inmediatos</td>
+                <td>Implementación: Aplicar mejoras</td>
+                <td>Poner en práctica las mejoras acordadas en la reunión.</td>
+              </tr>
+              <tr>
+                <td>22/03/2025</td>
+                <td>Seguimiento de la satisfacción de clientes y emprendedores</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Encuestas y retroalimentación diaria</td>
+                <td>Satisfacción: Nivel de contento</td>
+                <td>Verificar que tanto clientes como emprendedores estén satisfechos.</td>
+              </tr>
+              <tr>
+                <td>23/03/2025</td>
+                <td>Reunión de retroalimentación del equipo (análisis de avances y bloqueos)</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Registro de aprendizajes y propuestas</td>
+                <td>Retroalimentación: Feedback del equipo</td>
+                <td>Reunirse para revisar avances y resolver problemas.</td>
+              </tr>
+              <tr>
+                <td>24/03/2025</td>
+                <td>Documentación y análisis de avances del Sprint 2</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Preparación de reporte intermedio</td>
+                <td>Documentación: Informe de progreso</td>
+                <td>Registrar todo lo ocurrido en esta etapa para el informe final.</td>
+              </tr>
+              <tr>
+                <td>25/03/2025</td>
+                <td>Implementación de ajustes finales en infraestructura y servicios operativos</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Correcciones según feedback</td>
+                <td>Ajustes Finales: Últimos cambios</td>
+                <td>Aplicar las últimas correcciones necesarias.</td>
+              </tr>
+              <tr>
+                <td>26/03/2025</td>
+                <td>Revisión final de operaciones y consolidación de datos</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Validación de indicadores clave</td>
+                <td>Consolidación: Recopilación de resultados</td>
+                <td>Verificar que todos los sistemas funcionen correctamente.</td>
+              </tr>
+              <tr>
+                <td>27/03/2025</td>
+                <td>Preparación del reporte final del piloto y compilación de lecciones aprendidas</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 10: Reporte preliminar</td>
+                <td>Redacción del informe completo</td>
+                <td>Reporte: Documento final</td>
+                <td>Elaborar un informe final con todos los aprendizajes del piloto.</td>
+              </tr>
+              <tr>
+                <td>28/03/2025</td>
+                <td>Consolidación de datos, análisis de resultados y planificación de próximas fases</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Definir próximos pasos estratégicos</td>
+                <td>Planificación Futura: Estrategia a seguir</td>
+                <td>Organizar y analizar los datos para planificar el futuro.</td>
+              </tr>
+              <tr>
+                <td>29/03/2025</td>
+                <td>Reunión de cierre del proyecto piloto (Sprint final)</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 11: Cierre del piloto</td>
+                <td>Retroalimentación y cierre formal</td>
+                <td>Cierre del Proyecto: Finalización</td>
+                <td>Reunirse para cerrar el piloto y discutir los resultados finales.</td>
+              </tr>
+              <tr>
+                <td>30/03/2025</td>
+                <td>Presentación del informe final y discusión de resultados ante stakeholders</td>
+                <td>Persona 1, 2, 3</td>
+                <td></td>
+                <td>Presentación formal y validación</td>
+                <td>Stakeholders: Partes interesadas</td>
+                <td>Presentar el informe final a las personas clave.</td>
+              </tr>
+              <tr>
+                <td>31/03/2025</td>
+                <td>Cierre definitivo del piloto y planificación preliminar para la siguiente fase</td>
+                <td>Persona 1, 2, 3</td>
+                <td>Hito 12: Piloto finalizado</td>
+                <td>Cierre administrativo y lecciones aprendidas</td>
+                <td>Cierre: Conclusión del piloto</td>
+                <td>Terminar formalmente el piloto y planificar los próximos pasos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Pie del Modal -->
+    
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-1">© 2025 Casa Aldunate: Emprendimiento Colaborativo</p>
+                <p class="mb-0">
+                    Creado por:
+                    <span class="fw-bold">Liset Nahuel y Adriana Figueroa</span>
+                </p>
+                <p class="mt-2">
+                    <small>
+                        Contacto:
+                        <a href="mailto:vibraverdearaucania@gmail.com" class="text-white text-decoration-underline">
+                            vibraverdearaucania@gmail.com
+                        </a>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Dependencias: Bootstrap, AOS y Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Cargar Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script>// Inicializar AOS para animaciones scroll
+    AOS.init();
+    // Inicializar Mermaid
+    //mermaid.initialize({ startOnLoad: true });
+   
+      
+      // Si aún no se renderiza, forzar el renderizado cuando el documento esté listo
+     // document.addEventListener("DOMContentLoaded", function() {
+     //   mermaid.contentLoaded();
+     // });
+      
+    </script>
+ </body>
+</html>
