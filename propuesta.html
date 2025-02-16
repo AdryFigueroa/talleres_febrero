@@ -41,15 +41,28 @@
       background-color: #ff6f91;
       color: #fff;
     }
+    /* Asegura que el *footer* ocupe todo el ancho de la pantalla */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Opcional: Si hay un desbordamiento horizontal, ocúltalo */
+body {
+    overflow-x: hidden;
+}
+
   </style>
 </head>
 <body>
-  <div class="container py-5">
+  <div class="pt-5">
     <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
         <!-- Logo centrado -->
     <div class="d-flex justify-content-center mb-4">
       <img src="assets\img\CasaAldunate.png" alt="Logo Casa Aldunate" class="img-fluid" style="max-width: 500px;">
     </div>
+    <div class="container py-5">
     <div class="row">
       <!-- Card 1: La Propuesta -->
       <div class="col-md-4">
@@ -657,11 +670,11 @@
       </div>
     </div>
   </div>
-  
+</div>
 
 <!-- Footer -->
-<footer id="footer" class="bg-dark text-white py-4 mt-5">
-    <div class="container">
+<footer id="footer" class="bg-dark text-white py-4 mt-5 ">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center">
                 <p class="mb-1">© 2025 Casa Aldunate: Emprendimiento Colaborativo</p>
